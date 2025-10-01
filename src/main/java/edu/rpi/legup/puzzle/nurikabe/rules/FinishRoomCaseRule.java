@@ -10,6 +10,7 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeUtilities;
 import edu.rpi.legup.utility.DisjointSets;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -118,7 +119,7 @@ public class FinishRoomCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement equivalent puzzleElement
      * @return a list of elements the specified could be
      */
@@ -170,13 +171,13 @@ public class FinishRoomCaseRule extends CaseRule {
      * Recursively generates possible cases for filling a room with white cells based on the current
      * board state and specified parameters.
      *
-     * @param nuriBoard the current Nurikabe board state
-     * @param currentCell the current cell being evaluated
+     * @param nuriBoard      the current Nurikabe board state
+     * @param currentCell    the current cell being evaluated
      * @param filledRoomSize the target size for the room being filled
-     * @param directions the set of possible directions to expand the room
-     * @param checkedPoints the set of points already evaluated to avoid redundancy
-     * @param cases the list of valid board cases generated
-     * @param origPoint the original point of the number cell initiating the room filling
+     * @param directions     the set of possible directions to expand the room
+     * @param checkedPoints  the set of points already evaluated to avoid redundancy
+     * @param cases          the list of valid board cases generated
+     * @param origPoint      the original point of the number cell initiating the room filling
      */
     private void generateCases(
             NurikabeBoard nuriBoard,
@@ -256,11 +257,11 @@ public class FinishRoomCaseRule extends CaseRule {
      * Determines if a given cell touches a different room by checking adjacent cells in specified
      * directions.
      *
-     * @param board the current Nurikabe board state
-     * @param cell the cell being evaluated
+     * @param board        the current Nurikabe board state
+     * @param cell         the cell being evaluated
      * @param origRoomSize the size of the original room being filled
-     * @param directions the set of possible directions to check around the cell
-     * @param origPoint the original point of the number cell initiating the room filling
+     * @param directions   the set of possible directions to check around the cell
+     * @param origPoint    the original point of the number cell initiating the room filling
      * @return true if the cell touches a different room, false otherwise
      */
     private boolean touchesDifferentRoom(
@@ -296,10 +297,10 @@ public class FinishRoomCaseRule extends CaseRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {

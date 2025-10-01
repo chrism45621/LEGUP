@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.shorttruthtable;
 
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -243,11 +244,11 @@ public class ShortTruthTableStatement extends PuzzleElement<String> {
         System.out.println("Right type: " + rightType);
         // if this is a not statement, there is no left side
         if (cell.getSymbol() == ShortTruthTableOperation.NOT) {
-            return new ShortTruthTableCellType[] {null, type, rightType};
+            return new ShortTruthTableCellType[]{null, type, rightType};
         }
         // if it is any other operation, get the left side too and return it
         ShortTruthTableCellType leftType = this.leftStatement.getCell().getType();
-        return new ShortTruthTableCellType[] {leftType, type, rightType};
+        return new ShortTruthTableCellType[]{leftType, type, rightType};
     }
 
     // Setters

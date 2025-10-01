@@ -7,7 +7,9 @@ import edu.rpi.legup.puzzle.treetent.TreeTentBoard;
 import edu.rpi.legup.puzzle.treetent.TreeTentCell;
 import edu.rpi.legup.puzzle.treetent.rules.TooManyTentsContradictionRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -35,7 +37,7 @@ public class TooManyTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests for TooManyTents if: Row Tent Counts: 0,0,0 Column
-     *     Tent Counts: 0,0,0
+     *                                    Tent Counts: 0,0,0
      */
     @Test
     public void TooManyTentsContradictionRule_TotalFail() throws InvalidFileFormatException {
@@ -66,7 +68,7 @@ public class TooManyTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests for TooManyTents if: Row Tent Counts: 1,0,0 Column
-     *     Tent Counts: 0,0,0
+     *                                    Tent Counts: 0,0,0
      */
     @Test
     public void TooManyTentsContradictionRule_TopRight() throws InvalidFileFormatException {
@@ -98,7 +100,7 @@ public class TooManyTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests for TooManyTests if: Row Tent Counts: 0,0,1 Column
-     *     Tent Counts: 0,0,0
+     *                                    Tent Counts: 0,0,0
      */
     @Test
     public void TooManyTentsContradictionRule_BottomRight() throws InvalidFileFormatException {
@@ -130,7 +132,7 @@ public class TooManyTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests for TooManyTents if: Row Tent Counts: 0,0,0 Column
-     *     Tent Counts: 0,1,0
+     *                                    Tent Counts: 0,1,0
      */
     @Test
     public void TooManyTentsContradictionRule_TopDown() throws InvalidFileFormatException {
@@ -162,7 +164,7 @@ public class TooManyTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests for TooManyTents if: Row Tent Counts: 0,0,0 Column
-     *     Tent Counts: 0,0,1
+     *                                    Tent Counts: 0,0,1
      */
     @Test
     public void TooManyTentsContradictionRule_BottomDown() throws InvalidFileFormatException {
@@ -194,7 +196,7 @@ public class TooManyTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests for TooManyTents if the Top Tent is completely
-     *     accounted for, but not the bottom Row Tent Counts: 1,0,0 Column Tent Counts: 0,1,0
+     *                                    accounted for, but not the bottom Row Tent Counts: 1,0,0 Column Tent Counts: 0,1,0
      */
     @Test
     public void TooManyTentsContradictionRule_TopAccount() throws InvalidFileFormatException {
@@ -231,7 +233,7 @@ public class TooManyTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests for TooManyTents if the Bottom Tent is completely
-     *     accounted for, but not the Top Row Tent Counts: 0,0,1 Column Tent Counts: 0,0,1
+     *                                    accounted for, but not the Top Row Tent Counts: 0,0,1 Column Tent Counts: 0,0,1
      */
     @Test
     public void TooManyTentsContradictionRule_BottomAccount() throws InvalidFileFormatException {

@@ -8,7 +8,9 @@ import edu.rpi.legup.puzzle.skyscrapers.Skyscrapers;
 import edu.rpi.legup.puzzle.skyscrapers.SkyscrapersBoard;
 import edu.rpi.legup.puzzle.skyscrapers.rules.CellForNumberCaseRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.util.ArrayList;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;

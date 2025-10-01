@@ -9,6 +9,7 @@ import edu.rpi.legup.puzzle.battleship.BattleshipBoard;
 import edu.rpi.legup.puzzle.battleship.BattleshipCell;
 import edu.rpi.legup.puzzle.battleship.BattleshipClue;
 import edu.rpi.legup.puzzle.battleship.BattleshipType;
+
 import java.awt.*;
 import java.util.List;
 
@@ -28,10 +29,10 @@ public class FinishWithShipsDirectRule extends DirectRule {
      * puzzleElement index using this rule This method is the one that should be overridden in child
      * classes
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message.
+     * puzzleElement, otherwise error message.
      */
     @Override
     protected String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {

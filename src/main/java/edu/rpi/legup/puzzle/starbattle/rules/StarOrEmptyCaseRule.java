@@ -8,6 +8,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.starbattle.StarBattleBoard;
 import edu.rpi.legup.puzzle.starbattle.StarBattleCell;
 import edu.rpi.legup.puzzle.starbattle.StarBattleCellType;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,9 +52,9 @@ public class StarOrEmptyCaseRule extends CaseRule {
         }
 
         if (!((mod1.getType() == StarBattleCellType.STAR
-                        && mod2.getType() == StarBattleCellType.BLACK)
+                && mod2.getType() == StarBattleCellType.BLACK)
                 || (mod2.getType() == StarBattleCellType.STAR
-                        && mod1.getType() == StarBattleCellType.BLACK))) {
+                && mod1.getType() == StarBattleCellType.BLACK))) {
             return super.getInvalidUseOfRuleMessage()
                     + ": This case rule must create a star cell and a black cell.";
         }
@@ -77,7 +78,7 @@ public class StarOrEmptyCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement equivalent puzzleElement
      * @return a list of elements the specified could be
      */

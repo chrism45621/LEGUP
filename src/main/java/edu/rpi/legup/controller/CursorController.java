@@ -27,10 +27,10 @@ public class CursorController {
      *
      * <p>Sources consulted: http://www.catalysoft.com/articles/busycursor.html
      *
-     * @param component The component you want to set the cursor for
+     * @param component          The component you want to set the cursor for
      * @param mainActionListener The ActionListener that does the intended action processing
      * @return An ActionListener object that does the same action processing as mainActionListener
-     *     while also modifying the cursor if needed
+     * while also modifying the cursor if needed
      */
     public static ActionListener createListener(
             final Component component, final ActionListener mainActionListener) {

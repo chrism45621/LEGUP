@@ -72,10 +72,12 @@ public class MaterialUITimer implements MouseListener, ActionListener {
     }
 
     @Override
-    public void mouseReleased(MouseEvent me) {}
+    public void mouseReleased(MouseEvent me) {
+    }
 
     @Override
-    public void mouseClicked(MouseEvent me) {}
+    public void mouseClicked(MouseEvent me) {
+    }
 
     @Override
     public void mouseExited(MouseEvent me) {

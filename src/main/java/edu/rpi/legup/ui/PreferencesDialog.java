@@ -8,6 +8,7 @@ import edu.rpi.legup.model.rules.Rule;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialBorders;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialFonts;
 import edu.rpi.legup.ui.proofeditorui.rulesview.RuleFrame;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;

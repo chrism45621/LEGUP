@@ -6,6 +6,7 @@ import edu.rpi.legup.model.gameboard.Board;
 import edu.rpi.legup.model.rules.DirectRule;
 import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public class ApplyDefaultDirectRuleCommand extends PuzzleCommand {
      * basic rule
      *
      * @param selection selection of tree element views
-     * @param rule basic rule for the command
+     * @param rule      basic rule for the command
      */
     public ApplyDefaultDirectRuleCommand(TreeViewSelection selection, DirectRule rule) {
         this.selection = selection.copy();
@@ -38,7 +39,7 @@ public class ApplyDefaultDirectRuleCommand extends PuzzleCommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public String getErrorString() {

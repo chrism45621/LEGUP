@@ -6,6 +6,7 @@ import edu.rpi.legup.model.rules.ContradictionRule;
 import edu.rpi.legup.puzzle.skyscrapers.SkyscrapersBoard;
 import edu.rpi.legup.puzzle.skyscrapers.SkyscrapersCell;
 import edu.rpi.legup.puzzle.skyscrapers.SkyscrapersType;
+
 import java.awt.*;
 import java.util.LinkedList;
 import java.util.List;
@@ -25,10 +26,10 @@ public class PreemptiveVisibilityContradictionRule extends ContradictionRule {
      * Checks whether there is an instance of a visibility contradiction in every possible row/col
      * based on the specific puzzleElement index using this rule
      *
-     * @param board board to check contradiction
+     * @param board         board to check contradiction
      * @param puzzleElement equivalent puzzleElement
      * @return null if the all possible rows/cols contain a contradiction at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkContradictionAt(Board board, PuzzleElement puzzleElement) {
@@ -154,8 +155,8 @@ public class PreemptiveVisibilityContradictionRule extends ContradictionRule {
             rowContradiction =
                     rowContradiction
                             && (rowTooFew == null
-                                    || rowTooMany
-                                            == null); // !null means there isn't a contradiction, so
+                            || rowTooMany
+                            == null); // !null means there isn't a contradiction, so
             // there must be a valid
             // permutation of the array
         }

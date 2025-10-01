@@ -5,6 +5,7 @@ import edu.rpi.legup.model.gameboard.CaseBoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.rules.CaseRule;
 import edu.rpi.legup.model.tree.TreeTransition;
+
 import java.util.List;
 
 public class WhiteSplitCaseRule extends CaseRule {
@@ -30,10 +31,10 @@ public class WhiteSplitCaseRule extends CaseRule {
      * puzzleElement index using this rule. This method is the one that should overridden in child
      * classes.
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -56,7 +57,7 @@ public class WhiteSplitCaseRule extends CaseRule {
      * Gets the possible cases for this {@link Board} at a specific {@link PuzzleElement} based on
      * this case rule.
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement equivalent puzzleElement
      * @return a list of elements the specified could be
      */

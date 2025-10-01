@@ -2,6 +2,7 @@ package edu.rpi.legup.model.tree;
 
 import edu.rpi.legup.model.gameboard.Board;
 import edu.rpi.legup.utility.DisjointSets;
+
 import java.util.*;
 
 /**
@@ -48,7 +49,7 @@ public class TreeNode extends TreeElement {
      * and justified correctly
      *
      * @return true if this tree puzzleElement and all descendants of this tree puzzleElement is
-     *     valid, false otherwise
+     * valid, false otherwise
      */
     @Override
     public boolean isValidBranch() {

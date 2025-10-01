@@ -5,6 +5,7 @@ import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.rules.CaseRule;
 import edu.rpi.legup.model.rules.Rule;
 import edu.rpi.legup.model.rules.RuleType;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +43,7 @@ public class TreeTransition extends TreeElement {
      * TreeTransition Constructor - create a transition from one node to another
      *
      * @param parent parent tree node associated with the transition
-     * @param board board state of the transition
+     * @param board  board state of the transition
      */
     public TreeTransition(TreeNode parent, Board board) {
         this(board);
@@ -266,7 +267,7 @@ public class TreeTransition extends TreeElement {
      * and justified correctly
      *
      * @return true if this tree puzzleElement and all descendants of this tree puzzleElement is
-     *     valid, false otherwise
+     * valid, false otherwise
      */
     @Override
     public boolean isValidBranch() {

@@ -10,10 +10,10 @@ public class CaseRuleOr extends CaseRule_GenericStatement {
     }
 
     private static final ShortTruthTableCellType[][] trueCases = {
-        {T, U},
-        {U, T}
+            {T, U},
+            {U, T}
     };
     private static final ShortTruthTableCellType[][] falseCases = {
-        {F, F},
+            {F, F},
     };
 }

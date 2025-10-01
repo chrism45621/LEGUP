@@ -6,7 +6,9 @@ import edu.rpi.legup.model.rules.MergeRule;
 import edu.rpi.legup.model.rules.Rule;
 import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.util.*;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Element;
@@ -40,7 +42,7 @@ public abstract class PuzzleImporter {
     /**
      * Initializes an empty puzzle
      *
-     * @param rows number of rows on the puzzle
+     * @param rows    number of rows on the puzzle
      * @param columns number of columns on the puzzle
      * @throws RuntimeException if puzzle can not be made
      */
@@ -56,9 +58,9 @@ public abstract class PuzzleImporter {
      * Initializes the puzzle with the given array of statements
      *
      * @param statements the statements used to initialize the puzzle
-     * @throws InputMismatchException if the input statements are invalid
+     * @throws InputMismatchException   if the input statements are invalid
      * @throws IllegalArgumentException if the statements are not suitable for initializing the
-     *     puzzle
+     *                                  puzzle
      */
     public void initializePuzzle(String[] statements)
             throws InputMismatchException, IllegalArgumentException {
@@ -131,7 +133,7 @@ public abstract class PuzzleImporter {
     /**
      * Initializes the board with the specified number of rows and columns.
      *
-     * @param rows the number of rows on the puzzle
+     * @param rows    the number of rows on the puzzle
      * @param columns the number of columns on the puzzle
      * @throws RuntimeException if the board cannot be created with the provided dimensions
      */
@@ -150,8 +152,8 @@ public abstract class PuzzleImporter {
      *
      * @param statements the statements used to initialize the board
      * @throws UnsupportedOperationException if the operation is not supported
-     * @throws IllegalArgumentException if the statements are not suitable for initializing the
-     *     board
+     * @throws IllegalArgumentException      if the statements are not suitable for initializing the
+     *                                       board
      */
     public abstract void initializeBoard(String[] statements)
             throws UnsupportedOperationException, IllegalArgumentException;
@@ -162,7 +164,7 @@ public abstract class PuzzleImporter {
      * <p>Make sure the list elements are lowercase
      *
      * @return A list of elements that will change when solving the puzzle * e.g. {"cell"}, {"cell",
-     *     "line"}
+     * "line"}
      */
     public List<String> getImporterElements() {
         List<String> elements = new ArrayList<>();
@@ -397,10 +399,10 @@ public abstract class PuzzleImporter {
     /**
      * Updates the board state based on the changes specified in the TreeTransition.
      *
-     * @param transition the TreeTransition object representing the transition to be updated
+     * @param transition   the TreeTransition object representing the transition to be updated
      * @param transElement the XML node containing the transition data
      * @throws InvalidFileFormatException if the XML node format is incorrect or unknown nodes are
-     *     encountered
+     *                                    encountered
      */
     protected void makeTransitionChanges(TreeTransition transition, Node transElement)
             throws InvalidFileFormatException {

@@ -4,6 +4,7 @@ import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.tree.TreeNode;
 import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.save.ExportFileException;
+
 import java.io.File;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -17,6 +18,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
@@ -49,7 +51,7 @@ public abstract class PuzzleExporter {
      * function to prevent cheating
      *
      * @param solved the solved state of the board, true if solved
-     * @param date the current date and time, passed during export
+     * @param date   the current date and time, passed during export
      * @return hash value of time and solved state
      */
     public static int obfHash(boolean solved, String date) {

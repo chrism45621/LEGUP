@@ -8,8 +8,10 @@ import edu.rpi.legup.puzzle.treetent.TreeTentCell;
 import edu.rpi.legup.puzzle.treetent.TreeTentType;
 import edu.rpi.legup.puzzle.treetent.rules.FinishWithTentsDirectRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
 import java.util.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;

@@ -11,6 +11,7 @@ import edu.rpi.legup.model.rules.Rule;
 import edu.rpi.legup.model.rules.RuleType;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreeView;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreeViewSelection;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashMap;
@@ -44,7 +45,8 @@ public class PuzzleKeyAccelerator implements KeyListener {
      * @param e the event to be processed
      */
     @Override
-    public void keyTyped(KeyEvent e) {}
+    public void keyTyped(KeyEvent e) {
+    }
 
     /**
      * Invoked when a key has been pressed. See the class description for {@link KeyEvent} for a
@@ -101,5 +103,6 @@ public class PuzzleKeyAccelerator implements KeyListener {
      * @param e the event to be processed
      */
     @Override
-    public void keyReleased(KeyEvent e) {}
+    public void keyReleased(KeyEvent e) {
+    }
 }

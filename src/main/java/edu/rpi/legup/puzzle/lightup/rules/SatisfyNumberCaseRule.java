@@ -9,6 +9,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.lightup.LightUpBoard;
 import edu.rpi.legup.puzzle.lightup.LightUpCell;
 import edu.rpi.legup.puzzle.lightup.LightUpCellType;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -41,7 +42,7 @@ public class SatisfyNumberCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement puzzleElement to determine the possible cases for
      * @return a list of elements the specified could be
      */
@@ -230,7 +231,7 @@ public class SatisfyNumberCaseRule extends CaseRule {
                                     LightUpCell posCell = (LightUpCell) posEle;
                                     if (actCell.getType() == posCell.getType()
                                             && actCell.getLocation()
-                                                    .equals(posCell.getLocation())) {
+                                            .equals(posCell.getLocation())) {
                                         foundCell = true;
                                         break;
                                     }
@@ -263,10 +264,10 @@ public class SatisfyNumberCaseRule extends CaseRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement index of the puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -278,7 +279,7 @@ public class SatisfyNumberCaseRule extends CaseRule {
      *
      * @param transition TreeTransition object
      * @return list of cells that are adjacent to all modified cells, returns null if the number of
-     *     modified cells is =0 || >4
+     * modified cells is =0 || >4
      */
     private List<LightUpCell> getPossibleSpots(TreeTransition transition) {
         LightUpBoard board = (LightUpBoard) transition.getBoard();
@@ -324,10 +325,10 @@ public class SatisfyNumberCaseRule extends CaseRule {
      * Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be
      * valid Overridden by case rules dependent on more than just the modified data
      *
-     * @param board board state at application
+     * @param board         board state at application
      * @param puzzleElement selected puzzleElement
      * @return List of puzzle elements (typically cells) this application of the case rule depends
-     *     upon. Defaults to any element modified by any case
+     * upon. Defaults to any element modified by any case
      */
     @Override
     public List<PuzzleElement> dependentElements(Board board, PuzzleElement puzzleElement) {

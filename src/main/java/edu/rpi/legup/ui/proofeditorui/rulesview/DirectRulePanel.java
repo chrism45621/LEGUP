@@ -1,6 +1,7 @@
 package edu.rpi.legup.ui.proofeditorui.rulesview;
 
 import javax.swing.ImageIcon;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

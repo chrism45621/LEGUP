@@ -16,7 +16,9 @@ public class Masyu extends Puzzle {
         this.factory = new MasyuCellFactory();
     }
 
-    /** Initializes the game board. Called by the invoker of the class */
+    /**
+     * Initializes the game board. Called by the invoker of the class
+     */
     @Override
     public void initializeView() {
         boardView = new MasyuView((MasyuBoard) currentBoard);
@@ -63,5 +65,6 @@ public class Masyu extends Puzzle {
      * @param board the board that has changed
      */
     @Override
-    public void onBoardChange(Board board) {}
+    public void onBoardChange(Board board) {
+    }
 }

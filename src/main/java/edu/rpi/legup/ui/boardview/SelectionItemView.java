@@ -1,6 +1,7 @@
 package edu.rpi.legup.ui.boardview;
 
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import javax.swing.*;
 
 /**
@@ -27,7 +28,7 @@ public class SelectionItemView extends JMenuItem {
      * Constructs a SelectionItemView with the specified PuzzleElement and display text. Initializes
      * the menu item with the given display text and associates it with the provided PuzzleElement.
      *
-     * @param data the PuzzleElement associated with this menu item
+     * @param data    the PuzzleElement associated with this menu item
      * @param display the text to be displayed on the menu item
      */
     public SelectionItemView(PuzzleElement data, String display) {
@@ -40,7 +41,7 @@ public class SelectionItemView extends JMenuItem {
      * Initializes the menu item with the integer converted to a string and associates it with the
      * provided PuzzleElement.
      *
-     * @param data the PuzzleElement associated with this menu item
+     * @param data    the PuzzleElement associated with this menu item
      * @param display the integer to be displayed on the menu item
      */
     public SelectionItemView(PuzzleElement data, int display) {

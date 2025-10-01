@@ -8,7 +8,9 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.puzzle.nurikabe.rules.WhiteBottleNeckDirectRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -26,7 +28,9 @@ public class WhiteBottleNeckDirectRuleTest {
         nurikabe = new Nurikabe();
     }
 
-    /** Tests the White BottleNeck direct rule for a bottleneck in the middle of the board */
+    /**
+     * Tests the White BottleNeck direct rule for a bottleneck in the middle of the board
+     */
     @Test
     public void WhiteBottleNeckDirectRule_SimpleWhiteBottleNeckTest()
             throws InvalidFileFormatException {
@@ -55,7 +59,9 @@ public class WhiteBottleNeckDirectRuleTest {
         }
     }
 
-    /** Tests the White BottleNeck direct rule for a more complex board */
+    /**
+     * Tests the White BottleNeck direct rule for a more complex board
+     */
     @Test
     public void WhiteBottleNeckDirectRule_NurikabeBoard1Test() throws InvalidFileFormatException {
         TestUtilities.importTestBoard(
@@ -78,7 +84,9 @@ public class WhiteBottleNeckDirectRuleTest {
         }
     }
 
-    /** Tests the White BottleNeck direct rule for a more false bottle neck */
+    /**
+     * Tests the White BottleNeck direct rule for a more false bottle neck
+     */
     @Test
     public void WhiteBottleNeckDirectRule_FalseBottleNeck() throws InvalidFileFormatException {
         TestUtilities.importTestBoard(

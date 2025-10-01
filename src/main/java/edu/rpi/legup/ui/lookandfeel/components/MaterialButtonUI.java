@@ -3,6 +3,7 @@ package edu.rpi.legup.ui.lookandfeel.components;
 import edu.rpi.legup.ui.lookandfeel.animation.MaterialUIMovement;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialColors;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialDrawingUtils;
+
 import java.awt.Graphics;
 import javax.swing.AbstractButton;
 import javax.swing.JComponent;

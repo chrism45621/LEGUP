@@ -8,6 +8,7 @@ import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.observer.IBoardListener;
 import edu.rpi.legup.model.tree.TreeElement;
 import edu.rpi.legup.ui.ScrollView;
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -26,7 +27,7 @@ public abstract class BoardView extends ScrollView implements IBoardListener {
      * BoardView Constructor creates a view for the board object using the controller handle the ui
      * events
      *
-     * @param boardController controller that handles the ui events
+     * @param boardController   controller that handles the ui events
      * @param elementController controller that handles the ui events
      */
     public BoardView(BoardController boardController, ElementController elementController) {
@@ -43,7 +44,9 @@ public abstract class BoardView extends ScrollView implements IBoardListener {
         addKeyListener(elementController);
     }
 
-    /** Initializes the initial dimension of the viewport for the BoardView */
+    /**
+     * Initializes the initial dimension of the viewport for the BoardView
+     */
     public abstract void initSize();
 
     /**
@@ -129,7 +132,9 @@ public abstract class BoardView extends ScrollView implements IBoardListener {
         }
     }
 
-    /** Configures the view to handle case interactions */
+    /**
+     * Configures the view to handle case interactions
+     */
     protected void setCasePickable() {
         CaseBoard caseBoard = (CaseBoard) board;
         Board baseBoard = caseBoard.getBaseBoard();

@@ -12,7 +12,7 @@ public class SearchBarPanel extends RulePanel {
      * SearchBarPanel Constructor creates a SearchBarPanel
      *
      * @param ruleFrame rule frame that this SearchBarPanel is contained in
-     *     <p>This class is used to create a panel named "search bar"
+     *                  <p>This class is used to create a panel named "search bar"
      */
     SearchBarPanel(RuleFrame ruleFrame) {
         super(ruleFrame);

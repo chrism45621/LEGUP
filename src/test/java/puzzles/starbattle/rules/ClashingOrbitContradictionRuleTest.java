@@ -7,7 +7,9 @@ import edu.rpi.legup.puzzle.starbattle.StarBattleBoard;
 import edu.rpi.legup.puzzle.starbattle.StarBattleCell;
 import edu.rpi.legup.puzzle.starbattle.rules.ClashingOrbitContradictionRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;

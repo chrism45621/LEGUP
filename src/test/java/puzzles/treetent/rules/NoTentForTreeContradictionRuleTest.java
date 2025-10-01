@@ -6,7 +6,9 @@ import edu.rpi.legup.puzzle.treetent.TreeTent;
 import edu.rpi.legup.puzzle.treetent.TreeTentBoard;
 import edu.rpi.legup.puzzle.treetent.rules.NoTentForTreeContradictionRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -26,7 +28,7 @@ public class NoTentForTreeContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests if a tree is next to only grass in a 2x2 grid
-     *     triggers the contradiction
+     *                                    triggers the contradiction
      */
     @Test
     public void NoTentForTreeContradictionRule_Basic() throws InvalidFileFormatException {
@@ -47,7 +49,7 @@ public class NoTentForTreeContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests similarly to above, but now with a tent diagonally
-     *     next to the tree, which should still contradict
+     *                                    next to the tree, which should still contradict
      */
     @Test
     public void NoTentForTreeContradictionRule_Diagonal() throws InvalidFileFormatException {
@@ -90,7 +92,7 @@ public class NoTentForTreeContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests similarly to above, but now with a tent diagonally
-     *     next to two trees, which should still contradict on one.
+     *                                    next to two trees, which should still contradict on one.
      */
     @Test
     public void NoTentForTreeContradictionRule_TwoTreesDiagonal()

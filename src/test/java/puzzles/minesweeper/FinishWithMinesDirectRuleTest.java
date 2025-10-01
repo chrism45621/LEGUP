@@ -5,7 +5,9 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.minesweeper.*;
 import edu.rpi.legup.puzzle.minesweeper.rules.FinishWithMinesDirectRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;

@@ -10,7 +10,9 @@ import puzzles.minesweeper.MinesweeperUtilitiesTest;
 import puzzles.nurikabe.rules.*;
 import puzzles.treetent.rules.*;
 
-/** This class runs all of the tests for the project without needing to run build scripts. */
+/**
+ * This class runs all of the tests for the project without needing to run build scripts.
+ */
 public class TestRunner {
     public static void main(String[] args) {
         // Battleship Tests

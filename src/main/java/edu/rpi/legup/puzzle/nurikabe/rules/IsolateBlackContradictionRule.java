@@ -8,6 +8,7 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeUtilities;
 import edu.rpi.legup.utility.DisjointSets;
+
 import java.util.Set;
 
 public class IsolateBlackContradictionRule extends ContradictionRule {
@@ -28,10 +29,10 @@ public class IsolateBlackContradictionRule extends ContradictionRule {
      * Checks whether the transition has a contradiction at the specific {@link PuzzleElement} index
      * using this rule.
      *
-     * @param board board to check contradiction
+     * @param board         board to check contradiction
      * @param puzzleElement equivalent puzzleElement
      * @return <code>null</code> if the transition contains a contradiction at the specified {@link
-     *     PuzzleElement}, otherwise return a no contradiction message.
+     * PuzzleElement}, otherwise return a no contradiction message.
      */
     @Override
     public String checkContradictionAt(Board board, PuzzleElement puzzleElement) {

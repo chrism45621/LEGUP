@@ -9,7 +9,9 @@ import edu.rpi.legup.puzzle.treetent.TreeTentCell;
 import edu.rpi.legup.puzzle.treetent.TreeTentLine;
 import edu.rpi.legup.puzzle.treetent.rules.LinkTreeCaseRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.util.ArrayList;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;

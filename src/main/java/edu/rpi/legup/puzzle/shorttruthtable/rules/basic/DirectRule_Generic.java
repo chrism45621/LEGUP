@@ -63,7 +63,7 @@ public abstract class DirectRule_Generic extends DirectRule {
         ShortTruthTableCell checkCell =
                 this.ELIMINATION_RULE
                         ? (ShortTruthTableCell)
-                                modifiedBoard.getCell(parentCell.getX(), parentCell.getY())
+                        modifiedBoard.getCell(parentCell.getX(), parentCell.getY())
                         : (ShortTruthTableCell) modifiedBoard.getPuzzleElement(element);
 
         checkCell.setType(finalCell.getType().getNegation());

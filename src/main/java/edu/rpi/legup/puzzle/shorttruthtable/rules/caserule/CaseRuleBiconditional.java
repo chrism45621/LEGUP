@@ -15,11 +15,11 @@ public class CaseRuleBiconditional extends CaseRule_GenericStatement {
     }
 
     private static final ShortTruthTableCellType[][] trueCases = {
-        {T, T},
-        {F, F}
+            {T, T},
+            {F, F}
     };
     private static final ShortTruthTableCellType[][] falseCases = {
-        {T, F},
-        {F, T}
+            {T, F},
+            {F, T}
     };
 }

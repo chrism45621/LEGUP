@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.thermometer;
 
 import edu.rpi.legup.controller.BoardController;
 import edu.rpi.legup.ui.boardview.GridBoardView;
+
 import java.awt.*;
 
 public class ThermometerView extends GridBoardView {

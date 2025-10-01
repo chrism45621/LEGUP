@@ -8,6 +8,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.skyscrapers.SkyscrapersBoard;
 import edu.rpi.legup.puzzle.skyscrapers.SkyscrapersCell;
 import edu.rpi.legup.puzzle.skyscrapers.SkyscrapersType;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -40,7 +41,7 @@ public class NumberForCellCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement puzzleElement to determine the possible cases for
      * @return a list of elements the specified could be
      */
@@ -96,14 +97,14 @@ public class NumberForCellCaseRule extends CaseRule {
         } else {
             if (childTransitions.size()
                     != getCases(
-                                    transition.getBoard(),
-                                    childTransitions
-                                            .get(0)
-                                            .getBoard()
-                                            .getModifiedData()
-                                            .iterator()
-                                            .next())
-                            .size()) {
+                    transition.getBoard(),
+                    childTransitions
+                            .get(0)
+                            .getBoard()
+                            .getModifiedData()
+                            .iterator()
+                            .next())
+                    .size()) {
                 return "Wrong number of children.";
             }
         }
@@ -138,10 +139,10 @@ public class NumberForCellCaseRule extends CaseRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement index of the puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -152,10 +153,10 @@ public class NumberForCellCaseRule extends CaseRule {
      * Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be
      * valid Overridden by case rules dependent on more than just the modified data
      *
-     * @param board board state at application
+     * @param board         board state at application
      * @param puzzleElement selected puzzleElement
      * @return List of puzzle elements (typically cells) this application of the case rule depends
-     *     upon. Defaults to any element modified by any case
+     * upon. Defaults to any element modified by any case
      */
     @Override
     public List<PuzzleElement> dependentElements(Board board, PuzzleElement puzzleElement) {

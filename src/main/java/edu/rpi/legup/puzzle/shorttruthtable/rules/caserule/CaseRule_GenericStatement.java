@@ -8,6 +8,7 @@ import edu.rpi.legup.puzzle.shorttruthtable.ShortTruthTableCell;
 import edu.rpi.legup.puzzle.shorttruthtable.ShortTruthTableCellType;
 import edu.rpi.legup.puzzle.shorttruthtable.ShortTruthTableOperation;
 import edu.rpi.legup.puzzle.shorttruthtable.ShortTruthTableStatement;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,10 +64,10 @@ public abstract class CaseRule_GenericStatement extends CaseRule_Generic {
                     .isTrueOrFalse()) continue;
             if (this.operation != ShortTruthTableOperation.NOT
                     && cell.getStatementReference()
-                            .getRightStatement()
-                            .getCell()
-                            .getType()
-                            .isTrueOrFalse()) {
+                    .getRightStatement()
+                    .getCell()
+                    .getType()
+                    .isTrueOrFalse()) {
                 continue;
             }
             // if the element has passed all the checks, it can be selected
@@ -78,7 +79,7 @@ public abstract class CaseRule_GenericStatement extends CaseRule_Generic {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement equivalent puzzleElement
      * @return a list of elements the specified could be
      */
@@ -103,7 +104,7 @@ public abstract class CaseRule_GenericStatement extends CaseRule_Generic {
     /**
      * Collects a list of boards for each possible outcome of case-rule application
      *
-     * @param board current board state
+     * @param board         current board state
      * @param puzzleElement case rule operator
      * @param possibilities list of possibilities for operator state
      * @return ArrayList of Boards
@@ -141,10 +142,10 @@ public abstract class CaseRule_GenericStatement extends CaseRule_Generic {
      * Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be
      * valid Overridden by case rules dependent on more than just the modified data
      *
-     * @param board board state at application
+     * @param board         board state at application
      * @param puzzleElement selected puzzleElement
      * @return List of puzzle elements (typically cells) this application of the case rule depends
-     *     upon. Defaults to any element modified by any case
+     * upon. Defaults to any element modified by any case
      */
     @Override
     public List<PuzzleElement> dependentElements(Board board, PuzzleElement puzzleElement) {

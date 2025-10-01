@@ -16,5 +16,6 @@ public class MaterialBorders {
     public static final Border DEFAULT_SHADOW_BORDER =
             new DropShadowBorder(Color.BLACK, 5, 5, 0.3f, 12, true, true, true, true);
 
-    private MaterialBorders() {}
+    private MaterialBorders() {
+    }
 }

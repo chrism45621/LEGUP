@@ -13,7 +13,9 @@ public abstract class GridRegion<T> {
 
     protected List<T> regionCells;
 
-    /** Region Constructor */
+    /**
+     * Region Constructor
+     */
     public GridRegion() {
         this.regionCells = new ArrayList<>();
     }

@@ -9,6 +9,7 @@ import edu.rpi.legup.puzzle.treetent.TreeTentBoard;
 import edu.rpi.legup.puzzle.treetent.TreeTentCell;
 import edu.rpi.legup.puzzle.treetent.TreeTentLine;
 import edu.rpi.legup.puzzle.treetent.TreeTentType;
+
 import java.awt.*;
 import java.util.List;
 
@@ -26,10 +27,10 @@ public class FinishWithGrassDirectRule extends DirectRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {

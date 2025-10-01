@@ -2,6 +2,7 @@ package edu.rpi.legup.ui.lookandfeel.components;
 
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialColors;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialDrawingUtils;
+
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JComponent;
@@ -122,7 +123,8 @@ public class MaterialSliderUI extends BasicSliderUI {
     }
 
     @Override
-    public void paintFocus(Graphics g) {}
+    public void paintFocus(Graphics g) {
+    }
 
     @Override
     public void paint(Graphics g, JComponent c) {

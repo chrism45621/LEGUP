@@ -8,7 +8,8 @@ public class ShortTruthTableOperation {
     public static final char CONDITIONAL = '>';
     public static final char BICONDITIONAL = '-';
 
-    private ShortTruthTableOperation() {}
+    private ShortTruthTableOperation() {
+    }
 
     public static String getLogicSymbol(char c) {
         switch (c) {

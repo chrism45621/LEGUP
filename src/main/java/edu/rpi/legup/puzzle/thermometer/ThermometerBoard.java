@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.thermometer;
 
 import edu.rpi.legup.model.gameboard.GridBoard;
+
 import java.awt.*;
 import java.util.ArrayList;
 

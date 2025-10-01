@@ -6,11 +6,13 @@ import edu.rpi.legup.app.GameBoardFacade;
 import edu.rpi.legup.app.LegupPreferences;
 import edu.rpi.legup.ui.boardview.BoardView;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreePanel;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.security.InvalidParameterException;
 import java.util.Objects;
 import javax.swing.*;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -41,7 +43,9 @@ public class LegupUI extends JFrame implements WindowListener {
         return os;
     }
 
-    /** LegupUI Constructor - creates a new LegupUI to set up the menu and toolbar */
+    /**
+     * LegupUI Constructor - creates a new LegupUI to set up the menu and toolbar
+     */
     public LegupUI() {
         setTitle("LEGUP");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,11 +68,11 @@ public class LegupUI extends JFrame implements WindowListener {
 
         setIconImage(
                 new ImageIcon(
-                                Objects.requireNonNull(
-                                        ClassLoader.getSystemClassLoader()
-                                                .getResource(
-                                                        "edu/rpi/legup/images/Legup/Direct"
-                                                                + " Rules.gif")))
+                        Objects.requireNonNull(
+                                ClassLoader.getSystemClassLoader()
+                                        .getResource(
+                                                "edu/rpi/legup/images/Legup/Direct"
+                                                        + " Rules.gif")))
                         .getImage());
 
         if (LegupPreferences.getInstance()
@@ -96,7 +100,9 @@ public class LegupUI extends JFrame implements WindowListener {
         setVisible(true);
     }
 
-    /** Initializes the panels used in the UI. Sets up the layout and adds panels to the window. */
+    /**
+     * Initializes the panels used in the UI. Sets up the layout and adds panels to the window.
+     */
     private void initPanels() {
         window = new JPanel();
         window.setLayout(new BorderLayout());
@@ -145,7 +151,9 @@ public class LegupUI extends JFrame implements WindowListener {
         return (PuzzleEditorPanel) panels[2];
     }
 
-    /** Repaints the tree view in the proof editor. */
+    /**
+     * Repaints the tree view in the proof editor.
+     */
     public void repaintTree() {
         getProofEditor().repaintTree();
     }
@@ -174,7 +182,8 @@ public class LegupUI extends JFrame implements WindowListener {
     }
 
     @Override
-    public void windowOpened(WindowEvent e) {}
+    public void windowOpened(WindowEvent e) {
+    }
 
     public void windowClosing(WindowEvent e) {
         if (GameBoardFacade.getInstance().getHistory().getIndex() > -1) {
@@ -192,13 +201,17 @@ public class LegupUI extends JFrame implements WindowListener {
         System.exit(0);
     }
 
-    public void windowIconified(WindowEvent e) {}
+    public void windowIconified(WindowEvent e) {
+    }
 
-    public void windowDeiconified(WindowEvent e) {}
+    public void windowDeiconified(WindowEvent e) {
+    }
 
-    public void windowActivated(WindowEvent e) {}
+    public void windowActivated(WindowEvent e) {
+    }
 
-    public void windowDeactivated(WindowEvent e) {}
+    public void windowDeactivated(WindowEvent e) {
+    }
 
     /**
      * Gets the BoardView instance from the proof editor

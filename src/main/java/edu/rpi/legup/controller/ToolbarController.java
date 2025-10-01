@@ -1,6 +1,7 @@
 package edu.rpi.legup.controller;
 
 import edu.rpi.legup.ui.LegupUI;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -23,5 +24,6 @@ public class ToolbarController implements ActionListener {
      * @param e action event
      */
     @Override
-    public void actionPerformed(ActionEvent e) {}
+    public void actionPerformed(ActionEvent e) {
+    }
 }

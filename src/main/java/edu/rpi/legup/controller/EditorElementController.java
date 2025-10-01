@@ -4,6 +4,7 @@ import edu.rpi.legup.history.*;
 import edu.rpi.legup.model.elements.Element;
 import edu.rpi.legup.model.rules.*;
 import edu.rpi.legup.ui.puzzleeditorui.elementsview.ElementButton;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

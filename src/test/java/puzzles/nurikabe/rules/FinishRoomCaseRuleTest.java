@@ -7,9 +7,11 @@ import edu.rpi.legup.puzzle.nurikabe.*;
 import edu.rpi.legup.puzzle.nurikabe.rules.FinishRoomCaseRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
 import edu.rpi.legup.utility.DisjointSets;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Set;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -27,7 +29,9 @@ public class FinishRoomCaseRuleTest {
         nurikabe = new Nurikabe();
     }
 
-    /** Tests the Finish Room case rule by ensuring it produces the correct number of children */
+    /**
+     * Tests the Finish Room case rule by ensuring it produces the correct number of children
+     */
     @Test
     public void FinishRoomCaseRule_FinishRoomCaseRuleBaseTest() throws InvalidFileFormatException {
         TestUtilities.importTestBoard(

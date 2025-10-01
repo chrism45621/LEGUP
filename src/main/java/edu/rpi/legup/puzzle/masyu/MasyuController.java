@@ -7,6 +7,7 @@ import edu.rpi.legup.controller.ElementController;
 import edu.rpi.legup.model.Puzzle;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.ui.boardview.BoardView;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -88,7 +89,7 @@ public class MasyuController extends ElementController {
     /**
      * Alters the cells as they are being dragged over or clicked
      *
-     * @param e Mouse event being used
+     * @param e    Mouse event being used
      * @param data Data of selected cell
      */
     @Override

@@ -3,6 +3,7 @@ package edu.rpi.legup.model.tree;
 import edu.rpi.legup.controller.TreeController;
 import edu.rpi.legup.model.gameboard.Board;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreeView;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -25,7 +26,9 @@ public class Tree {
         this.rootNode.setRoot(true);
     }
 
-    /** Tree Constructor creates the tree structure with null root node */
+    /**
+     * Tree Constructor creates the tree structure with null root node
+     */
     public Tree() {
         this.rootNode = null;
     }
@@ -65,7 +68,7 @@ public class Tree {
     /**
      * Adds a tree node and its associated transition to the tree.
      *
-     * @param treeNode the tree node to add
+     * @param treeNode   the tree node to add
      * @param transition the transition to associate with the node
      * @return the added transition
      */
@@ -79,7 +82,7 @@ public class Tree {
      * Adds a transition and its associated tree node to the tree.
      *
      * @param transition the transition to add
-     * @param treeNode the tree node to associate with the transition
+     * @param treeNode   the tree node to associate with the transition
      * @return the added tree node
      */
     public TreeElement addTreeElement(TreeTransition transition, TreeNode treeNode) {
@@ -146,7 +149,7 @@ public class Tree {
     /**
      * Recursively gets a Set of TreeNodes that are leaf nodes
      *
-     * @param leafs Set of TreeNodes that are leaf nodes
+     * @param leafs   Set of TreeNodes that are leaf nodes
      * @param element current TreeNode being evaluated
      */
     private void getLeafTreeElements(Set<TreeElement> leafs, TreeElement element) {
@@ -177,7 +180,7 @@ public class Tree {
      *
      * @param nodes list of tree nodes to find the LCA
      * @return the first ancestor node that all tree nodes have in common, otherwise null if none
-     *     exists
+     * exists
      */
     public static TreeNode getLowestCommonAncestor(List<TreeNode> nodes) {
         if (nodes.isEmpty()) {

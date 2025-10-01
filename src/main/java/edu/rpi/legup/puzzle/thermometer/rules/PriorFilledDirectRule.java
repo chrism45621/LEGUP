@@ -9,6 +9,7 @@ import edu.rpi.legup.puzzle.thermometer.ThermometerBoard;
 import edu.rpi.legup.puzzle.thermometer.ThermometerCell;
 import edu.rpi.legup.puzzle.thermometer.ThermometerFill;
 import edu.rpi.legup.puzzle.thermometer.ThermometerVial;
+
 import java.util.ArrayList;
 
 // TODO: Rule is untested
@@ -26,10 +27,10 @@ public class PriorFilledDirectRule extends DirectRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
         ThermometerBoard initialBoard =

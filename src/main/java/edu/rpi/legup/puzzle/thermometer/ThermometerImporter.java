@@ -27,7 +27,8 @@ public class ThermometerImporter extends PuzzleImporter {
     }
 
     @Override
-    public void initializeBoard(int rows, int columns) {}
+    public void initializeBoard(int rows, int columns) {
+    }
 
     // method for initializing board from an xml file which has
     // a provided width/height
@@ -121,7 +122,8 @@ public class ThermometerImporter extends PuzzleImporter {
 
     @Override
     public void initializeBoard(String[] statements)
-            throws UnsupportedOperationException, IllegalArgumentException {}
+            throws UnsupportedOperationException, IllegalArgumentException {
+    }
 
     private void importRowColNums(NodeList rowNodes, NodeList colNodes, ThermometerBoard board)
             throws InvalidFileFormatException {

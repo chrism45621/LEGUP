@@ -8,6 +8,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.lightup.LightUpBoard;
 import edu.rpi.legup.puzzle.lightup.LightUpCell;
 import edu.rpi.legup.puzzle.lightup.LightUpCellType;
+
 import java.awt.*;
 
 public class FinishWithEmptyDirectRule extends DirectRule {
@@ -24,10 +25,10 @@ public class FinishWithEmptyDirectRule extends DirectRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement index of the puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -47,10 +48,10 @@ public class FinishWithEmptyDirectRule extends DirectRule {
     /**
      * Checks whether a certain cell is forced to not be a bulb
      *
-     * @param board specified board
+     * @param board    specified board
      * @param location location of cell to check
      * @return boolean value based on whether a certain cell has an adjacent cell that has the
-     *     required amount of adjacent bulbs
+     * required amount of adjacent bulbs
      */
     private boolean isForced(LightUpBoard board, Point location) {
         return isForcedEmpty(board, new Point(location.x + 1, location.y))
@@ -63,9 +64,9 @@ public class FinishWithEmptyDirectRule extends DirectRule {
      * Checks whether a certain cell has the required amount of adjacent bulbs
      *
      * @param board specified board
-     * @param loc location of cell to check
+     * @param loc   location of cell to check
      * @return boolean value based on whether a certain cell has the required amount of adjacent
-     *     bulbs
+     * bulbs
      */
     private boolean isForcedEmpty(LightUpBoard board, Point loc) {
         LightUpCell cell = board.getCell(loc.x, loc.y);

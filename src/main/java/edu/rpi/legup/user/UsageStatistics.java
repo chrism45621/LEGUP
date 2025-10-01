@@ -2,6 +2,7 @@ package edu.rpi.legup.user;
 
 import java.io.IOException;
 import java.io.InputStream;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -13,7 +14,8 @@ public class UsageStatistics {
 
     private static final String url = "https://legup-3b4a5.firebaseio.com/databases/test.json";
 
-    public UsageStatistics() {}
+    public UsageStatistics() {
+    }
 
     public boolean sendErrorReport() {
         try {

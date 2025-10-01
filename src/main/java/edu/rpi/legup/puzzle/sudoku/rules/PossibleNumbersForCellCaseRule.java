@@ -6,6 +6,7 @@ import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.rules.CaseRule;
 import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.sudoku.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,10 +35,10 @@ public class PossibleNumbersForCellCaseRule extends CaseRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -59,7 +60,7 @@ public class PossibleNumbersForCellCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement equivalent puzzleElement
      * @return a list of elements the specified could be
      */
@@ -71,10 +72,10 @@ public class PossibleNumbersForCellCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement equivalent puzzleElement
-     * @param value value that the rule will be applied from
-     * @param groupType group type
+     * @param value         value that the rule will be applied from
+     * @param groupType     group type
      * @return a list of elements the specified could be
      */
     public ArrayList<Board> getCases(

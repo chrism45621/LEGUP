@@ -8,6 +8,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.lightup.LightUpBoard;
 import edu.rpi.legup.puzzle.lightup.LightUpCell;
 import edu.rpi.legup.puzzle.lightup.LightUpCellType;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class LightOrEmptyCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement puzzleElement to determine the possible cases for
      * @return a list of elements the specified could be
      */
@@ -93,7 +94,7 @@ public class LightOrEmptyCaseRule extends CaseRule {
 
         if (!((mod1.getType() == LightUpCellType.EMPTY && mod2.getType() == LightUpCellType.BULB)
                 || (mod2.getType() == LightUpCellType.EMPTY
-                        && mod1.getType() == LightUpCellType.BULB))) {
+                && mod1.getType() == LightUpCellType.BULB))) {
             return super.getInvalidUseOfRuleMessage()
                     + ": This case rule must an empty cell and a bulb cell";
         }
@@ -105,10 +106,10 @@ public class LightOrEmptyCaseRule extends CaseRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement index of the puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {

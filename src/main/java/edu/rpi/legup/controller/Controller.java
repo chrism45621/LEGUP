@@ -1,6 +1,7 @@
 package edu.rpi.legup.controller;
 
 import edu.rpi.legup.ui.ScrollView;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -39,7 +40,8 @@ public abstract class Controller implements MouseMotionListener, MouseListener, 
      * @param e MouseEvent object
      */
     @Override
-    public void mouseClicked(MouseEvent e) {}
+    public void mouseClicked(MouseEvent e) {
+    }
 
     /**
      * Mouse Pressed event sets the cursor to the move cursor and stores info for possible panning
@@ -75,7 +77,8 @@ public abstract class Controller implements MouseMotionListener, MouseListener, 
      * @param e MouseEvent object
      */
     @Override
-    public void mouseEntered(MouseEvent e) {}
+    public void mouseEntered(MouseEvent e) {
+    }
 
     /**
      * Mouse Exited event no default action
@@ -83,7 +86,8 @@ public abstract class Controller implements MouseMotionListener, MouseListener, 
      * @param e MouseEvent object
      */
     @Override
-    public void mouseExited(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {
+    }
 
     /**
      * Mouse Dragged event adjusts the viewport
@@ -108,7 +112,8 @@ public abstract class Controller implements MouseMotionListener, MouseListener, 
      * @param e MouseEvent object
      */
     @Override
-    public void mouseMoved(MouseEvent e) {}
+    public void mouseMoved(MouseEvent e) {
+    }
 
     /**
      * Mouse Wheel Moved event zooms in on the viewport

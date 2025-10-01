@@ -7,6 +7,7 @@ import edu.rpi.legup.model.rules.DirectRule;
 import edu.rpi.legup.model.tree.TreeNode;
 import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.minesweeper.*;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -104,7 +105,7 @@ public class NonTouchingSharedEmptyDirectRule extends DirectRule {
             MinesweeperCell cell = (MinesweeperCell) element;
             if (cell.getTileType() == MinesweeperTileType.UNSET
                     && MinesweeperUtilities.isForcedEmpty(
-                            (MinesweeperBoard) node.getBoard(), cell)) {
+                    (MinesweeperBoard) node.getBoard(), cell)) {
                 cell.setCellType(MinesweeperTileData.empty());
                 minesweeperBoard.addModifiedData(cell);
             }

@@ -3,10 +3,12 @@ package edu.rpi.legup.puzzle.minesweeper;
 import edu.rpi.legup.controller.BoardController;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.ui.boardview.GridBoardView;
+
 import java.awt.*;
 import java.io.IOException;
 import java.util.Objects;
 import javax.imageio.ImageIO;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;

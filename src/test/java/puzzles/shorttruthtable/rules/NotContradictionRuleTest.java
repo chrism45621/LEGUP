@@ -56,9 +56,9 @@ public class NotContradictionRuleTest {
         ShortTruthTableCell a = board.getCell(1, 0);
 
         if ((not.getType() == ShortTruthTableCellType.TRUE
-                        && a.getType() == ShortTruthTableCellType.TRUE)
+                && a.getType() == ShortTruthTableCellType.TRUE)
                 || (not.getType() == ShortTruthTableCellType.FALSE
-                        && a.getType() == ShortTruthTableCellType.FALSE)) {
+                && a.getType() == ShortTruthTableCellType.FALSE)) {
             Assert.assertNull(RULE.checkContradiction(transition.getBoard()));
         } else {
             Assert.assertNotNull(RULE.checkContradiction(transition.getBoard()));

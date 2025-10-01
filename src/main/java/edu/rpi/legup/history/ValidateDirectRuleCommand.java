@@ -6,9 +6,11 @@ import edu.rpi.legup.model.rules.DirectRule;
 import edu.rpi.legup.model.rules.Rule;
 import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -29,7 +31,7 @@ public class ValidateDirectRuleCommand extends PuzzleCommand {
      * ValidateDesireRuleCommand Constructor creates a command for verifying a basic rule
      *
      * @param selection selection of tree elements
-     * @param rule basic rule
+     * @param rule      basic rule
      */
     public ValidateDirectRuleCommand(TreeViewSelection selection, DirectRule rule) {
         this.selection = selection.copy();
@@ -38,7 +40,9 @@ public class ValidateDirectRuleCommand extends PuzzleCommand {
         this.addNode = new HashMap<>();
     }
 
-    /** Executes the command to validate and apply the DirectRule. */
+    /**
+     * Executes the command to validate and apply the DirectRule.
+     */
     @Override
     public void executeCommand() {
         Tree tree = GameBoardFacade.getInstance().getTree();
@@ -118,7 +122,7 @@ public class ValidateDirectRuleCommand extends PuzzleCommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public String getErrorString() {
@@ -143,7 +147,9 @@ public class ValidateDirectRuleCommand extends PuzzleCommand {
         return null;
     }
 
-    /** Undoes the validation command, restoring the previous state. */
+    /**
+     * Undoes the validation command, restoring the previous state.
+     */
     @Override
     public void undoCommand() {
         Tree tree = GameBoardFacade.getInstance().getTree();

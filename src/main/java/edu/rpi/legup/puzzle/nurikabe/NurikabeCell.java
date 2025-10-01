@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.nurikabe;
 
 import edu.rpi.legup.model.elements.Element;
 import edu.rpi.legup.model.gameboard.GridCell;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
@@ -10,7 +11,7 @@ public class NurikabeCell extends GridCell<Integer> {
     /**
      * NurikabeCell Constructor - creates a NurikabeCell from the specified value and location
      *
-     * @param value value of the NurikabeCell
+     * @param value    value of the NurikabeCell
      * @param location position of the NurikabeCell
      */
     public NurikabeCell(int value, Point location) {

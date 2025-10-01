@@ -6,6 +6,7 @@ import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.rules.CaseRule;
 import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.skyscrapers.*;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -112,17 +113,17 @@ public class CellForNumberCaseRule extends CaseRule {
 
         if (childTransitions.size()
                 != getCasesFor(
-                                oldBoard,
-                                oldBoard.getPuzzleElement(transition.getSelection()),
-                                (Integer)
-                                        childTransitions
-                                                .get(0)
-                                                .getBoard()
-                                                .getModifiedData()
-                                                .iterator()
-                                                .next()
-                                                .getData())
-                        .size()) {
+                oldBoard,
+                oldBoard.getPuzzleElement(transition.getSelection()),
+                (Integer)
+                        childTransitions
+                                .get(0)
+                                .getBoard()
+                                .getModifiedData()
+                                .iterator()
+                                .next()
+                                .getData())
+                .size()) {
             // System.out.println("Wrong number of cases.");
             return "Wrong number of cases.";
         }
@@ -152,10 +153,10 @@ public class CellForNumberCaseRule extends CaseRule {
      * Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be
      * valid Overridden by case rules dependent on more than just the modified data
      *
-     * @param board board state at application
+     * @param board         board state at application
      * @param puzzleElement selected puzzleElement
      * @return List of puzzle elements (typically cells) this application of the case rule depends
-     *     upon. Defaults to any element modified by any case
+     * upon. Defaults to any element modified by any case
      */
     @Override
     public List<PuzzleElement> dependentElements(Board board, PuzzleElement puzzleElement) {

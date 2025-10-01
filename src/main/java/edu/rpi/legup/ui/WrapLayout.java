@@ -4,7 +4,9 @@ import java.awt.*;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
-/** FlowLayout subclass that fully supports wrapping of components. */
+/**
+ * FlowLayout subclass that fully supports wrapping of components.
+ */
 public class WrapLayout extends FlowLayout {
     private Dimension preferredLayoutSize;
 
@@ -36,8 +38,8 @@ public class WrapLayout extends FlowLayout {
      * </code>, or <code>WrapLayout</code>.
      *
      * @param align the alignment value
-     * @param hgap the horizontal gap between components
-     * @param vgap the vertical gap between components
+     * @param hgap  the horizontal gap between components
+     * @param vgap  the vertical gap between components
      */
     public WrapLayout(int align, int hgap, int vgap) {
         super(align, hgap, vgap);
@@ -72,7 +74,7 @@ public class WrapLayout extends FlowLayout {
     /**
      * Returns the minimum or preferred dimension needed to layout the target container.
      *
-     * @param target target to get layout dimension for
+     * @param target    target to get layout dimension for
      * @param preferred should preferred dimension be calculated
      * @return the dimension to layout the target container
      */
@@ -151,8 +153,8 @@ public class WrapLayout extends FlowLayout {
      * A new row has been completed. Use the dimensions of this row to update the preferred
      * dimension for the container.
      *
-     * @param dim update the width and height when appropriate
-     * @param rowWidth the width of the row to add
+     * @param dim       update the width and height when appropriate
+     * @param rowWidth  the width of the row to add
      * @param rowHeight the height of the row to add
      */
     private void addRow(Dimension dim, int rowWidth, int rowHeight) {

@@ -10,6 +10,7 @@ import edu.rpi.legup.model.rules.CaseRule;
 import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.boardview.ElementView;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.awt.event.MouseEvent;
 import java.util.*;
 
@@ -32,10 +33,10 @@ public class AutoCaseRuleCommand extends PuzzleCommand {
      * AutoCaseRuleCommand Constructor creates a command for validating a case rule
      *
      * @param elementView currently selected puzzle puzzleElement view that is being edited
-     * @param selection currently selected tree puzzleElement views that is being edited
-     * @param caseRule currently selected caseRule puzzleElement view that is being edited
-     * @param caseBoard currently selected caseBoard puzzleElement view that is being edited
-     * @param mouseEvent currently selected mouseEvent puzzleElement view that is being edited
+     * @param selection   currently selected tree puzzleElement views that is being edited
+     * @param caseRule    currently selected caseRule puzzleElement view that is being edited
+     * @param caseBoard   currently selected caseBoard puzzleElement view that is being edited
+     * @param mouseEvent  currently selected mouseEvent puzzleElement view that is being edited
      */
     public AutoCaseRuleCommand(
             ElementView elementView,
@@ -97,7 +98,7 @@ public class AutoCaseRuleCommand extends PuzzleCommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public String getErrorString() {

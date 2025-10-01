@@ -3,6 +3,7 @@ package edu.rpi.legup.puzzle.skyscrapers;
 import edu.rpi.legup.model.elements.Element;
 import edu.rpi.legup.model.gameboard.GridBoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -162,8 +163,8 @@ public class SkyscrapersBoard extends GridBoard {
      * Gets the cells of a certain type in a given row/column
      *
      * @param index: y pos of row or x pos of col,
-     * @param type of cell to collect,
-     * @param isRow true if row, false if col
+     * @param type   of cell to collect,
+     * @param isRow  true if row, false if col
      * @return list of cells of the given type, ordered west to east or north to south
      */
     public List<SkyscrapersCell> getRowCol(int index, SkyscrapersType type, boolean isRow) {
@@ -183,7 +184,9 @@ public class SkyscrapersBoard extends GridBoard {
         return list;
     }
 
-    /** Prints a semblance of the board to console (helps in debugging) */
+    /**
+     * Prints a semblance of the board to console (helps in debugging)
+     */
     public void printBoard() {
         for (int i = 0; i < this.dimension.height; i++) {
             for (SkyscrapersCell cell : this.getRowCol(i, SkyscrapersType.ANY, true)) {
@@ -202,7 +205,7 @@ public class SkyscrapersBoard extends GridBoard {
      * @param y position of cell
      * @param e Element to be placed (null if nothing selected)
      * @param m MouseEvent Increases clue values if in editor mode. Currently allows for presetting
-     *     tile values, though they will not be saved.
+     *          tile values, though they will not be saved.
      */
     @Override
     public void setCell(int x, int y, Element e, MouseEvent m) {

@@ -6,7 +6,9 @@ import edu.rpi.legup.puzzle.battleship.Battleship;
 import edu.rpi.legup.puzzle.battleship.BattleshipBoard;
 import edu.rpi.legup.puzzle.battleship.rules.AdjacentShipsContradictionRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;

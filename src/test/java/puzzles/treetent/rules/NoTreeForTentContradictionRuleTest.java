@@ -25,7 +25,7 @@ public class NoTreeForTentContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests if, in a 2x2 Grid, a Tent in the NW corner has no
-     *     adjacent trees
+     *                                    adjacent trees
      */
     @Test
     public void NoTreeForTentContradictionRule_NW() throws InvalidFileFormatException {
@@ -46,7 +46,7 @@ public class NoTreeForTentContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests if, in a 2x2 Grid, a Tent in the NE corner has no
-     *     adjacent trees
+     *                                    adjacent trees
      */
     @Test
     public void NoTreeForTentContradictionRule_NE() throws InvalidFileFormatException {
@@ -67,7 +67,7 @@ public class NoTreeForTentContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests if, in a 2x2 Grid, a Tent in the NW corner has no
-     *     adjacent trees
+     *                                    adjacent trees
      */
     @Test
     public void NoTreeForTentContradictionRule_SW() throws InvalidFileFormatException {
@@ -88,7 +88,7 @@ public class NoTreeForTentContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests if, in a 2x2 Grid, a Tent in the SE corner has no
-     *     adjacent trees
+     *                                    adjacent trees
      */
     @Test
     public void NoTreeForTentContradictionRule_SE() throws InvalidFileFormatException {
@@ -109,7 +109,7 @@ public class NoTreeForTentContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests if, in a 3x3 Grid with no trees, a Tent in the
-     *     center cell has no adjacent trees
+     *                                    center cell has no adjacent trees
      */
     @Test
     public void NoTreeForTentContradictionRule_3x3() throws InvalidFileFormatException {
@@ -135,7 +135,7 @@ public class NoTreeForTentContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests if, in a 3x3 Grid with diagonal trees, a Tent in the
-     *     center cell has no adjacent trees
+     *                                    center cell has no adjacent trees
      */
     @Test
     public void NoTreeForTentContradictionRule_3x3WithDiagonalTrees()
@@ -163,7 +163,7 @@ public class NoTreeForTentContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests if, in a 3x3 Grid with an adjacent tree, test does
-     *     not assert null.
+     *                                    not assert null.
      */
     @Test
     public void NoTreeForTentContradictionRule_YesTree() throws InvalidFileFormatException {
@@ -190,7 +190,7 @@ public class NoTreeForTentContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Tests if, in a 3x3 Grid with touching tents, a Tent in the
-     *     center cell has no adjacent trees
+     *                                    center cell has no adjacent trees
      */
     @Test
     public void NoTreeForTentContradictionRule_JustTent() throws InvalidFileFormatException {

@@ -6,7 +6,9 @@ import edu.rpi.legup.puzzle.nurikabe.Nurikabe;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeBoard;
 import edu.rpi.legup.puzzle.nurikabe.rules.TooManySpacesContradictionRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -57,7 +59,9 @@ public class TooManySpacesContradictionRuleTest {
         }
     }
 
-    /** Tests the Too Many Spaces contradiction rule for an extra diagonal space */
+    /**
+     * Tests the Too Many Spaces contradiction rule for an extra diagonal space
+     */
     @Test
     public void TooManySpacesContradictionRule_ExtraDiagonalSpace()
             throws InvalidFileFormatException {

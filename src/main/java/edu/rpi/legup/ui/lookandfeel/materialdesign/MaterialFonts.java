@@ -49,8 +49,8 @@ public class MaterialFonts {
         map.put(TextAttribute.KERNING, TextAttribute.KERNING_ON);
 
         try (InputStream inputStream =
-                MaterialFonts.class.getResourceAsStream(
-                        "/edu/rpi/legup/fonts/Roboto/Roboto-Regular.ttf")) {
+                     MaterialFonts.class.getResourceAsStream(
+                             "/edu/rpi/legup/fonts/Roboto/Roboto-Regular.ttf")) {
             return Font.createFont(Font.TRUETYPE_FONT, inputStream).deriveFont(map);
         } catch (IOException | FontFormatException e) {
             e.printStackTrace();

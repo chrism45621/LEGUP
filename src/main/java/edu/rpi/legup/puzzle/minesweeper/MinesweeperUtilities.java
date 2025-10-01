@@ -3,6 +3,7 @@ package edu.rpi.legup.puzzle.minesweeper;
 import edu.rpi.legup.model.rules.ContradictionRule;
 import edu.rpi.legup.puzzle.minesweeper.rules.TooFewMinesContradictionRule;
 import edu.rpi.legup.puzzle.minesweeper.rules.TooManyMinesContradictionRule;
+
 import java.awt.*;
 import java.util.*;
 import java.util.Objects;
@@ -48,11 +49,11 @@ public final class MinesweeperUtilities {
                 getSurroundingCells(board, cell).map(MinesweeperCell::getData);
         return (int)
                 (switch (type) {
-                            case UNSET -> stream.filter(MinesweeperTileData::isUnset);
-                            case MINE -> stream.filter(MinesweeperTileData::isMine);
-                            case EMPTY -> stream.filter(MinesweeperTileData::isEmpty);
-                            case NUMBER -> stream.filter(MinesweeperTileData::isNumber);
-                        })
+                    case UNSET -> stream.filter(MinesweeperTileData::isUnset);
+                    case MINE -> stream.filter(MinesweeperTileData::isMine);
+                    case EMPTY -> stream.filter(MinesweeperTileData::isEmpty);
+                    case NUMBER -> stream.filter(MinesweeperTileData::isNumber);
+                })
                         .count();
     }
 
@@ -74,7 +75,7 @@ public final class MinesweeperUtilities {
 
     /**
      * @return how many mines are left that need to be placed around {@code cell} which must be a
-     *     flag
+     * flag
      */
     public int countNeededminesFromNumber(MinesweeperBoard board, MinesweeperCell cell) {
         if (!cell.getData().isNumber()) {

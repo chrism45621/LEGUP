@@ -3,6 +3,7 @@ package edu.rpi.legup.puzzle.treetent;
 import edu.rpi.legup.model.gameboard.Board;
 import edu.rpi.legup.model.gameboard.GridBoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -127,7 +128,7 @@ public class TreeTentBoard extends GridBoard {
      * @param cell The cell to get adjacent cells from.
      * @param type The cell types to get.
      * @return List of adjacent cells in the form { up, right, down, left }. If an adjacent cell is
-     *     null, it will not be added to the list.
+     * null, it will not be added to the list.
      */
     public List<TreeTentCell> getAdjacent(TreeTentCell cell, TreeTentType type) {
         List<TreeTentCell> adj = new ArrayList<>();
@@ -147,7 +148,7 @@ public class TreeTentBoard extends GridBoard {
      * @param cell the base cell
      * @param type the type to look for
      * @return a list of TreeTentCells that are diagonals of the given TreeTentCell and are of the
-     *     given TreeTentType
+     * given TreeTentType
      */
     public List<TreeTentCell> getDiagonals(TreeTentCell cell, TreeTentType type) {
         List<TreeTentCell> dia = new ArrayList<>();
@@ -175,7 +176,7 @@ public class TreeTentBoard extends GridBoard {
      * Creates and returns a list of TreeTentCells that match the given TreeTentType
      *
      * @param index the row or column number
-     * @param type type of TreeTent element
+     * @param type  type of TreeTent element
      * @param isRow boolean value based on whether a row of column is being checked
      * @return List of TreeTentCells that match the given TreeTentType
      */

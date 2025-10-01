@@ -5,6 +5,7 @@ import edu.rpi.legup.model.Puzzle;
 import edu.rpi.legup.model.observer.ITreeListener;
 import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.util.List;
 
 /**
@@ -25,7 +26,9 @@ public class DeleteTreeElementCommand extends PuzzleCommand {
         this.selection = selection.copy();
     }
 
-    /** Executes the delete command, removing the selected tree elements from the tree. */
+    /**
+     * Executes the delete command, removing the selected tree elements from the tree.
+     */
     @Override
     public void executeCommand() {
         Tree tree = GameBoardFacade.getInstance().getTree();
@@ -68,7 +71,7 @@ public class DeleteTreeElementCommand extends PuzzleCommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public String getErrorString() {
@@ -86,7 +89,9 @@ public class DeleteTreeElementCommand extends PuzzleCommand {
         return null;
     }
 
-    /** Undoes the delete command, re-adding the previously deleted tree elements. */
+    /**
+     * Undoes the delete command, re-adding the previously deleted tree elements.
+     */
     @Override
     public void undoCommand() {
         Puzzle puzzle = GameBoardFacade.getInstance().getPuzzleModule();

@@ -7,7 +7,9 @@ public class DisjointSets<T> {
     private Map<T, Integer> depths;
     private Map<T, Set<T>> sets;
 
-    /** DisjointSets Constructor creates an empty DisjointSets */
+    /**
+     * DisjointSets Constructor creates an empty DisjointSets
+     */
     public DisjointSets() {
         this.parents = new HashMap<>();
         this.depths = new HashMap<>();
@@ -41,7 +43,7 @@ public class DisjointSets<T> {
      *
      * @param p puzzleElement of the set of which to find
      * @return representative set puzzleElement or null if the specified puzzleElement is null or is
-     *     not in the DisjointSets
+     * not in the DisjointSets
      */
     public T find(T p) {
         if (p == null || parents.get(p) == null) {
@@ -122,7 +124,7 @@ public class DisjointSets<T> {
      *
      * @param p puzzleElement to get the set of
      * @return the set of elements that the specified puzzleElement if contained in, or null if no
-     *     such set exists
+     * such set exists
      */
     public Set<T> getSet(T p) {
         T pid = find(p);

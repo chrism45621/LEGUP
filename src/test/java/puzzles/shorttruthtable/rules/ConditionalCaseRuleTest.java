@@ -9,7 +9,9 @@ import edu.rpi.legup.puzzle.shorttruthtable.ShortTruthTableCell;
 import edu.rpi.legup.puzzle.shorttruthtable.ShortTruthTableCellType;
 import edu.rpi.legup.puzzle.shorttruthtable.rules.caserule.CaseRuleConditional;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.util.ArrayList;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -63,17 +65,17 @@ public class ConditionalCaseRuleTest {
         Assert.assertNotEquals(board1A, board2A);
         Assert.assertTrue(
                 (board1A.equals(ShortTruthTableCellType.UNKNOWN)
-                                && board2A.equals(ShortTruthTableCellType.FALSE))
+                        && board2A.equals(ShortTruthTableCellType.FALSE))
                         || (board1A.equals(ShortTruthTableCellType.FALSE)
-                                && board2A.equals(ShortTruthTableCellType.UNKNOWN)));
+                        && board2A.equals(ShortTruthTableCellType.UNKNOWN)));
 
         // Assert that B is unknown in one board and true in the other
         Assert.assertNotEquals(board1B, board2B);
         Assert.assertTrue(
                 (board1B.equals(ShortTruthTableCellType.UNKNOWN)
-                                && board2B.equals(ShortTruthTableCellType.TRUE))
+                        && board2B.equals(ShortTruthTableCellType.TRUE))
                         || (board1B.equals(ShortTruthTableCellType.TRUE)
-                                && board2B.equals(ShortTruthTableCellType.UNKNOWN)));
+                        && board2B.equals(ShortTruthTableCellType.UNKNOWN)));
 
         // Verify the board dimensions are unchanged
         Assert.assertEquals(caseBoard1.getHeight(), caseBoard2.getHeight(), board.getHeight());

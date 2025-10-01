@@ -2,6 +2,7 @@ package edu.rpi.legup.ui.lookandfeel.components;
 
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialDrawingUtils;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialImages;
+
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;

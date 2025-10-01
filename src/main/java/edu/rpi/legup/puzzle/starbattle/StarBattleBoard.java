@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.starbattle;
 
 import edu.rpi.legup.model.gameboard.GridBoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.util.*;
 
 public class StarBattleBoard extends GridBoard {

@@ -9,7 +9,9 @@ import edu.rpi.legup.puzzle.shorttruthtable.ShortTruthTableCell;
 import edu.rpi.legup.puzzle.shorttruthtable.ShortTruthTableCellType;
 import edu.rpi.legup.puzzle.shorttruthtable.rules.caserule.CaseRuleBiconditional;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.util.ArrayList;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -63,16 +65,16 @@ public class BiconditionalCaseRuleTest {
         Assert.assertEquals(board1A, board1B);
         Assert.assertTrue(
                 (board1A.equals(ShortTruthTableCellType.TRUE)
-                                && board1B.equals(ShortTruthTableCellType.TRUE))
+                        && board1B.equals(ShortTruthTableCellType.TRUE))
                         || (board1A.equals(ShortTruthTableCellType.FALSE)
-                                && board1B.equals(ShortTruthTableCellType.FALSE)));
+                        && board1B.equals(ShortTruthTableCellType.FALSE)));
 
         Assert.assertNotEquals(board1B, board2B);
         Assert.assertTrue(
                 (board2A.equals(ShortTruthTableCellType.TRUE)
-                                && board2B.equals(ShortTruthTableCellType.TRUE))
+                        && board2B.equals(ShortTruthTableCellType.TRUE))
                         || (board2A.equals(ShortTruthTableCellType.FALSE)
-                                && board2B.equals(ShortTruthTableCellType.FALSE)));
+                        && board2B.equals(ShortTruthTableCellType.FALSE)));
 
         // Verify the board dimensions are unchanged
         Assert.assertEquals(caseBoard1.getHeight(), caseBoard2.getHeight(), board.getHeight());
@@ -144,16 +146,16 @@ public class BiconditionalCaseRuleTest {
         Assert.assertNotEquals(board1A, board1B);
         Assert.assertTrue(
                 (board1A.equals(ShortTruthTableCellType.TRUE)
-                                && board1B.equals(ShortTruthTableCellType.FALSE))
+                        && board1B.equals(ShortTruthTableCellType.FALSE))
                         || (board1A.equals(ShortTruthTableCellType.FALSE)
-                                && board1B.equals(ShortTruthTableCellType.TRUE)));
+                        && board1B.equals(ShortTruthTableCellType.TRUE)));
 
         Assert.assertNotEquals(board2A, board2B);
         Assert.assertTrue(
                 (board2A.equals(ShortTruthTableCellType.TRUE)
-                                && board2B.equals(ShortTruthTableCellType.FALSE))
+                        && board2B.equals(ShortTruthTableCellType.FALSE))
                         || (board2A.equals(ShortTruthTableCellType.FALSE)
-                                && board2B.equals(ShortTruthTableCellType.TRUE)));
+                        && board2B.equals(ShortTruthTableCellType.TRUE)));
 
         // Verify the board dimensions are unchanged
         Assert.assertEquals(caseBoard1.getHeight(), caseBoard2.getHeight(), board.getHeight());

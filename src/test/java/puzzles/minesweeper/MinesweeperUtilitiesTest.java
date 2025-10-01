@@ -5,7 +5,9 @@ import edu.rpi.legup.puzzle.minesweeper.MinesweeperBoard;
 import edu.rpi.legup.puzzle.minesweeper.MinesweeperCell;
 import edu.rpi.legup.puzzle.minesweeper.MinesweeperUtilities;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.util.stream.Stream;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;

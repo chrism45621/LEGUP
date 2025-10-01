@@ -8,6 +8,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.binary.BinaryBoard;
 import edu.rpi.legup.puzzle.binary.BinaryCell;
 import edu.rpi.legup.puzzle.binary.BinaryType;
+
 import java.util.ArrayList;
 
 public class UniqueRowColumnDirectRule extends DirectRule {
@@ -41,9 +42,9 @@ public class UniqueRowColumnDirectRule extends DirectRule {
     /**
      * Checks if there is a valid opposite digit to prevent a repeated row/column
      *
-     * @param seq The sequence (row or column) to check
-     * @param origBoard The original board
-     * @param binaryCell The binary cell being checked
+     * @param seq         The sequence (row or column) to check
+     * @param origBoard   The original board
+     * @param binaryCell  The binary cell being checked
      * @param rowOrColumn Flag to indicate whether checking a row (0) or a column (1)
      * @return Null if a valid opposite digit is found, otherwise an error message
      */
@@ -125,11 +126,11 @@ public class UniqueRowColumnDirectRule extends DirectRule {
      * Checks if there is one digit remaining in a sequence that can be filled to avoid repeating
      * another sequence on the board
      *
-     * @param seq The sequence (row or column) to check
-     * @param origBoard The original board
-     * @param binaryCell The binary cell being checked
+     * @param seq         The sequence (row or column) to check
+     * @param origBoard   The original board
+     * @param binaryCell  The binary cell being checked
      * @param rowOrColumn Flag to indicate whether checking a row (0) or a column (1)
-     * @param zeroOrOne Flag to indicate whether checking for 0s (0) or 1s (1)
+     * @param zeroOrOne   Flag to indicate whether checking for 0s (0) or 1s (1)
      * @return Null if the rule can be applied, otherwise an error message
      */
     private String checkRemainingOneDigitDifference(
@@ -205,10 +206,10 @@ public class UniqueRowColumnDirectRule extends DirectRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
         BinaryBoard origBoard = (BinaryBoard) transition.getParents().get(0).getBoard();

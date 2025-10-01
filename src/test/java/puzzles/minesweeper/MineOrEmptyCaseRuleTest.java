@@ -9,8 +9,10 @@ import edu.rpi.legup.puzzle.minesweeper.MinesweeperCell;
 import edu.rpi.legup.puzzle.minesweeper.MinesweeperTileData;
 import edu.rpi.legup.puzzle.minesweeper.rules.MineOrEmptyCaseRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
 import java.util.ArrayList;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -53,9 +55,9 @@ public class MineOrEmptyCaseRuleTest {
 
         Assert.assertTrue(
                 ((board1Type.equals(MinesweeperTileData.mine())
-                                || board1Type.equals(MinesweeperTileData.empty())))
+                        || board1Type.equals(MinesweeperTileData.empty())))
                         && (board2Type.equals(MinesweeperTileData.mine())
-                                || board2Type.equals(MinesweeperTileData.empty())));
+                        || board2Type.equals(MinesweeperTileData.empty())));
         Assert.assertFalse(board1Type.equals(board2Type));
 
         Assert.assertEquals(caseBoard.getHeight(), caseBoard2.getHeight(), board.getHeight());

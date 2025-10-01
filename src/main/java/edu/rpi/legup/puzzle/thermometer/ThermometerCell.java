@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.thermometer;
 
 import edu.rpi.legup.model.gameboard.GridCell;
+
 import java.awt.Point;
 
 public class ThermometerCell extends GridCell<Integer> {

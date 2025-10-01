@@ -4,6 +4,7 @@ import edu.rpi.legup.model.Puzzle;
 import edu.rpi.legup.model.gameboard.Board;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.rules.ContradictionRule;
+
 import java.util.List;
 
 public class TreeTent extends Puzzle {
@@ -19,7 +20,9 @@ public class TreeTent extends Puzzle {
         this.factory = new TreeTentCellFactory();
     }
 
-    /** Initializes the game board. Called by the invoker of the class */
+    /**
+     * Initializes the game board. Called by the invoker of the class
+     */
     @Override
     public void initializeView() {
         TreeTentBoard board = (TreeTentBoard) currentBoard;
@@ -81,7 +84,8 @@ public class TreeTent extends Puzzle {
      * @param board the board that has changed
      */
     @Override
-    public void onBoardChange(Board board) {}
+    public void onBoardChange(Board board) {
+    }
 
     /**
      * @return if it is valid TreeTent puzzle must have same number of clues as the dimension size

@@ -3,6 +3,7 @@ package edu.rpi.legup.puzzle.starbattle;
 import edu.rpi.legup.controller.BoardController;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.ui.boardview.GridBoardView;
+
 import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -78,8 +79,8 @@ public class StarBattleView extends GridBoardView {
         // checks cells adjacent
         // along i (x) instead of j (y)
         for (int j = 0;
-                j < board.getHeight();
-                j++) { // initialize j (y) first since we're checking the opposite axis
+             j < board.getHeight();
+             j++) { // initialize j (y) first since we're checking the opposite axis
             for (int i = 0; i < board.getHeight() + 1; i++) { // +1 to account for sides of board
                 StarBattleBorderView temp =
                         new StarBattleBorderView(

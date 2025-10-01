@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.starbattle;
 
 import edu.rpi.legup.ui.boardview.GridElementView;
+
 import java.awt.*;
 
 public class StarBattleElementView extends GridElementView {

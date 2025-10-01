@@ -5,6 +5,7 @@ import edu.rpi.legup.model.Puzzle;
 import edu.rpi.legup.model.gameboard.Board;
 import edu.rpi.legup.model.rules.Rule;
 import edu.rpi.legup.ui.lookandfeel.components.MaterialTabbedPaneUI;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.*;
@@ -111,17 +112,23 @@ public class RuleFrame extends JPanel {
         contradictionPanel.setSelectionByRule(rule);
     }
 
-    /** Reset the rules button and status string */
+    /**
+     * Reset the rules button and status string
+     */
     public void resetRuleButtons() {
         resetStatus();
     }
 
-    /** Reset the status label to the empty string */
+    /**
+     * Reset the status label to the empty string
+     */
     public void resetStatus() {
         // ((GridUI)GameBoardFacade.getInstance().getLegupUI()).getTreePanel().updateStatus();
     }
 
-    /** Resets the dimension of the rule frame */
+    /**
+     * Resets the dimension of the rule frame
+     */
     public void resetSize() {
         int buttonWidth =
                 ((RulePanel) tabbedPane.getSelectedComponent()).getRuleButtons()[0].getWidth();
@@ -132,7 +139,7 @@ public class RuleFrame extends JPanel {
      * Set the status label to a value. Use resetStatus to clear it.
      *
      * @param check true if we want a checkbox, if false we'll have a red x box
-     * @param text the text we're setting the label to display
+     * @param text  the text we're setting the label to display
      */
     public void setStatus(boolean check, String text) {
         String box = (check ? checkBox : xBox);

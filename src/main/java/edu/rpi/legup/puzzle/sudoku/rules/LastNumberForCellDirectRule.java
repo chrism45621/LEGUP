@@ -7,6 +7,7 @@ import edu.rpi.legup.model.tree.TreeNode;
 import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.sudoku.SudokuBoard;
 import edu.rpi.legup.puzzle.sudoku.SudokuCell;
+
 import java.util.HashSet;
 
 public class LastNumberForCellDirectRule extends DirectRule {
@@ -23,10 +24,10 @@ public class LastNumberForCellDirectRule extends DirectRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
         SudokuBoard initialBoard = (SudokuBoard) transition.getParents().get(0).getBoard();
@@ -68,7 +69,7 @@ public class LastNumberForCellDirectRule extends DirectRule {
         } else {
             if (numbers.size() == 1
                     && numbers.iterator().next()
-                            != finalBoard.getPuzzleElement(puzzleElement).getData()) {
+                    != finalBoard.getPuzzleElement(puzzleElement).getData()) {
                 return super.getInvalidUseOfRuleMessage()
                         + ": The number at the index is forced but not correct";
             }

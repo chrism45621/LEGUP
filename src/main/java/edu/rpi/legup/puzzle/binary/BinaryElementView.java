@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.binary;
 
 import edu.rpi.legup.ui.boardview.GridElementView;
+
 import java.awt.*;
 
 public class BinaryElementView extends GridElementView {
@@ -48,7 +49,7 @@ public class BinaryElementView extends GridElementView {
      * Helper method to handle drawing the cell based on its type and background color
      *
      * @param graphics2D The graphics object to draw on
-     * @param bgColor The background color for the cell
+     * @param bgColor    The background color for the cell
      */
     private void drawCell(Graphics2D graphics2D, Color bgColor) {
         BinaryCell cell = (BinaryCell) puzzleElement;

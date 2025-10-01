@@ -8,7 +8,9 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.puzzle.nurikabe.rules.CannotReachCellDirectRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -26,7 +28,9 @@ public class CannotReachCellDirectRuleTest {
         nurikabe = new Nurikabe();
     }
 
-    /** Tests the Cannot Reach Cell direct rule for a simple unreachable cell */
+    /**
+     * Tests the Cannot Reach Cell direct rule for a simple unreachable cell
+     */
     @Test
     public void CannotReachCellDirectRule_SimpleUnreachableCell()
             throws InvalidFileFormatException {
@@ -54,7 +58,9 @@ public class CannotReachCellDirectRuleTest {
         }
     }
 
-    /** Tests the Cannot Reach Cell direct rule for a more complex board with all cells reachable */
+    /**
+     * Tests the Cannot Reach Cell direct rule for a more complex board with all cells reachable
+     */
     @Test
     public void CannotReachCellDirectRule_AllCellsReachable() throws InvalidFileFormatException {
         TestUtilities.importTestBoard(

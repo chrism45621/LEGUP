@@ -8,6 +8,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.lightup.LightUpBoard;
 import edu.rpi.legup.puzzle.lightup.LightUpCell;
 import edu.rpi.legup.puzzle.lightup.LightUpCellType;
+
 import java.awt.*;
 
 public class MustLightDirectRule extends DirectRule {
@@ -24,10 +25,10 @@ public class MustLightDirectRule extends DirectRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement index of the puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -60,7 +61,7 @@ public class MustLightDirectRule extends DirectRule {
         modifiedCell.setData(LightUpCellType.EMPTY.value);
         // Check if this cell itself (the one with the bulb) has no other lighting option
         if ((modifiedCell.getType() == LightUpCellType.EMPTY
-                        || modifiedCell.getType() == LightUpCellType.UNKNOWN)
+                || modifiedCell.getType() == LightUpCellType.UNKNOWN)
                 && !modifiedCell.isLite()
                 && cannotLite.checkContradictionAt(modifiedBoard, modifiedCell) == null) {
             return true;

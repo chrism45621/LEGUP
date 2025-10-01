@@ -3,6 +3,7 @@ package edu.rpi.legup.puzzle.sudoku;
 import edu.rpi.legup.app.LegupPreferences;
 import edu.rpi.legup.model.gameboard.GridCell;
 import edu.rpi.legup.ui.boardview.GridElementView;
+
 import java.awt.*;
 
 public class SudokuElementView extends GridElementView {

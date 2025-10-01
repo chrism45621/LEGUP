@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.sudoku;
 
 import edu.rpi.legup.model.gameboard.GridBoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.awt.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -40,8 +41,8 @@ public class SudokuBoard extends GridBoard {
      * width (or height) of the board.
      *
      * @param groupIndex group index of the cell
-     * @param x x location relative to the group
-     * @param y y location relative to the group
+     * @param x          x location relative to the group
+     * @param y          y location relative to the group
      * @return cell in the specified group index at the given x and y location
      */
     public SudokuCell getCell(int groupIndex, int x, int y) {

@@ -40,9 +40,9 @@ public class NotIntroductionTest {
         transition.setRule(RULE);
 
         ShortTruthTableCellType[] cellTypes = {
-            ShortTruthTableCellType.TRUE,
-            ShortTruthTableCellType.FALSE,
-            ShortTruthTableCellType.UNKNOWN
+                ShortTruthTableCellType.TRUE,
+                ShortTruthTableCellType.FALSE,
+                ShortTruthTableCellType.UNKNOWN
         };
 
         for (ShortTruthTableCellType cellType : cellTypes) {
@@ -75,9 +75,9 @@ public class NotIntroductionTest {
         transition.setRule(RULE);
 
         ShortTruthTableCellType[] cellTypes = {
-            ShortTruthTableCellType.TRUE,
-            ShortTruthTableCellType.FALSE,
-            ShortTruthTableCellType.UNKNOWN
+                ShortTruthTableCellType.TRUE,
+                ShortTruthTableCellType.FALSE,
+                ShortTruthTableCellType.UNKNOWN
         };
 
         for (ShortTruthTableCellType cellType : cellTypes) {
@@ -111,9 +111,9 @@ public class NotIntroductionTest {
         transition.setRule(RULE);
 
         ShortTruthTableCellType[] cellTypes = {
-            ShortTruthTableCellType.TRUE,
-            ShortTruthTableCellType.FALSE,
-            ShortTruthTableCellType.UNKNOWN
+                ShortTruthTableCellType.TRUE,
+                ShortTruthTableCellType.FALSE,
+                ShortTruthTableCellType.UNKNOWN
         };
 
         for (ShortTruthTableCellType cellType1 : cellTypes) {

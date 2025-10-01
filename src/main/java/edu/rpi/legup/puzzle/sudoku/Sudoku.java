@@ -9,7 +9,9 @@ import edu.rpi.legup.ui.boardview.BoardView;
 public class Sudoku extends Puzzle {
     private SudokuView boardView;
 
-    /** Sudoku Constructor */
+    /**
+     * Sudoku Constructor
+     */
     public Sudoku() {
         super();
 
@@ -25,7 +27,9 @@ public class Sudoku extends Puzzle {
         return boardView;
     }
 
-    /** Initializes the game board */
+    /**
+     * Initializes the game board
+     */
     @Override
     public void initializeView() {
         boardView = new SudokuView((SudokuBoard) currentBoard);
@@ -106,5 +110,6 @@ public class Sudoku extends Puzzle {
      * @param board the board that has changed
      */
     @Override
-    public void onBoardChange(Board board) {}
+    public void onBoardChange(Board board) {
+    }
 }

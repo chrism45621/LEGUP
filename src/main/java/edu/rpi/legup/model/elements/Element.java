@@ -24,10 +24,10 @@ public abstract class Element {
     /**
      * Constructs an Element with the specified ID, name, description, and image name
      *
-     * @param elementID Unique identifier for the element
+     * @param elementID   Unique identifier for the element
      * @param elementName Name of the element
      * @param description Description of the element
-     * @param imageName File name of the image associated with the element
+     * @param imageName   File name of the image associated with the element
      */
     public Element(String elementID, String elementName, String description, String imageName) {
         this.elementID = elementID;

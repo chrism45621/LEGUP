@@ -11,7 +11,7 @@ public class CaseRuleAnd extends CaseRule_GenericStatement {
 
     private static final ShortTruthTableCellType[][] trueCases = {{T, T}};
     private static final ShortTruthTableCellType[][] falseCases = {
-        {F, U},
-        {U, F}
+            {F, U},
+            {U, F}
     };
 }

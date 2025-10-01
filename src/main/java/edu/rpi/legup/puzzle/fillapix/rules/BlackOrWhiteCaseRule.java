@@ -8,6 +8,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.fillapix.FillapixBoard;
 import edu.rpi.legup.puzzle.fillapix.FillapixCell;
 import edu.rpi.legup.puzzle.fillapix.FillapixCellType;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -80,7 +81,7 @@ public class BlackOrWhiteCaseRule extends CaseRule {
 
         if (!((mod1.getType() == FillapixCellType.BLACK && mod2.getType() == FillapixCellType.WHITE)
                 || (mod2.getType() == FillapixCellType.BLACK
-                        && mod1.getType() == FillapixCellType.WHITE))) {
+                && mod1.getType() == FillapixCellType.WHITE))) {
             return super.getInvalidUseOfRuleMessage()
                     + ": This case rule must an empty cell and a lit cell.";
         }

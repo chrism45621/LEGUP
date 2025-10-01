@@ -10,14 +10,18 @@ public abstract class PuzzleCommand implements ICommand {
     private boolean isCached;
     private String cachedError;
 
-    /** Puzzle Command Constructor for creating an undoable and redoable change to the model */
+    /**
+     * Puzzle Command Constructor for creating an undoable and redoable change to the model
+     */
     protected PuzzleCommand() {
         this.state = CommandState.CREATED;
         this.isCached = false;
         this.cachedError = null;
     }
 
-    /** Executes the command if it can be executed */
+    /**
+     * Executes the command if it can be executed
+     */
     @Override
     public final void execute() {
         if (canExecute()) {
@@ -26,7 +30,9 @@ public abstract class PuzzleCommand implements ICommand {
         }
     }
 
-    /** Determines whether the command can be executed by checking the error state */
+    /**
+     * Determines whether the command can be executed by checking the error state
+     */
     @Override
     public final boolean canExecute() {
         cachedError = getError();
@@ -38,7 +44,7 @@ public abstract class PuzzleCommand implements ICommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public final String getError() {
@@ -53,7 +59,7 @@ public abstract class PuzzleCommand implements ICommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     public abstract String getErrorString();
 
@@ -69,7 +75,9 @@ public abstract class PuzzleCommand implements ICommand {
      */
     public abstract void undoCommand();
 
-    /** Redoes the command. This method is called if the command was previously undone. */
+    /**
+     * Redoes the command. This method is called if the command was previously undone.
+     */
     public void redoCommand() {
         if (state == CommandState.UNDOED) {
             executeCommand();
@@ -79,7 +87,9 @@ public abstract class PuzzleCommand implements ICommand {
         }
     }
 
-    /** Undoes the command if it was executed or redone */
+    /**
+     * Undoes the command if it was executed or redone
+     */
     @Override
     public final void undo() {
         if (state == CommandState.EXECUTED || state == CommandState.REDOED) {
@@ -90,7 +100,9 @@ public abstract class PuzzleCommand implements ICommand {
         }
     }
 
-    /** Redoes the command if it was previously undone. */
+    /**
+     * Redoes the command if it was previously undone.
+     */
     public final void redo() {
         if (state == CommandState.UNDOED) {
             redoCommand();

@@ -2,6 +2,7 @@ package edu.rpi.legup.ui.puzzleeditorui.elementsview;
 
 import edu.rpi.legup.controller.EditorElementController;
 import edu.rpi.legup.model.Puzzle;
+
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;

@@ -5,7 +5,9 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.treetent.*;
 import edu.rpi.legup.puzzle.treetent.rules.TentForTreeDirectRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.util.ArrayList;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;

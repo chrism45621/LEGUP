@@ -15,10 +15,10 @@ public abstract class DirectRule extends Rule {
     /**
      * DirectRule Constructor creates a new basic rule.
      *
-     * @param ruleID ID of the rule
-     * @param ruleName name of the rule
+     * @param ruleID      ID of the rule
+     * @param ruleName    name of the rule
      * @param description description of the rule
-     * @param imageName file name of the image
+     * @param imageName   file name of the image
      */
     public DirectRule(String ruleID, String ruleName, String description, String imageName) {
         super(ruleID, ruleName, description, imageName);
@@ -74,10 +74,10 @@ public abstract class DirectRule extends Rule {
      * Checks whether the child node logically follows from the parent node at the specific {@link
      * PuzzleElement} using this rule.
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     public String checkRuleAt(TreeTransition transition, PuzzleElement puzzleElement) {
         Board finalBoard = transition.getBoard();

@@ -6,7 +6,9 @@ import edu.rpi.legup.puzzle.nurikabe.Nurikabe;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeBoard;
 import edu.rpi.legup.puzzle.nurikabe.rules.NoNumberContradictionRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -24,7 +26,9 @@ public class NoNumbersContradictionRuleTest {
         nurikabe = new Nurikabe();
     }
 
-    /** Tests the No Number contradiction rule for a white region enclosed by black squares */
+    /**
+     * Tests the No Number contradiction rule for a white region enclosed by black squares
+     */
     @Test
     public void NoNumberContradictionRule_NoNumberSurroundBlack()
             throws InvalidFileFormatException {
@@ -50,7 +54,9 @@ public class NoNumbersContradictionRuleTest {
         }
     }
 
-    /** Tests the No Number contradiction rule for a false contradiction */
+    /**
+     * Tests the No Number contradiction rule for a false contradiction
+     */
     @Test
     public void NoNumberContradictionRule_FalseNoNumber() throws InvalidFileFormatException {
         TestUtilities.importTestBoard(

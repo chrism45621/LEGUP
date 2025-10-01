@@ -9,8 +9,10 @@ import edu.rpi.legup.puzzle.starbattle.StarBattleCell;
 import edu.rpi.legup.puzzle.starbattle.StarBattleCellType;
 import edu.rpi.legup.puzzle.starbattle.rules.StarOrEmptyCaseRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
 import java.util.ArrayList;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -47,9 +49,9 @@ public class StarOrEmptyCaseRuleTest {
 
         Assert.assertTrue(
                 (board1Type.equals(StarBattleCellType.BLACK)
-                                || board1Type.equals(StarBattleCellType.STAR))
+                        || board1Type.equals(StarBattleCellType.STAR))
                         && (board2Type.equals(StarBattleCellType.BLACK)
-                                || board2Type.equals(StarBattleCellType.STAR)));
+                        || board2Type.equals(StarBattleCellType.STAR)));
         Assert.assertFalse(board1Type.equals(board2Type));
         Assert.assertEquals(caseBoard1.getHeight(), caseBoard2.getHeight(), board.getHeight());
         Assert.assertEquals(caseBoard1.getWidth(), caseBoard2.getWidth(), board.getWidth());

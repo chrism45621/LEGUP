@@ -3,6 +3,7 @@ package edu.rpi.legup.puzzle.fillapix;
 import edu.rpi.legup.model.rules.ContradictionRule;
 import edu.rpi.legup.puzzle.fillapix.rules.TooFewBlackCellsContradictionRule;
 import edu.rpi.legup.puzzle.fillapix.rules.TooManyBlackCellsContradictionRule;
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -60,7 +61,9 @@ public class FillapixUtilities {
         return false;
     }
 
-    /** Gets all cells adjacent to a specific cell. The cell itself will be included. */
+    /**
+     * Gets all cells adjacent to a specific cell. The cell itself will be included.
+     */
     public static ArrayList<FillapixCell> getAdjacentCells(FillapixBoard board, FillapixCell cell) {
         ArrayList<FillapixCell> adjCells = new ArrayList<FillapixCell>();
         Point cellLoc = cell.getLocation();
@@ -105,8 +108,8 @@ public class FillapixUtilities {
         int i = 0, j = 0;
         // top line
         for (i = cellLoc.x - (distance), j = cellLoc.y - (distance + 1);
-                i <= cellLoc.x + (distance + 1);
-                i++) {
+             i <= cellLoc.x + (distance + 1);
+             i++) {
             if (cellLoc.getX() + i < 0
                     || cellLoc.y + j < 0
                     || cellLoc.x + i >= board.getWidth()
@@ -121,8 +124,8 @@ public class FillapixUtilities {
         }
         // right line
         for (i = cellLoc.x + (distance + 1), j = cellLoc.y - (distance);
-                j <= cellLoc.y + (distance + 1);
-                j++) {
+             j <= cellLoc.y + (distance + 1);
+             j++) {
             if (cellLoc.getX() + i < 0
                     || cellLoc.y + j < 0
                     || cellLoc.x + i >= board.getWidth()
@@ -137,8 +140,8 @@ public class FillapixUtilities {
         }
         // bottom line
         for (i = cellLoc.x + (distance), j = cellLoc.y + (distance + 1);
-                i <= cellLoc.x - (distance + 1);
-                i--) {
+             i <= cellLoc.x - (distance + 1);
+             i--) {
             if (cellLoc.getX() + i < 0
                     || cellLoc.y + j < 0
                     || cellLoc.x + i >= board.getWidth()
@@ -153,8 +156,8 @@ public class FillapixUtilities {
         }
         // left line
         for (i = cellLoc.x - (distance + 1), j = cellLoc.y + (distance);
-                j <= cellLoc.y - (distance + 1);
-                j--) {
+             j <= cellLoc.y - (distance + 1);
+             j--) {
             if (cellLoc.getX() + i < 0
                     || cellLoc.y + j < 0
                     || cellLoc.x + i >= board.getWidth()
@@ -178,13 +181,13 @@ public class FillapixUtilities {
      *
      * <pre>[ [true,false], [false,true] ]</pre>
      *
-     * @param totalNumItems the total number of items that can possibly be chosen
+     * @param totalNumItems  the total number of items that can possibly be chosen
      * @param chosenNumItems the number of items to be chosen
      * @return an ArrayList of Boolean arrays. Each index in the ArrayList represents a distinct
-     *     combination. Each Boolean array will be <code>totalNumItems</code> long and each index
-     *     will be <code>true</code> if the corresponding item is included in that combination, and
-     *     <code>
-     *     false</code> otherwise.
+     * combination. Each Boolean array will be <code>totalNumItems</code> long and each index
+     * will be <code>true</code> if the corresponding item is included in that combination, and
+     * <code>
+     * false</code> otherwise.
      */
     public static ArrayList<boolean[]> getCombinations(int chosenNumItems, int totalNumItems) {
         ArrayList<boolean[]> combinations = new ArrayList<boolean[]>();

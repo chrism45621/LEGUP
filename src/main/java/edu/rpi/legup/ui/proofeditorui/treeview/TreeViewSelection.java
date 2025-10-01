@@ -14,7 +14,9 @@ public class TreeViewSelection {
     private TreeElementView hover;
     private Point mousePoint;
 
-    /** TreeViewSelection Constructor creates a tree view selection */
+    /**
+     * TreeViewSelection Constructor creates a tree view selection
+     */
     public TreeViewSelection() {
         this.selectedViews = new ArrayList<>();
         this.hover = null;
@@ -97,7 +99,9 @@ public class TreeViewSelection {
         treeElementView.setSelected(true);
     }
 
-    /** Clears all selected views */
+    /**
+     * Clears all selected views
+     */
     public void clearSelection() {
         for (TreeElementView treeElementView : selectedViews) {
             treeElementView.setSelected(false);
@@ -109,7 +113,7 @@ public class TreeViewSelection {
      * Gets tree puzzleElement view that the mouse is hovering over or null is no such view exists
      *
      * @return tree puzzleElement view that the mouse is hovering over or null is no such view
-     *     exists
+     * exists
      */
     public TreeElementView getHover() {
         return hover;
@@ -128,7 +132,9 @@ public class TreeViewSelection {
         hover = newHovered;
     }
 
-    /** Clears the current hover tree puzzleElement view */
+    /**
+     * Clears the current hover tree puzzleElement view
+     */
     public void clearHover() {
         if (hover != null) {
             hover.setHover(false);

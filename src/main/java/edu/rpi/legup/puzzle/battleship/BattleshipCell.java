@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.battleship;
 
 import edu.rpi.legup.model.gameboard.GridCell;
+
 import java.awt.*;
 
 public class BattleshipCell extends GridCell<BattleshipType> {
@@ -8,7 +9,7 @@ public class BattleshipCell extends GridCell<BattleshipType> {
     /**
      * BattleShipCell Constructor - creates a BattleShipCell from the specified value and location
      *
-     * @param value value of the BattleShipCell
+     * @param value    value of the BattleShipCell
      * @param location position of the BattleShipCell
      */
     public BattleshipCell(BattleshipType value, Point location) {

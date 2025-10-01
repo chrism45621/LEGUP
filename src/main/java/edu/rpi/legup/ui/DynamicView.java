@@ -7,6 +7,7 @@ import edu.rpi.legup.model.Puzzle;
 import edu.rpi.legup.model.gameboard.Board;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialColors;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialFonts;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
@@ -37,7 +38,7 @@ public class DynamicView extends JPanel {
      * Constructs a new DynamicView with the specified ScrollView and view type
      *
      * @param scrollView the ScrollView that provides the content to be displayed and zoomed
-     * @param type the type of dynamic view to set up (e.g., BOARD or PROOF_TREE)
+     * @param type       the type of dynamic view to set up (e.g., BOARD or PROOF_TREE)
      */
     public DynamicView(ScrollView scrollView, DynamicViewType type) {
         this.scrollView = scrollView;
@@ -52,7 +53,7 @@ public class DynamicView extends JPanel {
      * Sets up the zoomer for the given DynamicViewType
      *
      * @param type The DynamicView that we are setting up the zoomer for (so the zoomer for the
-     *     board view or the zoomer for the proof tree view)
+     *             board view or the zoomer for the proof tree view)
      * @return A JPanel containing the zoomer
      */
     private JPanel setUpZoomer(DynamicViewType type) {
@@ -98,7 +99,7 @@ public class DynamicView extends JPanel {
     /**
      * Creates the zoomer
      *
-     * @param label A string containing the label to be displayed on the fit to screen button
+     * @param label    A string containing the label to be displayed on the fit to screen button
      * @param listener A listener that determines what the resize button will do
      * @return A JPanel containing the zoomer
      */
@@ -244,12 +245,16 @@ public class DynamicView extends JPanel {
         status.setText(message);
     }
 
-    /** Clears the status label */
+    /**
+     * Clears the status label
+     */
     public void resetStatus() {
         status.setText("");
     }
 
-    /** Resets the view to its default state and zooms the content to fit the screen */
+    /**
+     * Resets the view to its default state and zooms the content to fit the screen
+     */
     public void reset() {
         Puzzle puzzle = GameBoardFacade.getInstance().getPuzzleModule();
         Board board1 = GameBoardFacade.getInstance().getBoard();
@@ -258,7 +263,9 @@ public class DynamicView extends JPanel {
         this.getScrollView().zoomFit();
     }
 
-    /** Fits the board view to the screen */
+    /**
+     * Fits the board view to the screen
+     */
     protected void fitBoardViewToScreen() {
         scrollView.zoomFit();
     }

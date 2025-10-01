@@ -5,6 +5,7 @@ import edu.rpi.legup.ui.boardview.DataSelectionView;
 import edu.rpi.legup.ui.boardview.ElementView;
 import edu.rpi.legup.ui.boardview.GridBoardView;
 import edu.rpi.legup.ui.boardview.SelectionItemView;
+
 import java.awt.*;
 import java.util.Set;
 import javax.swing.*;

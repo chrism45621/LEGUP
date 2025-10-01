@@ -10,6 +10,7 @@ import edu.rpi.legup.puzzle.minesweeper.*;
 import edu.rpi.legup.puzzle.minesweeper.MinesweeperBoard;
 import edu.rpi.legup.puzzle.minesweeper.MinesweeperCell;
 import edu.rpi.legup.puzzle.minesweeper.MinesweeperUtilities;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -107,7 +108,7 @@ public class NonTouchingSharedMineDirectRule extends DirectRule {
             MinesweeperCell cell = (MinesweeperCell) element;
             if (cell.getTileType() == MinesweeperTileType.UNSET
                     && MinesweeperUtilities.isForcedMine(
-                            (MinesweeperBoard) node.getBoard(), cell)) {
+                    (MinesweeperBoard) node.getBoard(), cell)) {
                 cell.setCellType(MinesweeperTileData.mine());
                 minesweeperBoard.addModifiedData(cell);
             }

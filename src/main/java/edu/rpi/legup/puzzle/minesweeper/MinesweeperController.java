@@ -2,7 +2,9 @@ package edu.rpi.legup.puzzle.minesweeper;
 
 import edu.rpi.legup.controller.ElementController;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.awt.event.MouseEvent;
+
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
@@ -14,7 +16,7 @@ public class MinesweeperController extends ElementController {
      * {@link MinesweeperTileData#fromData(int)} is called with a value of {@code currentData() - 1}
      * Otherwise {@link MinesweeperTileData#empty()} is returned.
      *
-     * @param event The user's click data
+     * @param event   The user's click data
      * @param current The current data at the cell they clicked on
      * @return A different cell data depending on what the current data is
      */
@@ -46,9 +48,9 @@ public class MinesweeperController extends ElementController {
     }
 
     /**
-     * @see #getNewCellDataOnClick(MouseEvent, MinesweeperTileData)
      * @param event The user's click data
-     * @param data The current data at the cell they clicked on
+     * @param data  The current data at the cell they clicked on
+     * @see #getNewCellDataOnClick(MouseEvent, MinesweeperTileData)
      */
     @Override
     @SuppressWarnings("unchecked")

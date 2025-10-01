@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.lightup;
 
 import edu.rpi.legup.model.gameboard.GridBoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.awt.*;
 import java.util.HashSet;
 import java.util.Set;

@@ -3,6 +3,7 @@ package edu.rpi.legup.model.rules;
 import edu.rpi.legup.app.LegupPreferences;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.tree.TreeTransition;
+
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -27,10 +28,10 @@ public abstract class Rule {
     /**
      * Rule Constructor creates a new rule
      *
-     * @param ruleID ID of the rule
-     * @param ruleName name of the rule
+     * @param ruleID      ID of the rule
+     * @param ruleName    name of the rule
      * @param description description of the rule
-     * @param imageName file name of the image
+     * @param imageName   file name of the image
      */
     public Rule(String ruleID, String ruleName, String description, String imageName) {
         this.ruleID = ruleID;
@@ -62,10 +63,10 @@ public abstract class Rule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     public abstract String checkRuleAt(TreeTransition transition, PuzzleElement puzzleElement);
 
@@ -74,15 +75,17 @@ public abstract class Rule {
      * puzzleElement index using this rule This method is the one that should overridden in child
      * classes
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     protected abstract String checkRuleRawAt(
             TreeTransition transition, PuzzleElement puzzleElement);
 
-    /** Loads the image file */
+    /**
+     * Loads the image file
+     */
     public void loadImage() {
         if (imageName != null) {
             String name = imageName;

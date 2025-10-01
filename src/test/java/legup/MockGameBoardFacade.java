@@ -30,7 +30,8 @@ public class MockGameBoardFacade extends GameBoardFacade {
     }
 
     @Override
-    public void initializeUI() {}
+    public void initializeUI() {
+    }
 
     @Override
     public void setPuzzle(Puzzle puzzle) {
@@ -38,5 +39,6 @@ public class MockGameBoardFacade extends GameBoardFacade {
     }
 
     @Override
-    public void setWindowTitle(String puzzleName, String fileName) {}
+    public void setWindowTitle(String puzzleName, String fileName) {
+    }
 }

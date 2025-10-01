@@ -1,7 +1,9 @@
 package edu.rpi.legup.puzzle.minesweeper;
 
 import edu.rpi.legup.ui.boardview.GridElementView;
+
 import java.awt.*;
+
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 

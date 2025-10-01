@@ -28,7 +28,7 @@ public interface IHistorySubject {
      * Notifies all registered listeners about a change in the command history.
      *
      * @param algorithm a Consumer function that takes an IHistoryListener and performs some action
-     *     with it
+     *                  with it
      */
     void notifyHistoryListeners(Consumer<? super IHistoryListener> algorithm);
 }

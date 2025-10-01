@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.thermometer;
 
 import edu.rpi.legup.model.gameboard.GridCell;
 import edu.rpi.legup.ui.boardview.GridElementView;
+
 import java.awt.*;
 
 public class ThermometerNumberView extends GridElementView {

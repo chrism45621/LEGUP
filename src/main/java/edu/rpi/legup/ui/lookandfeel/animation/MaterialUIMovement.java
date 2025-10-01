@@ -5,7 +5,8 @@ import javax.swing.JComponent;
 
 public class MaterialUIMovement {
 
-    private MaterialUIMovement() {}
+    private MaterialUIMovement() {
+    }
 
     public static void add(JComponent c, Color fadeTo, int steps, int interval) {
         new MaterialUITimer(c, fadeTo, steps, interval);

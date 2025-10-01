@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.skyscrapers;
 
 import edu.rpi.legup.ui.boardview.GridElementView;
+
 import java.awt.*;
 
 public class SkyscrapersElementView extends GridElementView {

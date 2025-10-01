@@ -6,6 +6,7 @@ import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.rules.CaseRule;
 import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.thermometer.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,9 +51,9 @@ public class MercuryOrBlockedCaseRule extends CaseRule {
         }
 
         if (!((mod1.getFill() == ThermometerFill.BLOCKED
-                        && mod2.getFill() == ThermometerFill.FILLED)
+                && mod2.getFill() == ThermometerFill.FILLED)
                 || (mod2.getFill() == ThermometerFill.BLOCKED
-                        && mod1.getFill() == ThermometerFill.FILLED))) {
+                && mod1.getFill() == ThermometerFill.FILLED))) {
             return super.getInvalidUseOfRuleMessage()
                     + ": This case rule must have a filled or blocked cell.";
         }
@@ -64,10 +65,10 @@ public class MercuryOrBlockedCaseRule extends CaseRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -90,7 +91,7 @@ public class MercuryOrBlockedCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement equivalent puzzleElement
      * @return a list of elements the specified could be
      */

@@ -10,6 +10,7 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeBoard;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.utility.ConnectedRegions;
+
 import java.awt.*;
 import java.util.Set;
 
@@ -28,10 +29,10 @@ public class CornerBlackDirectRule extends DirectRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -62,9 +63,9 @@ public class CornerBlackDirectRule extends DirectRule {
                     // corner
                     // are empty
                     if (board.getCell(cornerLocation.x, cellLocation.y).getType()
-                                    == NurikabeType.UNKNOWN
+                            == NurikabeType.UNKNOWN
                             && board.getCell(cellLocation.x, cornerLocation.y).getType()
-                                    == NurikabeType.UNKNOWN) {
+                            == NurikabeType.UNKNOWN) {
                         // System.out.println("Went inside if statement");
                         NurikabeBoard modified = board.copy();
                         modified.getCell(cornerLocation.x, cellLocation.y)

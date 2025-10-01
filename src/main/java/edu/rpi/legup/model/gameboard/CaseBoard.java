@@ -1,6 +1,7 @@
 package edu.rpi.legup.model.gameboard;
 
 import edu.rpi.legup.model.rules.CaseRule;
+
 import java.awt.event.MouseEvent;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,7 +19,7 @@ public class CaseBoard extends Board {
      * Constructs a CaseBoard with a base board and a case rule.
      *
      * @param baseBoard the base board to use for this CaseBoard
-     * @param caseRule the case rule applied to this CaseBoard
+     * @param caseRule  the case rule applied to this CaseBoard
      */
     public CaseBoard(Board baseBoard, CaseRule caseRule) {
         this.baseBoard = baseBoard;
@@ -48,7 +49,7 @@ public class CaseBoard extends Board {
      * Checks if a puzzle element is pickable based on the mouse event.
      *
      * @param puzzleElement the puzzle element to check
-     * @param e the mouse event
+     * @param e             the mouse event
      * @return true if the puzzle element is pickable, false otherwise
      */
     public boolean isPickable(PuzzleElement puzzleElement, MouseEvent e) {

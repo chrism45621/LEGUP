@@ -1,6 +1,7 @@
 package edu.rpi.legup.ui;
 
 import edu.rpi.legup.app.GameBoardFacade;
+
 import java.awt.Container;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
@@ -46,9 +47,9 @@ public class PickGameDialog extends JDialog implements ActionListener {
     /**
      * Initialize the dialog
      *
-     * @param parent the parent JFrame
+     * @param parent         the parent JFrame
      * @param pickBothAtOnce if true they can pick a game type and a specific edu.rpi.legup.puzzle,
-     *     if false they can only pick a game type
+     *                       if false they can only pick a game type
      */
     public PickGameDialog(JFrame parent, boolean pickBothAtOnce) {
         super(parent, true);

@@ -16,6 +16,7 @@ import edu.rpi.legup.model.tree.TreeNode;
 import edu.rpi.legup.save.InvalidFileFormatException;
 import edu.rpi.legup.ui.boardview.BoardView;
 import edu.rpi.legup.utility.LegupUtils;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,6 +30,7 @@ import java.util.function.Consumer;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
@@ -60,7 +62,9 @@ public abstract class Puzzle implements IBoardSubject, ITreeSubject {
     protected List<CaseRule> caseRules;
     protected List<PlaceableElement> placeableElements;
 
-    /** Puzzle Constructor - creates a new Puzzle */
+    /**
+     * Puzzle Constructor - creates a new Puzzle
+     */
     public Puzzle() {
         this.boardListeners = new ArrayList<>();
         this.treeListeners = new ArrayList<>();
@@ -178,7 +182,9 @@ public abstract class Puzzle implements IBoardSubject, ITreeSubject {
         }
     }
 
-    /** Initializes the view. Called by the invoker of the class */
+    /**
+     * Initializes the view. Called by the invoker of the class
+     */
     public abstract void initializeView();
 
     /**
@@ -192,7 +198,7 @@ public abstract class Puzzle implements IBoardSubject, ITreeSubject {
     /**
      * Checks if the given height and width are valid board dimensions for the given puzzle
      *
-     * @param rows the number of rows on the board
+     * @param rows    the number of rows on the board
      * @param columns the number of columns on the board
      * @return true if the given dimensions are valid for the given puzzle, false otherwise
      */
@@ -628,7 +634,7 @@ public abstract class Puzzle implements IBoardSubject, ITreeSubject {
      * each listener to process the notification.
      *
      * @param algorithm A Consumer function that takes an IBoardListener and performs operations to
-     *     notify the listener.
+     *                  notify the listener.
      */
     @Override
     public void notifyBoardListeners(Consumer<? super IBoardListener> algorithm) {
@@ -662,7 +668,7 @@ public abstract class Puzzle implements IBoardSubject, ITreeSubject {
      * each listener to process the notification.
      *
      * @param algorithm A Consumer function that takes an ITreeListener and performs operations to
-     *     notify the listener.
+     *                  notify the listener.
      */
     @Override
     public void notifyTreeListeners(Consumer<? super ITreeListener> algorithm) {

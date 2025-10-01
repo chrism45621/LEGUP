@@ -9,6 +9,7 @@ import edu.rpi.legup.puzzle.treetent.TreeTentBoard;
 import edu.rpi.legup.puzzle.treetent.TreeTentCell;
 import edu.rpi.legup.puzzle.treetent.TreeTentClue;
 import edu.rpi.legup.puzzle.treetent.TreeTentType;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +56,7 @@ public class FillinRowCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement equivalent puzzleElement
      * @return a list of elements the specified could be
      */
@@ -96,10 +97,10 @@ public class FillinRowCaseRule extends CaseRule {
 
     /**
      * @param iBoard the board to place tents onto
-     * @param tiles the locations where tents can be placed
+     * @param tiles  the locations where tents can be placed
      * @param target the target number of tents to place
-     * @param index the index of tiles which is trying to be placed
-     * @param isRow Used to check validity of board
+     * @param index  the index of tiles which is trying to be placed
+     * @param isRow  Used to check validity of board
      * @return the list of boards created
      */
     private ArrayList<Board> genCombinations(
@@ -126,15 +127,15 @@ public class FillinRowCaseRule extends CaseRule {
      * Recursive function to generate all ways of placing the target number of tents from the list
      * of tiles to fill.
      *
-     * @param iBoard The board
-     * @param tiles Unknown Tiles to fill
-     * @param target number of tents to place
-     * @param current number of tents already placed
+     * @param iBoard      The board
+     * @param tiles       Unknown Tiles to fill
+     * @param target      number of tents to place
+     * @param current     number of tents already placed
      * @param currentTile index of the next tile to add
-     * @param selected the cells which have tents
-     * @param index The index of the clue
-     * @param isRow Used for checking if the board is good
-     *     <p>The generated boards are placed into generatedBoards (passed by reference)
+     * @param selected    the cells which have tents
+     * @param index       The index of the clue
+     * @param isRow       Used for checking if the board is good
+     *                    <p>The generated boards are placed into generatedBoards (passed by reference)
      */
     private void genCombRecursive(
             TreeTentBoard iBoard,
@@ -232,10 +233,10 @@ public class FillinRowCaseRule extends CaseRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -246,10 +247,10 @@ public class FillinRowCaseRule extends CaseRule {
      * Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be
      * valid Overridden by case rules dependent on more than just the modified data
      *
-     * @param board board state at application
+     * @param board         board state at application
      * @param puzzleElement selected puzzleElement
      * @return List of puzzle elements (typically cells) this application of the case rule depends
-     *     upon. Defaults to any element modified by any case
+     * upon. Defaults to any element modified by any case
      */
     @Override
     public List<PuzzleElement> dependentElements(Board board, PuzzleElement puzzleElement) {

@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.battleship;
 
 import edu.rpi.legup.controller.ElementController;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.awt.event.MouseEvent;
 
 public class BattleshipCellController extends ElementController {
@@ -10,7 +11,7 @@ public class BattleshipCellController extends ElementController {
      * shown on the GUI
      *
      * @param data the PuzzleElement to be changed
-     * @param e the user mouse input
+     * @param e    the user mouse input
      */
     @Override
     public void changeCell(MouseEvent e, PuzzleElement data) {

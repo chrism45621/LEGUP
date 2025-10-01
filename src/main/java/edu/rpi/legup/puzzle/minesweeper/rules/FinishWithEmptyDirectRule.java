@@ -51,7 +51,7 @@ public class FinishWithEmptyDirectRule extends DirectRule {
             MinesweeperCell cell = (MinesweeperCell) element;
             if (cell.getTileType() == MinesweeperTileType.UNSET
                     && MinesweeperUtilities.isForcedMine(
-                            (MinesweeperBoard) node.getBoard(), cell)) {
+                    (MinesweeperBoard) node.getBoard(), cell)) {
                 cell.setCellType(MinesweeperTileData.mine());
                 minesweeperBoard.addModifiedData(cell);
             }

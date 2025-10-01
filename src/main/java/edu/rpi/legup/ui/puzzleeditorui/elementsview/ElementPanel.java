@@ -2,6 +2,7 @@ package edu.rpi.legup.ui.puzzleeditorui.elementsview;
 
 import edu.rpi.legup.model.elements.Element;
 import edu.rpi.legup.ui.WrapLayout;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;

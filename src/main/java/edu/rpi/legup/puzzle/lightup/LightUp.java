@@ -19,7 +19,9 @@ public class LightUp extends Puzzle {
         this.factory = new LightUpCellFactory();
     }
 
-    /** Initializes the game board. Called by the invoker of the class */
+    /**
+     * Initializes the game board. Called by the invoker of the class
+     */
     @Override
     public void initializeView() {
         boardView = new LightUpView((LightUpBoard) currentBoard);
@@ -70,7 +72,7 @@ public class LightUp extends Puzzle {
         for (PuzzleElement data : lightUpBoard.getPuzzleElements()) {
             LightUpCell cell = (LightUpCell) data;
             if ((cell.getType() == LightUpCellType.UNKNOWN
-                            || cell.getType() == LightUpCellType.EMPTY)
+                    || cell.getType() == LightUpCellType.EMPTY)
                     && !cell.isLite()) {
                 return false;
             }
@@ -84,5 +86,6 @@ public class LightUp extends Puzzle {
      * @param board the board that has changed
      */
     @Override
-    public void onBoardChange(Board board) {}
+    public void onBoardChange(Board board) {
+    }
 }

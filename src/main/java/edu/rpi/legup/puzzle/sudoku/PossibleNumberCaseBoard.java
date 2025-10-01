@@ -3,6 +3,7 @@ package edu.rpi.legup.puzzle.sudoku;
 import edu.rpi.legup.model.gameboard.CaseBoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.puzzle.sudoku.rules.PossibleCellsForNumberRegionCaseRule;
+
 import java.awt.event.MouseEvent;
 import java.util.HashSet;
 import java.util.Set;

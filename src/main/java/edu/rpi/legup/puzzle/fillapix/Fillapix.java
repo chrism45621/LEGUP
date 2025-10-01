@@ -6,7 +6,9 @@ import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.model.rules.ContradictionRule;
 
 public class Fillapix extends Puzzle {
-    /** Fillapix Constructor */
+    /**
+     * Fillapix Constructor
+     */
     public Fillapix() {
         super();
 
@@ -18,7 +20,9 @@ public class Fillapix extends Puzzle {
         this.factory = new FillapixCellFactory();
     }
 
-    /** Initializes the game board */
+    /**
+     * Initializes the game board
+     */
     @Override
     public void initializeView() {
         boardView = new FillapixView((FillapixBoard) currentBoard);
@@ -61,5 +65,6 @@ public class Fillapix extends Puzzle {
     }
 
     @Override
-    public void onBoardChange(Board board) {}
+    public void onBoardChange(Board board) {
+    }
 }

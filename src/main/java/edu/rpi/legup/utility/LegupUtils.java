@@ -23,7 +23,7 @@ public class LegupUtils {
      * @param packageName The base package
      * @return The classes
      * @throws ClassNotFoundException if class is not in package
-     * @throws IOException if file is not found
+     * @throws IOException            if file is not found
      */
     public static Class[] getClasses(String packageName)
             throws ClassNotFoundException, IOException {
@@ -55,7 +55,7 @@ public class LegupUtils {
     /**
      * Recursive method used to find all classes in a given directory and subdirs.
      *
-     * @param directory The base directory
+     * @param directory   The base directory
      * @param packageName The package name for classes found inside the base directory
      * @return The classes
      * @throws ClassNotFoundException
@@ -78,7 +78,7 @@ public class LegupUtils {
                                     packageName
                                             + '.'
                                             + file.getName()
-                                                    .substring(0, file.getName().length() - 6)));
+                                            .substring(0, file.getName().length() - 6)));
                 }
             }
         }

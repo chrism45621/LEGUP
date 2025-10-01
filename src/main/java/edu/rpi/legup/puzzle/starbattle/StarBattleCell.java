@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.starbattle;
 
 import edu.rpi.legup.model.elements.Element;
 import edu.rpi.legup.model.gameboard.GridCell;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
@@ -12,10 +13,10 @@ public class StarBattleCell extends GridCell<Integer> {
     /**
      * StarBattleCell Constructor - creates a new StarBattle cell to hold the puzzleElement
      *
-     * @param value value of the star battle cell denoting its state
-     * @param location location of the cell on the board
+     * @param value      value of the star battle cell denoting its state
+     * @param location   location of the cell on the board
      * @param groupIndex indicates what group # the cell is in.
-     * @param size size of the star battle cell
+     * @param size       size of the star battle cell
      */
     public StarBattleCell(int value, Point location, int groupIndex, int size) {
         super(value, location);

@@ -2,11 +2,13 @@ package edu.rpi.legup.puzzle.shorttruthtable;
 
 import edu.rpi.legup.model.PuzzleImporter;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import javax.swing.*;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -49,8 +51,8 @@ class ShortTruthTableImporter extends PuzzleImporter {
      * <p>Both allCells and statements act as returns, They should be passed as empty arrays
      *
      * @param statementData The data to be imported
-     * @param allCells returns all the cells as a jagged 2d array
-     * @param statements returns all the statements
+     * @param allCells      returns all the cells as a jagged 2d array
+     * @param statements    returns all the statements
      * @return the length, in chars, of the longest statement
      */
     private int parseAllStatementsAndCells(
@@ -121,7 +123,7 @@ class ShortTruthTableImporter extends PuzzleImporter {
     protected boolean validGrammar(String sentence) {
         int open = 0;
         int close = 0;
-        char[] valid_characters = new char[] {'^', 'v', '!', '>', '-', '&', '|', '~', '$', '%'};
+        char[] valid_characters = new char[]{'^', 'v', '!', '>', '-', '&', '|', '~', '$', '%'};
         for (int i = 0; i < sentence.length(); i++) {
             char s = sentence.charAt(i);
             if (s == '(' || s == ')') {
@@ -265,12 +267,13 @@ class ShortTruthTableImporter extends PuzzleImporter {
     /**
      * Creates an empty board for building
      *
-     * @param rows the number of rows on the board
+     * @param rows    the number of rows on the board
      * @param columns the number of columns on the board
      * @throws RuntimeException
      */
     @Override
-    public void initializeBoard(int rows, int columns) {}
+    public void initializeBoard(int rows, int columns) {
+    }
 
     // STATEMENT IMPORTER
 

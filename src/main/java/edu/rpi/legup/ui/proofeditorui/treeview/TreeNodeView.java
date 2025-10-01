@@ -3,6 +3,7 @@ package edu.rpi.legup.ui.proofeditorui.treeview;
 import edu.rpi.legup.model.rules.RuleType;
 import edu.rpi.legup.model.tree.TreeElementType;
 import edu.rpi.legup.model.tree.TreeNode;
+
 import java.awt.*;
 import java.awt.geom.*;
 import java.util.ArrayList;
@@ -70,7 +71,7 @@ public class TreeNodeView extends TreeElementView {
             if (getTreeElement().getParent() != null
                     && getTreeElement().getParent().isJustified()
                     && getTreeElement().getParent().getRule().getRuleType()
-                            == RuleType.CONTRADICTION) {
+                    == RuleType.CONTRADICTION) {
                 isContradictoryState = true;
                 graphics2D.setColor(NODE_COLOR_CONTRADICTION);
                 graphics2D.drawLine(
@@ -292,7 +293,7 @@ public class TreeNodeView extends TreeElementView {
      * @param x the x-coordinate of the point to check
      * @param y the y-coordinate of the point to check
      * @return {@code true} if the point is within the bounds of this TreeNodeView; {@code false}
-     *     otherwise
+     * otherwise
      */
     @Override
     public boolean contains(double x, double y) {
@@ -304,7 +305,7 @@ public class TreeNodeView extends TreeElementView {
      *
      * @param p the Point2D object representing the point to check
      * @return {@code true} if the point is within the bounds of this TreeNodeView; {@code false}
-     *     otherwise
+     * otherwise
      */
     @Override
     public boolean contains(Point2D p) {
@@ -320,7 +321,7 @@ public class TreeNodeView extends TreeElementView {
      * @param w The width of the rectangle to check
      * @param h The height of the rectangle to check
      * @return {@code true} if the rectangle intersects with the bounds of this TreeNodeView; {@code
-     *     false} otherwise
+     * false} otherwise
      */
     @Override
     public boolean intersects(double x, double y, double w, double h) {
@@ -333,7 +334,7 @@ public class TreeNodeView extends TreeElementView {
      *
      * @param r the Rectangle2D object representing the rectangle to check
      * @return {@code true} if the rectangle intersects with the bounds of this TreeNodeView; {@code
-     *     false} otherwise
+     * false} otherwise
      */
     @Override
     public boolean intersects(Rectangle2D r) {
@@ -349,7 +350,7 @@ public class TreeNodeView extends TreeElementView {
      * @param w the width of the rectangle to check
      * @param h the height of the rectangle to check
      * @return {@code true} if the rectangle is entirely contained within the bounds of this
-     *     TreeNodeView; {@code false} otherwise
+     * TreeNodeView; {@code false} otherwise
      */
     @Override
     public boolean contains(double x, double y, double w, double h) {
@@ -362,7 +363,7 @@ public class TreeNodeView extends TreeElementView {
      *
      * @param r the Rectangle2D object representing the rectangle to check
      * @return {@code true} if the rectangle is entirely contained within the bounds of this
-     *     TreeNodeView; {@code false} otherwise
+     * TreeNodeView; {@code false} otherwise
      */
     @Override
     public boolean contains(Rectangle2D r) {
@@ -386,7 +387,7 @@ public class TreeNodeView extends TreeElementView {
      * The iterator provides access to the path's segments and their coordinates, which can be used
      * for rendering or hit testing.
      *
-     * @param at the AffineTransform to apply to the path geometry
+     * @param at       the AffineTransform to apply to the path geometry
      * @param flatness the maximum distance that the line segments can deviate from the true path
      * @return a PathIterator that iterates over the path geometry of this TreeNodeView
      */

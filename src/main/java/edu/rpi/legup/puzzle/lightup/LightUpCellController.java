@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.lightup;
 
 import edu.rpi.legup.controller.ElementController;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.awt.event.MouseEvent;
 
 public class LightUpCellController extends ElementController {

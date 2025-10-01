@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.nurikabe;
 
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.utility.DisjointSets;
+
 import java.awt.*;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -52,12 +53,12 @@ public class NurikabeUtilities {
                 if (cell.getType() == NurikabeType.NUMBER || cell.getType() == NurikabeType.WHITE) {
                     if (rightCell != null
                             && (rightCell.getType() == NurikabeType.NUMBER
-                                    || rightCell.getType() == NurikabeType.WHITE)) {
+                            || rightCell.getType() == NurikabeType.WHITE)) {
                         regions.union(cell, rightCell);
                     }
                     if (downCell != null
                             && (downCell.getType() == NurikabeType.NUMBER
-                                    || downCell.getType() == NurikabeType.WHITE)) {
+                            || downCell.getType() == NurikabeType.WHITE)) {
                         regions.union(cell, downCell);
                     }
                 } else {
@@ -112,12 +113,12 @@ public class NurikabeUtilities {
                         || cell.getType() == NurikabeType.UNKNOWN) {
                     if (rightCell != null
                             && (rightCell.getType() == NurikabeType.BLACK
-                                    || rightCell.getType() == NurikabeType.UNKNOWN)) {
+                            || rightCell.getType() == NurikabeType.UNKNOWN)) {
                         blackRegions.union(cell, rightCell);
                     }
                     if (downCell != null
                             && (downCell.getType() == NurikabeType.BLACK
-                                    || downCell.getType() == NurikabeType.UNKNOWN)) {
+                            || downCell.getType() == NurikabeType.UNKNOWN)) {
                         blackRegions.union(cell, downCell);
                     }
                 }
@@ -157,14 +158,14 @@ public class NurikabeUtilities {
                         || cell.getType() == NurikabeType.UNKNOWN) {
                     if (rightCell != null
                             && (rightCell.getType() == NurikabeType.WHITE
-                                    || rightCell.getType() == NurikabeType.NUMBER
-                                    || rightCell.getType() == NurikabeType.UNKNOWN)) {
+                            || rightCell.getType() == NurikabeType.NUMBER
+                            || rightCell.getType() == NurikabeType.UNKNOWN)) {
                         whiteRegions.union(cell, rightCell);
                     }
                     if (downCell != null
                             && (downCell.getType() == NurikabeType.WHITE
-                                    || downCell.getType() == NurikabeType.NUMBER
-                                    || downCell.getType() == NurikabeType.UNKNOWN)) {
+                            || downCell.getType() == NurikabeType.NUMBER
+                            || downCell.getType() == NurikabeType.UNKNOWN)) {
                         whiteRegions.union(cell, downCell);
                     }
                 }
@@ -251,7 +252,7 @@ public class NurikabeUtilities {
     /**
      * Gets all the non-black cells connected to the given cell
      *
-     * @param board nurikabe board
+     * @param board  nurikabe board
      * @param center nurikabe cell
      * @return a set of all white/numbered cells in the region
      */

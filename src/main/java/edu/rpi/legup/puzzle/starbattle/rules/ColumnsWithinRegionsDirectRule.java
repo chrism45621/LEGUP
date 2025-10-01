@@ -8,6 +8,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.starbattle.StarBattleBoard;
 import edu.rpi.legup.puzzle.starbattle.StarBattleCell;
 import edu.rpi.legup.puzzle.starbattle.StarBattleCellType;
+
 import java.util.*;
 
 public class ColumnsWithinRegionsDirectRule extends DirectRule {
@@ -42,10 +43,10 @@ public class ColumnsWithinRegionsDirectRule extends DirectRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -84,7 +85,7 @@ public class ColumnsWithinRegionsDirectRule extends DirectRule {
             }
             if (containsRegion
                     && board.getPuzzleNumber() * columnSubset.size() - columnStars
-                            >= board.getPuzzleNumber() * regions.size() - regionStars) {
+                    >= board.getPuzzleNumber() * regions.size() - regionStars) {
                 return null;
             }
         }

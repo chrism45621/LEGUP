@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.fillapix;
 
 import edu.rpi.legup.ui.boardview.GridElementView;
+
 import java.awt.*;
 
 public class FillapixElementView extends GridElementView {

@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.masyu;
 
 import edu.rpi.legup.model.gameboard.GridBoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.util.ArrayList;
 import java.util.List;
 

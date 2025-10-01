@@ -5,5 +5,6 @@ import javax.swing.*;
 
 public class ManualPuzzleCreatorDialog extends JDialog {
 
-    public ManualPuzzleCreatorDialog() {}
+    public ManualPuzzleCreatorDialog() {
+    }
 }

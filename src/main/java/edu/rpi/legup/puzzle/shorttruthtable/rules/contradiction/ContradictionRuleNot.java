@@ -12,9 +12,9 @@ public class ContradictionRuleNot extends ContradictionRule_GenericStatement {
                 "A negation and its following statement can not have the same truth value",
                 "edu/rpi/legup/images/shorttruthtable/ruleimages/contradiction/Not.png",
                 ShortTruthTableOperation.NOT,
-                new ShortTruthTableCellType[][] {
-                    {n, T, T},
-                    {n, F, F}
+                new ShortTruthTableCellType[][]{
+                        {n, T, T},
+                        {n, F, F}
                 });
     }
 }

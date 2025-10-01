@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.shorttruthtable;
 
 import edu.rpi.legup.model.elements.Element;
 import edu.rpi.legup.model.gameboard.GridCell;
+
 import java.awt.Point;
 import java.awt.event.MouseEvent;
 

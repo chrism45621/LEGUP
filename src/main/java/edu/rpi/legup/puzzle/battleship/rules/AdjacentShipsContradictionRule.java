@@ -6,6 +6,7 @@ import edu.rpi.legup.model.rules.ContradictionRule;
 import edu.rpi.legup.puzzle.battleship.BattleshipBoard;
 import edu.rpi.legup.puzzle.battleship.BattleshipCell;
 import edu.rpi.legup.puzzle.battleship.BattleshipType;
+
 import java.util.List;
 
 public class AdjacentShipsContradictionRule extends ContradictionRule {
@@ -25,10 +26,10 @@ public class AdjacentShipsContradictionRule extends ContradictionRule {
      * Checks whether the transition has a contradiction at the specific {@link PuzzleElement} index
      * using this rule.
      *
-     * @param board board to check contradiction
+     * @param board         board to check contradiction
      * @param puzzleElement equivalent {@link PuzzleElement}
      * @return <code>null</code> if the transition contains a contradiction at the specified {@link
-     *     PuzzleElement}, otherwise return a no contradiction message.
+     * PuzzleElement}, otherwise return a no contradiction message.
      */
     @Override
     public String checkContradictionAt(Board board, PuzzleElement puzzleElement) {

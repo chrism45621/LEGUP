@@ -19,6 +19,7 @@ import edu.rpi.legup.ui.proofeditorui.rulesview.RuleFrame;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreePanel;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreeViewSelection;
 import edu.rpi.legup.user.Submission;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -33,6 +34,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -90,22 +92,22 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
     public static final int INTERN_RO = 64;
     public static final int AUTO_JUST = 128;
     private static final String[] PROFILES = {
-        "No Assistance",
-        "Rigorous Proof",
-        "Casual Proof",
-        "Assisted Proof",
-        "Guided Proof",
-        "Training-Wheels Proof",
-        "No Restrictions"
+            "No Assistance",
+            "Rigorous Proof",
+            "Casual Proof",
+            "Assisted Proof",
+            "Guided Proof",
+            "Training-Wheels Proof",
+            "No Restrictions"
     };
     private static final int[] PROF_FLAGS = {
-        0,
-        ALLOW_JUST | REQ_STEP_JUST,
-        ALLOW_JUST,
-        ALLOW_HINTS | ALLOW_JUST | AUTO_JUST,
-        ALLOW_HINTS | ALLOW_JUST | REQ_STEP_JUST,
-        ALLOW_HINTS | ALLOW_DEFAPP | ALLOW_JUST | IMD_FEEDBACK | INTERN_RO,
-        ALLOW_HINTS | ALLOW_DEFAPP | ALLOW_FULLAI | ALLOW_JUST
+            0,
+            ALLOW_JUST | REQ_STEP_JUST,
+            ALLOW_JUST,
+            ALLOW_HINTS | ALLOW_JUST | AUTO_JUST,
+            ALLOW_HINTS | ALLOW_JUST | REQ_STEP_JUST,
+            ALLOW_HINTS | ALLOW_DEFAPP | ALLOW_JUST | IMD_FEEDBACK | INTERN_RO,
+            ALLOW_HINTS | ALLOW_DEFAPP | ALLOW_FULLAI | ALLOW_JUST
     };
     private JMenu proofMode = new JMenu("Proof Mode");
     private JCheckBoxMenuItem[] proofModeItems = new JCheckBoxMenuItem[PROF_FLAGS.length];
@@ -122,8 +124,8 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
      * Constructs a new {@code ProofEditorPanel} with the specified parameters
      *
      * @param fileDialog the {@code FileDialog} used for file operations
-     * @param frame the {@code JFrame} that contains this panel
-     * @param legupUI the {@code LegupUI} instance managing the user interface
+     * @param frame      the {@code JFrame} that contains this panel
+     * @param legupUI    the {@code LegupUI} instance managing the user interface
      */
     public ProofEditorPanel(FileDialog fileDialog, JFrame frame, LegupUI legupUI) {
         this.fileDialog = fileDialog;
@@ -514,7 +516,7 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
      * set the new working directory.
      *
      * @return an array containing the file name and the selected file, or {@code null} if the
-     *     operation was canceled
+     * operation was canceled
      */
     public Object[] promptPuzzle() {
         GameBoardFacade facade = GameBoardFacade.getInstance();
@@ -556,7 +558,7 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
         }
 
         System.out.println(preferences.getSavedPath());
-        return new Object[] {fileName, puzzleFile};
+        return new Object[]{fileName, puzzleFile};
     }
 
     /**
@@ -582,7 +584,7 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
      * cannot be read, it shows an appropriate error message and prompts the user to try loading
      * another puzzle.
      *
-     * @param fileName the name of the file to load
+     * @param fileName   the name of the file to load
      * @param puzzleFile the file object representing the puzzle file
      */
     public void loadPuzzle(String fileName, File puzzleFile) {
@@ -689,6 +691,7 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
     }
 
     // Hyperlink for help button; links to wiki page for tutorials
+
     /**
      * Opens the default web browser to a help page related to the type of puzzle currently being
      * used. The URL is chosen based on the name of the puzzle. If the puzzle type is not
@@ -1076,7 +1079,9 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
         }
     }
 
-    /** Repaints the board view and tree panel */
+    /**
+     * Repaints the board view and tree panel
+     */
     private void repaintAll() {
         boardView.repaint();
         treePanel.repaint();
@@ -1116,7 +1121,9 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
         reloadGui();
     }
 
-    /** Calls {@code repaintTree()} to refresh the tree view. */
+    /**
+     * Calls {@code repaintTree()} to refresh the tree view.
+     */
     public void reloadGui() {
         repaintTree();
     }
@@ -1128,7 +1135,9 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
         treePanel.repaintTreeView(GameBoardFacade.getInstance().getTree());
     }
 
-    /** Checks the proof for all files */
+    /**
+     * Checks the proof for all files
+     */
     private void checkProofAll() {
         GameBoardFacade facade = GameBoardFacade.getInstance();
 
@@ -1184,7 +1193,7 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
      *
      * @param folder the folder to traverse
      * @param writer the CSV writer
-     * @param path the current path in the directory traversal
+     * @param path   the current path in the directory traversal
      * @throws IOException if an error occurs while writing to the CSV file
      */
     private void traverseDir(File folder, BufferedWriter writer, String path) throws IOException {
@@ -1289,13 +1298,15 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
      * to undo or redo. It disables both buttons when the history is cleared.
      */
     @Override
-    public void onClearHistory() {}
+    public void onClearHistory() {
+
+    }
 
     /**
      * Called when an action is redone
      *
      * @param isBottom true if there are no more actions to undo, false otherwise
-     * @param isTop true if there are no more changes to redo, false otherwise
+     * @param isTop    true if there are no more changes to redo, false otherwise
      */
     @Override
     public void onRedo(boolean isBottom, boolean isTop) {
@@ -1316,7 +1327,7 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
      * Called when an action is undone
      *
      * @param isBottom true if there are no more actions to undo, false otherwise
-     * @param isTop true if there are no more changes to redo, false otherwise
+     * @param isTop    true if there are no more changes to redo, false otherwise
      */
     @Override
     public void onUndo(boolean isBottom, boolean isTop) {
@@ -1331,7 +1342,9 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
         }
     }
 
-    /** Submits the proof file */
+    /**
+     * Submits the proof file
+     */
     private void submit() {
         GameBoardFacade facade = GameBoardFacade.getInstance();
         Board board = facade.getBoard();
@@ -1365,7 +1378,9 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
         // TODO: implement
     }
 
-    /** Zooms the tree view to fit within the available screen space */
+    /**
+     * Zooms the tree view to fit within the available screen space
+     */
     protected void fitTreeViewToScreen() {
         this.treePanel.getTreeView().zoomFit();
     }

@@ -24,9 +24,9 @@ public class TrioContradictionRule extends ContradictionRule {
      * This method checks the surrounding cells of a given puzzle element at a specified distance in
      * both the vertical and horizontal directions
      *
-     * @param board The board where the puzzle elements are located
+     * @param board         The board where the puzzle elements are located
      * @param puzzleElement The puzzle element from which the distance is calculated
-     * @param n The distance away from the puzzle element to retrieve the surrounding cells
+     * @param n             The distance away from the puzzle element to retrieve the surrounding cells
      * @return An array of BinaryCells representing the surrounding cells
      */
     public BinaryCell[] getCellsNAway(Board board, PuzzleElement puzzleElement, int n) {
@@ -61,7 +61,7 @@ public class TrioContradictionRule extends ContradictionRule {
      * Checks whether the cell and its two surrounding cells form a trio of zeros or ones; If a trio
      * is found, it indicates a contradiction
      *
-     * @param board The board where the puzzle elements are located
+     * @param board         The board where the puzzle elements are located
      * @param puzzleElement The puzzle element to check for contradiction
      * @return true if no contradiction is found, false if contradiction detected
      */
@@ -123,7 +123,7 @@ public class TrioContradictionRule extends ContradictionRule {
      * Checks whether there are two of the same cell type separated by one cell that also has the
      * same type in any direction. If a trio is found, it indicates a contradiction
      *
-     * @param board The board where the puzzle elements are located
+     * @param board         The board where the puzzle elements are located
      * @param puzzleElement The puzzle element to check for contradiction
      * @return true if no contradiction is found, false if contradiction detected
      */
@@ -163,10 +163,10 @@ public class TrioContradictionRule extends ContradictionRule {
      * Checks whether the transition has a contradiction at the specific puzzleElement index using
      * this rule
      *
-     * @param board board to check contradiction
+     * @param board         board to check contradiction
      * @param puzzleElement equivalent puzzleElement
      * @return null if the transition contains a contradiction at the specified puzzleElement,
-     *     otherwise error message
+     * otherwise error message
      */
     @Override
     public String checkContradictionAt(Board board, PuzzleElement puzzleElement) {

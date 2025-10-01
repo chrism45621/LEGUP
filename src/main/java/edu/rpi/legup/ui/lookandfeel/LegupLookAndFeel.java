@@ -5,6 +5,7 @@ import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialBorders;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialColors;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialFonts;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialImages;
+
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicLookAndFeel;

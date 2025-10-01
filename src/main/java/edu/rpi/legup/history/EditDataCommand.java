@@ -10,6 +10,7 @@ import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.boardview.BoardView;
 import edu.rpi.legup.ui.boardview.ElementView;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.List;
@@ -33,8 +34,8 @@ public class EditDataCommand extends PuzzleCommand {
      * EditDataCommand Constructor create a puzzle command for editing a board
      *
      * @param elementView currently selected puzzle puzzleElement view that is being edited
-     * @param selection currently selected tree puzzleElement views that are being edited
-     * @param event mouse event
+     * @param selection   currently selected tree puzzleElement views that are being edited
+     * @param event       mouse event
      */
     public EditDataCommand(ElementView elementView, TreeViewSelection selection, MouseEvent event) {
         this.elementView = elementView;
@@ -45,7 +46,9 @@ public class EditDataCommand extends PuzzleCommand {
         this.transition = null;
     }
 
-    /** Executes the edit data command, modifying the puzzle element and propagating changes */
+    /**
+     * Executes the edit data command, modifying the puzzle element and propagating changes
+     */
     @SuppressWarnings("unchecked")
     @Override
     public void executeCommand() {
@@ -99,7 +102,7 @@ public class EditDataCommand extends PuzzleCommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public String getErrorString() {
@@ -132,7 +135,9 @@ public class EditDataCommand extends PuzzleCommand {
         return null;
     }
 
-    /** Undoes the edit data command, restoring the previous state of the puzzle element. */
+    /**
+     * Undoes the edit data command, restoring the previous state of the puzzle element.
+     */
     @SuppressWarnings("unchecked")
     @Override
     public void undoCommand() {

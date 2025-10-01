@@ -94,7 +94,8 @@ public class LegupPreferences {
      * Private constructor to prevent instantiation from outside the class Use {@link
      * #getInstance()} to access the singleton instance
      */
-    private LegupPreferences() {}
+    private LegupPreferences() {
+    }
 
     /**
      * Gets the user preference by the string key
@@ -109,7 +110,7 @@ public class LegupPreferences {
     /**
      * Sets the user preference for the specified key to the provided value
      *
-     * @param key key to set for the preference
+     * @param key   key to set for the preference
      * @param value value to set for the preference
      */
     public void setUserPref(String key, String value) {

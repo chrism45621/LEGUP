@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.nurikabe;
 
 import edu.rpi.legup.controller.ElementController;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.awt.event.MouseEvent;
 
 public class NurikabeController extends ElementController {
@@ -12,7 +13,7 @@ public class NurikabeController extends ElementController {
      * position - Otherwise, toggles the cell data state between 0, -1, and -2 in a cyclic manner If
      * the right mouse button is clicked, the cell data state is also toggled between -2, -1, and 0
      *
-     * @param e MouseEvent triggered by the user interaction
+     * @param e    MouseEvent triggered by the user interaction
      * @param data PuzzleElement representing the cell being modified
      */
     @Override

@@ -3,6 +3,7 @@ package edu.rpi.legup.ui.proofeditorui.rulesview;
 import edu.rpi.legup.model.Puzzle;
 import edu.rpi.legup.model.rules.Rule;
 import edu.rpi.legup.ui.WrapLayout;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
@@ -82,7 +83,9 @@ public abstract class RulePanel extends JPanel {
         revalidate();
     }
 
-    /** Updates the rules displayed by reloading images and setting the rules again. */
+    /**
+     * Updates the rules displayed by reloading images and setting the rules again.
+     */
     public void updateRules() {
         for (Rule rule : rules) {
             rule.loadImage();
@@ -93,13 +96,13 @@ public abstract class RulePanel extends JPanel {
     /**
      * Search a certain rule in all the puzzles and set it for the searchBarPanel
      *
-     * @param puzzle puzzle where the rule is being searched for
+     * @param puzzle   puzzle where the rule is being searched for
      * @param ruleName rule that is being compared to each puzzle
-     *     <p>This function is the searching algorithm for "public void setSearchBar(Puzzle
-     *     allPuzzle)" (below)
-     *     <p>It takes two param Puzzle puzzle and String ruleName puzzle contains rules, this
-     *     function will compare each rule of puzzle with ruleName, to find exact same, similar
-     *     rules, or all the rules with same start letter (if input is a signal letter)
+     *                 <p>This function is the searching algorithm for "public void setSearchBar(Puzzle
+     *                 allPuzzle)" (below)
+     *                 <p>It takes two param Puzzle puzzle and String ruleName puzzle contains rules, this
+     *                 function will compare each rule of puzzle with ruleName, to find exact same, similar
+     *                 rules, or all the rules with same start letter (if input is a signal letter)
      */
     public void searchForRule(Puzzle puzzle, String ruleName) {
 
@@ -186,8 +189,8 @@ public abstract class RulePanel extends JPanel {
      * @param s1 user's input
      * @param s2 the compared really rule name
      * @return a similarity degree between 0 and 1 similarityCheck will use a helper function to
-     *     calculate a similarity degree(from 0 to 1). closer to 0 means less similar, and closer to
-     *     1 means more similar.
+     * calculate a similarity degree(from 0 to 1). closer to 0 means less similar, and closer to
+     * 1 means more similar.
      */
     public static double similarityCheck(String s1, String s2) {
         String longer = s1, shorter = s2;
@@ -319,7 +322,9 @@ public abstract class RulePanel extends JPanel {
         }
     }
 
-    /** Clears the rule buttons off this panel */
+    /**
+     * Clears the rule buttons off this panel
+     */
     protected void clearButtons() {
         if (ruleButtons != null) {
             removeAll();

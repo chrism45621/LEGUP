@@ -11,6 +11,7 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeUtilities;
 import edu.rpi.legup.utility.DisjointSets;
+
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -29,10 +30,10 @@ public class BlackBetweenRegionsDirectRule extends DirectRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -62,7 +63,7 @@ public class BlackBetweenRegionsDirectRule extends DirectRule {
 
         if (upCell != null
                 && (upCell.getType() == NurikabeType.WHITE
-                        || upCell.getType() == NurikabeType.NUMBER)) {
+                || upCell.getType() == NurikabeType.NUMBER)) {
             NurikabeCell repCell = regions.find(upCell);
             if (!adjacentWhiteRegions.contains(repCell)) {
                 adjacentWhiteRegions.add(repCell);
@@ -70,7 +71,7 @@ public class BlackBetweenRegionsDirectRule extends DirectRule {
         }
         if (rightCell != null
                 && (rightCell.getType() == NurikabeType.WHITE
-                        || rightCell.getType() == NurikabeType.NUMBER)) {
+                || rightCell.getType() == NurikabeType.NUMBER)) {
             NurikabeCell repCell = regions.find(rightCell);
             if (!adjacentWhiteRegions.contains(repCell)) {
                 adjacentWhiteRegions.add(repCell);
@@ -78,7 +79,7 @@ public class BlackBetweenRegionsDirectRule extends DirectRule {
         }
         if (downCell != null
                 && (downCell.getType() == NurikabeType.WHITE
-                        || downCell.getType() == NurikabeType.NUMBER)) {
+                || downCell.getType() == NurikabeType.NUMBER)) {
             NurikabeCell repCell = regions.find(downCell);
             if (!adjacentWhiteRegions.contains(repCell)) {
                 adjacentWhiteRegions.add(repCell);
@@ -86,7 +87,7 @@ public class BlackBetweenRegionsDirectRule extends DirectRule {
         }
         if (leftCell != null
                 && (leftCell.getType() == NurikabeType.WHITE
-                        || leftCell.getType() == NurikabeType.NUMBER)) {
+                || leftCell.getType() == NurikabeType.NUMBER)) {
             NurikabeCell repCell = regions.find(leftCell);
             if (!adjacentWhiteRegions.contains(repCell)) {
                 adjacentWhiteRegions.add(repCell);

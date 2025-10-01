@@ -12,11 +12,11 @@ public class ContradictionRuleBiconditional extends ContradictionRule_GenericSta
                 "A Biconditional statement must have a contradicting pattern",
                 "edu/rpi/legup/images/shorttruthtable/ruleimages/contradiction/Biconditional.png",
                 ShortTruthTableOperation.BICONDITIONAL,
-                new ShortTruthTableCellType[][] {
-                    {T, T, F},
-                    {F, T, T},
-                    {T, F, T},
-                    {F, F, F}
+                new ShortTruthTableCellType[][]{
+                        {T, T, F},
+                        {F, T, T},
+                        {T, F, T},
+                        {F, F, F}
                 });
     }
 }

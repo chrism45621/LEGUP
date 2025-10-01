@@ -6,6 +6,7 @@ import edu.rpi.legup.model.Puzzle;
 import edu.rpi.legup.model.tree.Tree;
 import edu.rpi.legup.ui.boardview.BoardView;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
@@ -20,7 +21,8 @@ public class TreeController extends Controller {
      * TreeController Constructor creates a controller object to listen to ui events from a {@link
      * TreePanel}
      */
-    public TreeController() {}
+    public TreeController() {
+    }
 
     /**
      * Mouse Clicked event no default action
@@ -28,7 +30,8 @@ public class TreeController extends Controller {
      * @param e MouseEvent object
      */
     @Override
-    public void mouseClicked(MouseEvent e) {}
+    public void mouseClicked(MouseEvent e) {
+    }
 
     /**
      * Mouse Pressed event sets the cursor to the move cursor and stores info for possible panning

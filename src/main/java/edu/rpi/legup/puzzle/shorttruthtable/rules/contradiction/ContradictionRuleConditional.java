@@ -12,10 +12,10 @@ public class ContradictionRuleConditional extends ContradictionRule_GenericState
                 "A Conditional statement must have a contradicting pattern",
                 "edu/rpi/legup/images/shorttruthtable/ruleimages/contradiction/Conditional.png",
                 ShortTruthTableOperation.CONDITIONAL,
-                new ShortTruthTableCellType[][] {
-                    {n, F, T},
-                    {F, F, n},
-                    {T, T, F}
+                new ShortTruthTableCellType[][]{
+                        {n, F, T},
+                        {F, F, n},
+                        {T, T, F}
                 });
     }
 }

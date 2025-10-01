@@ -17,7 +17,9 @@ public class Binary extends Puzzle {
         this.factory = new BinaryCellFactory();
     }
 
-    /** Initializes the game board. Called by the invoker of the class */
+    /**
+     * Initializes the game board. Called by the invoker of the class
+     */
     @Override
     public void initializeView() {
         boardView = new BinaryView((BinaryBoard) currentBoard);
@@ -66,12 +68,13 @@ public class Binary extends Puzzle {
      * @param board the board that has changed
      */
     @Override
-    public void onBoardChange(Board board) {}
+    public void onBoardChange(Board board) {
+    }
 
     /**
      * Determines if the given dimensions are valid for Binary
      *
-     * @param rows the number of rows
+     * @param rows    the number of rows
      * @param columns the number of columns
      * @return true if the given dimensions are valid for Binary, false otherwise
      */

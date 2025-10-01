@@ -1,6 +1,7 @@
 package edu.rpi.legup.ui.lookandfeel.components;
 
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialDrawingUtils;
+
 import java.awt.Graphics;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;

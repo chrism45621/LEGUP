@@ -36,7 +36,8 @@ public class MaterialImages {
     public static final BufferedImage NEW_FOLDER = loadImg("/edu/rpi/legup/imgs/new_folder.png");
     public static final BufferedImage DETAILS = loadImg("/edu/rpi/legup/imgs/details.png");
 
-    private MaterialImages() {}
+    private MaterialImages() {
+    }
 
     private static BufferedImage loadImg(String imgPath) {
         try (InputStream inputStream = MaterialImages.class.getResourceAsStream(imgPath)) {

@@ -10,6 +10,7 @@ import edu.rpi.legup.ui.boardview.ElementView;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreeElementView;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreeView;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreeViewSelection;
+
 import java.awt.*;
 import java.util.List;
 
@@ -26,7 +27,9 @@ public class EditLineCommand extends PuzzleCommand {
         this.end = getViewInDirection(endDrag);
     }
 
-    /** Executes a command */
+    /**
+     * Executes a command
+     */
     @Override
     public void executeCommand() {
         Puzzle puzzle = getInstance().getPuzzleModule();
@@ -90,7 +93,7 @@ public class EditLineCommand extends PuzzleCommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public String getErrorString() {
@@ -130,14 +133,16 @@ public class EditLineCommand extends PuzzleCommand {
         TreeTentCell endCell = (TreeTentCell) end.getPuzzleElement();
         if (!((startCell.getType() == TreeTentType.TENT && endCell.getType() == TreeTentType.TREE)
                 || (endCell.getType() == TreeTentType.TENT
-                        && startCell.getType() == TreeTentType.TREE))) {
+                && startCell.getType() == TreeTentType.TREE))) {
             return "The line must connect a tree to a tent.";
         }
 
         return null;
     }
 
-    /** Undoes an command */
+    /**
+     * Undoes an command
+     */
     @Override
     public void undoCommand() {
         Puzzle puzzle = getInstance().getPuzzleModule();

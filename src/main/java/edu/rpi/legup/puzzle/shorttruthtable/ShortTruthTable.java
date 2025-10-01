@@ -18,7 +18,9 @@ public class ShortTruthTable extends Puzzle {
         this.factory = new ShortTruthTableCellFactory();
     }
 
-    /** Initializes the game board. Called by the invoker of the class */
+    /**
+     * Initializes the game board. Called by the invoker of the class
+     */
     @Override
     public void initializeView() {
         ShortTruthTableBoard sttBoard = (ShortTruthTableBoard) currentBoard;
@@ -106,5 +108,6 @@ public class ShortTruthTable extends Puzzle {
      * @param board the board that has changed
      */
     @Override
-    public void onBoardChange(Board board) {}
+    public void onBoardChange(Board board) {
+    }
 }

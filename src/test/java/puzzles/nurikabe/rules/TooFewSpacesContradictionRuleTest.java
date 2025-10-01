@@ -7,7 +7,9 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeBoard;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.rules.TooFewSpacesContradictionRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -25,7 +27,9 @@ public class TooFewSpacesContradictionRuleTest {
         nurikabe = new Nurikabe();
     }
 
-    /** Tests the Too Few Spaces contradiction rule for an isolated completely enclosed number */
+    /**
+     * Tests the Too Few Spaces contradiction rule for an isolated completely enclosed number
+     */
     @Test
     public void TooFewSpacesContradictionRule_TwoSurroundBlackTest()
             throws InvalidFileFormatException {
@@ -50,7 +54,9 @@ public class TooFewSpacesContradictionRuleTest {
         }
     }
 
-    /** Tests the Too Few Spaces contradiction rule for a region with insufficient space */
+    /**
+     * Tests the Too Few Spaces contradiction rule for a region with insufficient space
+     */
     @Test
     public void TooFewSpacesContradictionRule_InsufficientSpaceTest()
             throws InvalidFileFormatException {
@@ -77,7 +83,9 @@ public class TooFewSpacesContradictionRuleTest {
         }
     }
 
-    /** Tests the Too Few Spaces contradiction rule for a false contradiction */
+    /**
+     * Tests the Too Few Spaces contradiction rule for a false contradiction
+     */
     @Test
     public void TooFewSpacesContradictionRule_FalseTooFewSpaces()
             throws InvalidFileFormatException {

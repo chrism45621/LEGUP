@@ -4,6 +4,7 @@ import edu.rpi.legup.controller.BoardController;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.ui.boardview.ElementView;
 import edu.rpi.legup.ui.boardview.GridBoardView;
+
 import java.awt.*;
 import java.awt.geom.Area;
 import java.util.HashMap;

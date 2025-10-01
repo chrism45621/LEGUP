@@ -11,6 +11,7 @@ import edu.rpi.legup.model.tree.Tree;
 import edu.rpi.legup.ui.DynamicView;
 import edu.rpi.legup.ui.DynamicViewType;
 import edu.rpi.legup.ui.lookandfeel.materialdesign.MaterialFonts;
+
 import java.awt.*;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
@@ -34,8 +35,10 @@ public class TreePanel extends JPanel {
 
     private JLabel status;
 
-    /** Constructs a {@code TreePanel} and initializes the UI components. */
-    public TreePanel(/*LegupUI legupUI*/ ) {
+    /**
+     * Constructs a {@code TreePanel} and initializes the UI components.
+     */
+    public TreePanel(/*LegupUI legupUI*/) {
         // this.legupUI = legupUI;
 
         main = new JPanel();

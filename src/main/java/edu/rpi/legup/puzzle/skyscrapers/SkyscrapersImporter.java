@@ -2,7 +2,9 @@ package edu.rpi.legup.puzzle.skyscrapers;
 
 import edu.rpi.legup.model.PuzzleImporter;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -25,7 +27,7 @@ public class SkyscrapersImporter extends PuzzleImporter {
     /**
      * Creates an empty board for building
      *
-     * @param rows the number of rows on the board
+     * @param rows    the number of rows on the board
      * @param columns the number of columns on the board
      * @throws RuntimeException if board can not be created
      */

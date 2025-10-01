@@ -23,6 +23,7 @@ import edu.rpi.legup.ui.boardview.ElementSelection;
 import edu.rpi.legup.ui.boardview.ElementView;
 import edu.rpi.legup.ui.boardview.SelectionItemView;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -63,7 +64,8 @@ public class ElementController
      * @param e the event to be processed
      */
     @Override
-    public void mouseClicked(MouseEvent e) {}
+    public void mouseClicked(MouseEvent e) {
+    }
 
     /**
      * Invoked when a mouse button has been pressed on a component.
@@ -71,7 +73,8 @@ public class ElementController
      * @param e the event to be processed
      */
     @Override
-    public void mousePressed(MouseEvent e) {}
+    public void mousePressed(MouseEvent e) {
+    }
 
     /**
      * Invoked when a mouse button has been released on a component.
@@ -221,7 +224,8 @@ public class ElementController
      * @param e the event to be processed
      */
     @Override
-    public void mouseDragged(MouseEvent e) {}
+    public void mouseDragged(MouseEvent e) {
+    }
 
     /**
      * Invoked when the mouse moved
@@ -265,7 +269,8 @@ public class ElementController
         }
     }
 
-    public void changeCell(MouseEvent e, PuzzleElement data) {}
+    public void changeCell(MouseEvent e, PuzzleElement data) {
+    }
 
     /**
      * Invoked when an action occurs.
@@ -312,7 +317,8 @@ public class ElementController
      * @param e the event to be processed
      */
     @Override
-    public void keyTyped(KeyEvent e) {}
+    public void keyTyped(KeyEvent e) {
+    }
 
     /**
      * Invoked when a key has been pressed. See the class description for {@link KeyEvent} for a
@@ -321,7 +327,8 @@ public class ElementController
      * @param e the event to be processed
      */
     @Override
-    public void keyPressed(KeyEvent e) {}
+    public void keyPressed(KeyEvent e) {
+    }
 
     /**
      * Invoked when a key has been released. See the class description for {@link KeyEvent} for a

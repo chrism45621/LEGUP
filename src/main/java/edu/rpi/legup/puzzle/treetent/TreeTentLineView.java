@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.treetent;
 
 import edu.rpi.legup.ui.boardview.ElementView;
+
 import java.awt.*;
 
 public class TreeTentLineView extends ElementView {

@@ -15,6 +15,7 @@ import edu.rpi.legup.ui.boardview.ElementView;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreePanel;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreeView;
 import edu.rpi.legup.ui.proofeditorui.treeview.TreeViewSelection;
+
 import java.awt.event.MouseEvent;
 
 public class TreeTentController extends ElementController {

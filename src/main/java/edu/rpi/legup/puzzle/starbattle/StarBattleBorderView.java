@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.starbattle;
 
 import edu.rpi.legup.ui.boardview.ElementView;
+
 import java.awt.*;
 import java.awt.geom.Line2D;
 

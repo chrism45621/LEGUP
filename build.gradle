@@ -132,7 +132,7 @@ tasks.register("jpackage") {
 
 tasks.register('copyInstaller', Sync) {
     group("jpackage")
-    from ("build/installer/")
+    from("build/installer/")
     into("installer")
     rename("LEGUP-${project.version}", "LEGUP-installer-${project.version}")
 }

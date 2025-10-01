@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.masyu;
 
 import edu.rpi.legup.ui.boardview.GridElementView;
+
 import java.awt.*;
 
 public class MasyuElementView extends GridElementView {

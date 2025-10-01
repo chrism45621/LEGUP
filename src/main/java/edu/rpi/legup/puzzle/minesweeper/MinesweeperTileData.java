@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.minesweeper;
 
 import java.util.Objects;
+
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -34,7 +35,7 @@ public record MinesweeperTileData(MinesweeperTileType type, int data) {
     /**
      * @param count how many mines are near the number
      * @return a new {@link MinesweeperTileData} with a {@link MinesweeperTileData#type} of {@link
-     *     MinesweeperTileType#NUMBER} and a {@link MinesweeperTileData#data} of {@code count}
+     * MinesweeperTileType#NUMBER} and a {@link MinesweeperTileData#data} of {@code count}
      */
     @Contract(pure = true)
     public static @NotNull MinesweeperTileData number(int count) {
@@ -44,10 +45,10 @@ public record MinesweeperTileData(MinesweeperTileType type, int data) {
     /**
      * @param data Determines what type of {@link MinesweeperTileData} to return.
      * @return If {@code data} is one of {@link MinesweeperTileData#UNSET_DATA}, {@link
-     *     MinesweeperTileData#MINE_DATA}, or {@link MinesweeperTileData#EMPTY_DATA}, it will return
-     *     that data. If {@code data} is less than any of the values, or greater than 8, it will
-     *     return {@link MinesweeperTileData#UNSET_DATA}. Otherwise, it returns {@link
-     *     MinesweeperTileData#number(int)} and passes {@code data} as the parameter.
+     * MinesweeperTileData#MINE_DATA}, or {@link MinesweeperTileData#EMPTY_DATA}, it will return
+     * that data. If {@code data} is less than any of the values, or greater than 8, it will
+     * return {@link MinesweeperTileData#UNSET_DATA}. Otherwise, it returns {@link
+     * MinesweeperTileData#number(int)} and passes {@code data} as the parameter.
      */
     @Contract(pure = true)
     public static @NotNull MinesweeperTileData fromData(int data) {

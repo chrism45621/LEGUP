@@ -8,7 +8,9 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.puzzle.nurikabe.rules.BlackBottleNeckDirectRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -26,7 +28,9 @@ public class BlackBottleNeckDirectRuleTest {
         nurikabe = new Nurikabe();
     }
 
-    /** Tests the Black BottleNeck direct rule for a bottleneck in the center of the board */
+    /**
+     * Tests the Black BottleNeck direct rule for a bottleneck in the center of the board
+     */
     @Test
     public void BlackBottleNeckDirectRule_TwoSurroundBlackTest() throws InvalidFileFormatException {
         TestUtilities.importTestBoard(
@@ -55,7 +59,9 @@ public class BlackBottleNeckDirectRuleTest {
         }
     }
 
-    /** Tests the Black BottleNeck direct rule for a bottleneck in the corner of the board */
+    /**
+     * Tests the Black BottleNeck direct rule for a bottleneck in the corner of the board
+     */
     @Test
     public void BlackBottleNeckDirectRule_CornerBottleneck() throws InvalidFileFormatException {
         TestUtilities.importTestBoard(
@@ -84,7 +90,9 @@ public class BlackBottleNeckDirectRuleTest {
         }
     }
 
-    /** Tests the Black BottleNeck direct rule for a false bottleneck */
+    /**
+     * Tests the Black BottleNeck direct rule for a false bottleneck
+     */
     @Test
     public void BlackBottleNeckDirectRule_FalseBottleneck() throws InvalidFileFormatException {
         TestUtilities.importTestBoard(

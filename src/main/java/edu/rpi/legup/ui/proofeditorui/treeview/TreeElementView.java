@@ -2,6 +2,7 @@ package edu.rpi.legup.ui.proofeditorui.treeview;
 
 import edu.rpi.legup.model.tree.TreeElement;
 import edu.rpi.legup.model.tree.TreeElementType;
+
 import java.awt.*;
 
 /**
@@ -22,7 +23,7 @@ public abstract class TreeElementView implements Shape {
     /**
      * TreeElementView Constructor creates a tree puzzleElement view
      *
-     * @param type tree puzzleElement type
+     * @param type        tree puzzleElement type
      * @param treeElement tree puzzleElement puzzleElement associated with this view
      */
     protected TreeElementView(TreeElementType type, TreeElement treeElement) {

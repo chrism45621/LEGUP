@@ -6,6 +6,7 @@ import edu.rpi.legup.model.gameboard.Board;
 import edu.rpi.legup.model.rules.MergeRule;
 import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -28,7 +29,9 @@ public class MergeCommand extends PuzzleCommand {
         this.transition = null;
     }
 
-    /** Executes the merge command */
+    /**
+     * Executes the merge command
+     */
     @Override
     public void executeCommand() {
         List<TreeElementView> selectedViews = selection.getSelectedViews();
@@ -75,7 +78,9 @@ public class MergeCommand extends PuzzleCommand {
         puzzle.notifyTreeListeners(listener -> listener.onTreeSelectionChanged(newSelection));
     }
 
-    /** Undoes the merge command */
+    /**
+     * Undoes the merge command
+     */
     @Override
     public void undoCommand() {
         Tree tree = GameBoardFacade.getInstance().getTree();
@@ -93,7 +98,7 @@ public class MergeCommand extends PuzzleCommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public String getErrorString() {

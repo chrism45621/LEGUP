@@ -5,7 +5,9 @@ package edu.rpi.legup.history;
  * provides methods to execute, undo, redo commands, and to check if a command can be executed.
  */
 public interface ICommand {
-    /** Executes the command. The specific behavior depends on the implementation */
+    /**
+     * Executes the command. The specific behavior depends on the implementation
+     */
     void execute();
 
     /**
@@ -19,13 +21,17 @@ public interface ICommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     String getError();
 
-    /** Undoes the command. Reverts the changes made by the execute method */
+    /**
+     * Undoes the command. Reverts the changes made by the execute method
+     */
     void undo();
 
-    /** Redoes the command. Re-applies the changes made by the execute method after undoing */
+    /**
+     * Redoes the command. Re-applies the changes made by the execute method after undoing
+     */
     void redo();
 }

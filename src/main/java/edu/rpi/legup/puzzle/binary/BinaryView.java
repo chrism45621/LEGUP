@@ -3,6 +3,7 @@ package edu.rpi.legup.puzzle.binary;
 import edu.rpi.legup.controller.BoardController;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
 import edu.rpi.legup.ui.boardview.GridBoardView;
+
 import java.awt.*;
 
 public class BinaryView extends GridBoardView {

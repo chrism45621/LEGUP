@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.battleship;
 
 import edu.rpi.legup.model.gameboard.GridBoard;
 import edu.rpi.legup.model.gameboard.PuzzleElement;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ public class BattleshipBoard extends GridBoard {
     /**
      * Constructor for creating a rectangular battleship board.
      *
-     * @param width width of the board
+     * @param width  width of the board
      * @param height height of the board
      */
     public BattleshipBoard(int width, int height) {
@@ -109,7 +110,7 @@ public class BattleshipBoard extends GridBoard {
      *
      * @param cell The cell to get diagonally adjacent cells from.
      * @return List of diagonally adjacent cells in clockwise order: <code>
-     *     { upRight, downRight, downLeft, upLeft }</code>
+     * { upRight, downRight, downLeft, upLeft }</code>
      */
     public List<BattleshipCell> getAdjDiagonals(BattleshipCell cell) {
         List<BattleshipCell> dia = new ArrayList<>();

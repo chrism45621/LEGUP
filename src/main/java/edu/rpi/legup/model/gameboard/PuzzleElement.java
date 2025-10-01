@@ -1,6 +1,7 @@
 package edu.rpi.legup.model.gameboard;
 
 import edu.rpi.legup.model.elements.Element;
+
 import java.awt.event.MouseEvent;
 
 /**
@@ -20,7 +21,9 @@ public abstract class PuzzleElement<T> {
     protected boolean isValid;
     protected int casesDepended;
 
-    /** PuzzleElement Constructor creates a new puzzle element. */
+    /**
+     * PuzzleElement Constructor creates a new puzzle element.
+     */
     public PuzzleElement() {
         this.index = -1;
         this.data = null;

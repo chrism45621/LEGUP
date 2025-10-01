@@ -33,7 +33,7 @@ public abstract class TreeElement {
      * and justified correctly
      *
      * @return true if this tree puzzleElement and all descendants of this tree puzzleElement is
-     *     valid, false otherwise
+     * valid, false otherwise
      */
     public abstract boolean isValidBranch();
 
@@ -41,7 +41,7 @@ public abstract class TreeElement {
      * Gets the type of tree puzzleElement
      *
      * @return NODE if this tree puzzleElement is a tree node, TRANSITION, if this tree
-     *     puzzleElement is a transition
+     * puzzleElement is a transition
      */
     public TreeElementType getType() {
         return type;

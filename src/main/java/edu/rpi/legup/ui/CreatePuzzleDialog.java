@@ -3,6 +3,7 @@ package edu.rpi.legup.ui;
 import edu.rpi.legup.app.Config;
 import edu.rpi.legup.app.GameBoardFacade;
 import edu.rpi.legup.controller.CursorController;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -117,7 +118,7 @@ public class CreatePuzzleDialog extends JDialog {
     /**
      * Constructs a new CreatePuzzleDialog
      *
-     * @param parent the parent frame of the dialog
+     * @param parent    the parent frame of the dialog
      * @param homePanel the home panel where the created puzzle will be added
      */
     public CreatePuzzleDialog(JFrame parent, HomePanel homePanel) {

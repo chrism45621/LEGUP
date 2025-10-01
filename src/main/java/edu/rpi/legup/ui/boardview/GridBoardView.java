@@ -2,6 +2,7 @@ package edu.rpi.legup.ui.boardview;
 
 import edu.rpi.legup.controller.BoardController;
 import edu.rpi.legup.controller.ElementController;
+
 import java.awt.Color;
 import java.awt.Dimension;
 
@@ -17,8 +18,8 @@ public class GridBoardView extends BoardView {
      * GridBoardView Constructor creates a GridBoardView object using the controller handle the ui
      * events
      *
-     * @param boardController controller that handles the ui events
-     * @param gridSize dimension of the grid
+     * @param boardController   controller that handles the ui events
+     * @param gridSize          dimension of the grid
      * @param elementController controller that handles the ui events
      */
     public GridBoardView(

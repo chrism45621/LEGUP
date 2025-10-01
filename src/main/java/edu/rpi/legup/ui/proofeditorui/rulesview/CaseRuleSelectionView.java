@@ -1,6 +1,7 @@
 package edu.rpi.legup.ui.proofeditorui.rulesview;
 
 import edu.rpi.legup.ui.WrapLayout;
+
 import java.awt.*;
 import javax.swing.*;
 

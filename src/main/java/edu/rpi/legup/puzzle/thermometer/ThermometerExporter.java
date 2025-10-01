@@ -1,7 +1,9 @@
 package edu.rpi.legup.puzzle.thermometer;
 
 import edu.rpi.legup.model.PuzzleExporter;
+
 import java.util.ArrayList;
+
 import org.w3c.dom.Document;
 
 public class ThermometerExporter extends PuzzleExporter {

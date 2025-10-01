@@ -24,6 +24,7 @@ public class TouchingTentsContradictionRuleTest {
     }
 
     // DIAGONAL TESTS
+
     /**
      * @throws InvalidFileFormatException Tests a tent diagonal of orientation T T
      */
@@ -69,6 +70,7 @@ public class TouchingTentsContradictionRuleTest {
     }
 
     // ADJACENT TESTS
+
     /**
      * @throws InvalidFileFormatException Tests a tent adjacent of orientation T T
      */
@@ -114,6 +116,7 @@ public class TouchingTentsContradictionRuleTest {
     }
 
     // MIXED TESTS
+
     /**
      * @throws InvalidFileFormatException Tests a tent of orientation TT TT
      */

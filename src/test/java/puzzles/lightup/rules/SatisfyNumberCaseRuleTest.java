@@ -9,7 +9,9 @@ import edu.rpi.legup.puzzle.lightup.LightUpCell;
 import edu.rpi.legup.puzzle.lightup.LightUpCellType;
 import edu.rpi.legup.puzzle.lightup.rules.SatisfyNumberCaseRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.util.ArrayList;
+
 import legup.TestUtilities;
 import org.junit.Assert;
 import org.junit.BeforeClass;

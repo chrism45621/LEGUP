@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.binary;
 
 import edu.rpi.legup.model.elements.Element;
 import edu.rpi.legup.model.gameboard.GridCell;
+
 import java.awt.Point;
 import java.awt.event.MouseEvent;
 
@@ -9,7 +10,7 @@ public class BinaryCell extends GridCell<Integer> {
     /**
      * BinaryCell Constructor - creates a BinaryCell from the specified value and location
      *
-     * @param value value of the BinaryCell
+     * @param value    value of the BinaryCell
      * @param location position of the BinaryCell
      */
     public BinaryCell(int value, Point location) {

@@ -12,10 +12,10 @@ public class ContradictionRuleOr extends ContradictionRule_GenericStatement {
                 "An OR statement must have a contradicting pattern",
                 "edu/rpi/legup/images/shorttruthtable/ruleimages/contradiction/Or.png",
                 ShortTruthTableOperation.OR,
-                new ShortTruthTableCellType[][] {
-                    {n, F, T},
-                    {T, F, n},
-                    {F, T, F}
+                new ShortTruthTableCellType[][]{
+                        {n, F, T},
+                        {T, F, n},
+                        {F, T, F}
                 });
     }
 }

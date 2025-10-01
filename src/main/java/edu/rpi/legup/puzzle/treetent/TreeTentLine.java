@@ -27,9 +27,9 @@ public class TreeTentLine extends PuzzleElement<Entry<TreeTentCell, TreeTentCell
 
     public boolean compare(TreeTentLine line) {
         return ((line.getC1().getLocation().equals(data.getKey().getLocation())
-                        && line.getC2().getLocation().equals(data.getValue().getLocation()))
+                && line.getC2().getLocation().equals(data.getValue().getLocation()))
                 || (line.getC1().getLocation().equals(data.getValue().getLocation())
-                        && line.getC2().getLocation().equals(data.getKey().getLocation())));
+                && line.getC2().getLocation().equals(data.getKey().getLocation())));
     }
 
     /**

@@ -14,6 +14,7 @@ import edu.rpi.legup.save.ExportFileException;
 import edu.rpi.legup.save.InvalidFileFormatException;
 import edu.rpi.legup.ui.boardview.BoardView;
 import edu.rpi.legup.ui.puzzleeditorui.elementsview.ElementFrame;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,6 +26,7 @@ import java.net.URL;
 import java.util.Objects;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -69,8 +71,8 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
      * instance
      *
      * @param fileDialog the file dialog used for file operations
-     * @param frame the main application frame
-     * @param legupUI the Legup UI instance
+     * @param frame      the main application frame
+     * @param legupUI    the Legup UI instance
      */
     public PuzzleEditorPanel(FileDialog fileDialog, JFrame frame, LegupUI legupUI) {
         this.fileDialog = fileDialog;
@@ -459,8 +461,8 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
     /**
      * Initializes a puzzle based on the provided game name, rows, and columns.
      *
-     * @param game the name of the game or puzzle to load
-     * @param rows the number of rows in the puzzle
+     * @param game    the name of the game or puzzle to load
+     * @param rows    the number of rows in the puzzle
      * @param columns the number of columns in the puzzle
      * @throws IllegalArgumentException if the provided arguments are invalid
      */
@@ -480,7 +482,7 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
     /**
      * Initializes a puzzle based on the provided game name and an array of statements.
      *
-     * @param game the name of the game or puzzle to load
+     * @param game       the name of the game or puzzle to load
      * @param statements an array of statements to initialize the puzzle
      * @throws IllegalArgumentException if the provided arguments are invalid
      */
@@ -502,7 +504,7 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
      * confirm if they want to open a new puzzle.
      *
      * @return an array containing the selected file name and file object, or null if the operation
-     *     was canceled
+     * was canceled
      */
     public Object[] promptPuzzle() {
         GameBoardFacade facade = GameBoardFacade.getInstance();
@@ -542,7 +544,7 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
             return null;
         }
 
-        return new Object[] {fileName, puzzleFile};
+        return new Object[]{fileName, puzzleFile};
     }
 
     /**
@@ -565,7 +567,7 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
      * Loads a puzzle from the specified file. If the puzzle file is valid and exists, it loads the
      * puzzle and updates the UI. If the file format is invalid, an error message is displayed.
      *
-     * @param fileName the name of the puzzle file
+     * @param fileName   the name of the puzzle file
      * @param puzzleFile the file object representing the puzzle file
      */
     public void loadPuzzle(String fileName, File puzzleFile) {
@@ -603,21 +605,34 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
         return n != JOptionPane.YES_OPTION;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public void onPushChange(ICommand command) {}
+    public void onPushChange(ICommand command) {
+    }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public void onUndo(boolean isBottom, boolean isTop) {}
+    public void onUndo(boolean isBottom, boolean isTop) {
+    }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public void onRedo(boolean isBottom, boolean isTop) {}
+    public void onRedo(boolean isBottom, boolean isTop) {
+    }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public void onClearHistory() {}
+    public void onClearHistory() {
+    }
+
 
     /**
      * Returns the current board view
@@ -664,7 +679,9 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
         this.toolBar2Buttons = toolBar2Buttons;
     }
 
-    /** Repaints the current board view */
+    /**
+     * Repaints the current board view
+     */
     private void repaintAll() {
         boardView.repaint();
     }
@@ -697,7 +714,9 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
         setupToolBar2();
     }
 
-    /** Saves a puzzle */
+    /**
+     * Saves a puzzle
+     */
     private void direct_save() {
         Puzzle puzzle = GameBoardFacade.getInstance().getPuzzleModule();
         if (puzzle == null) {
@@ -722,7 +741,7 @@ public class PuzzleEditorPanel extends LegupPanel implements IHistoryListener {
      * and saves the puzzle to that directory. Returns the path where the puzzle was saved.
      *
      * @return the path where the puzzle was saved, or an empty string if the save operation was
-     *     canceled
+     * canceled
      */
     private String savePuzzle() {
         Puzzle puzzle = GameBoardFacade.getInstance().getPuzzleModule();

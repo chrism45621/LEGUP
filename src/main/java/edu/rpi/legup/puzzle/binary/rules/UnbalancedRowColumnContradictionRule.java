@@ -6,6 +6,7 @@ import edu.rpi.legup.model.rules.ContradictionRule;
 import edu.rpi.legup.puzzle.binary.BinaryBoard;
 import edu.rpi.legup.puzzle.binary.BinaryCell;
 import edu.rpi.legup.puzzle.binary.BinaryType;
+
 import java.util.Set;
 
 public class UnbalancedRowColumnContradictionRule extends ContradictionRule {
@@ -26,10 +27,10 @@ public class UnbalancedRowColumnContradictionRule extends ContradictionRule {
      * Checks whether the transition has a contradiction at the specific puzzleElement index using
      * this rule
      *
-     * @param board board to check contradiction
+     * @param board         board to check contradiction
      * @param puzzleElement equivalent puzzleElement
      * @return null if the transition contains a contradiction at the specified puzzleElement,
-     *     otherwise error message
+     * otherwise error message
      */
     @Override
     public String checkContradictionAt(Board board, PuzzleElement puzzleElement) {

@@ -7,10 +7,12 @@ import edu.rpi.legup.model.tree.TreeElement;
 import edu.rpi.legup.ui.boardview.DataSelectionView;
 import edu.rpi.legup.ui.boardview.GridBoardView;
 import edu.rpi.legup.ui.boardview.SelectionItemView;
+
 import java.awt.*;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -60,7 +62,9 @@ public class LightUpView extends GridBoardView {
         repaint();
     }
 
-    /** Returns a DataSelectionView popup menu */
+    /**
+     * Returns a DataSelectionView popup menu
+     */
     public DataSelectionView getSelectionPopupMenu() {
         DataSelectionView selectionView = new DataSelectionView(elementController);
         GridLayout layout = new GridLayout(3, 1);

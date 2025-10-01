@@ -23,7 +23,8 @@ public class BoardController extends Controller {
      * @param e MouseEvent object
      */
     @Override
-    public void mouseClicked(MouseEvent e) {}
+    public void mouseClicked(MouseEvent e) {
+    }
 
     /**
      * Mouse Pressed event - sets the cursor to the move cursor and stores info for possible panning
@@ -51,7 +52,8 @@ public class BoardController extends Controller {
      * @param e MouseEvent object
      */
     @Override
-    public void mouseEntered(MouseEvent e) {}
+    public void mouseEntered(MouseEvent e) {
+    }
 
     /**
      * Mouse Exited event - no default action
@@ -59,7 +61,8 @@ public class BoardController extends Controller {
      * @param e MouseEvent object
      */
     @Override
-    public void mouseExited(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {
+    }
 
     /**
      * Mouse Dragged event - adjusts the viewport
@@ -77,7 +80,8 @@ public class BoardController extends Controller {
      * @param e MouseEvent object
      */
     @Override
-    public void mouseMoved(MouseEvent e) {}
+    public void mouseMoved(MouseEvent e) {
+    }
 
     /**
      * Mouse Wheel Moved event - zooms in on the viewport

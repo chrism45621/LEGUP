@@ -12,6 +12,7 @@ import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.proofeditorui.rulesview.RuleButton;
 import edu.rpi.legup.ui.proofeditorui.rulesview.RulePanel;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;

@@ -8,7 +8,9 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.puzzle.nurikabe.rules.CornerBlackDirectRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -26,7 +28,9 @@ public class CornerBlackDirectRuleTest {
         nurikabe = new Nurikabe();
     }
 
-    /** Tests the Corner Black direct rule for a simple corner black tile */
+    /**
+     * Tests the Corner Black direct rule for a simple corner black tile
+     */
     @Test
     public void CornerBlackContradictionRule_SimpleCornerBlackTest()
             throws InvalidFileFormatException {
@@ -55,7 +59,9 @@ public class CornerBlackDirectRuleTest {
         }
     }
 
-    /** Tests the Corner Black direct rule for a false application of the rule */
+    /**
+     * Tests the Corner Black direct rule for a false application of the rule
+     */
     @Test
     public void CornerBlackContradictionRule_FalseCornerBlackTest()
             throws InvalidFileFormatException {

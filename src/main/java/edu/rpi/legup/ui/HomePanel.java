@@ -4,6 +4,7 @@ import edu.rpi.legup.app.GameBoardFacade;
 import edu.rpi.legup.app.LegupPreferences;
 import edu.rpi.legup.controller.CursorController;
 import edu.rpi.legup.model.PuzzleExporter;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,6 +23,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
@@ -46,7 +48,9 @@ public class HomePanel extends LegupPanel {
 
     private final int buttonSize = 100;
 
-    /** Initialize the proof solver to an empty panel with no puzzle */
+    /**
+     * Initialize the proof solver to an empty panel with no puzzle
+     */
     private ActionListener openProofListener =
             new ActionListener() {
                 @Override
@@ -58,7 +62,7 @@ public class HomePanel extends LegupPanel {
     /**
      * Constructs a {@code HomePanel} with the specified {@code JFrame} and {@code LegupUI}.
      *
-     * @param frame the main application frame
+     * @param frame   the main application frame
      * @param legupUI the LEGUP user interface
      */
     public HomePanel(JFrame frame, LegupUI legupUI) {
@@ -103,7 +107,9 @@ public class HomePanel extends LegupPanel {
         return this.menuBar;
     }
 
-    /** Makes the panel visible and sets the menu bar of the frame */
+    /**
+     * Makes the panel visible and sets the menu bar of the frame
+     */
     @Override
     public void makeVisible() {
         render();
@@ -113,8 +119,8 @@ public class HomePanel extends LegupPanel {
     /**
      * Resizes the provided icon to the specified width and height
      *
-     * @param icon the icon to resize
-     * @param width the target width
+     * @param icon   the icon to resize
+     * @param width  the target width
      * @param height the target height
      * @return the resized icon
      */
@@ -124,7 +130,9 @@ public class HomePanel extends LegupPanel {
         return new ImageIcon(resizedImage);
     }
 
-    /** Initializes the buttons for this panel */
+    /**
+     * Initializes the buttons for this panel
+     */
     private void initButtons() {
         this.buttons = new JButton[3];
 
@@ -173,7 +181,9 @@ public class HomePanel extends LegupPanel {
         this.buttons[2].addActionListener(e -> openBatchGraderMenu());
     }
 
-    /** Initializes screen for autograder options */
+    /**
+     * Initializes screen for autograder options
+     */
     public void openBatchGraderMenu() {
         JDialog batchGraderOptions = new JDialog(frame, "Batch Grader Options", true);
         batchGraderOptions.setSize(450, 200);
@@ -302,7 +312,7 @@ public class HomePanel extends LegupPanel {
      * "solved?" status. Results are saved in a "result.csv" file.
      *
      * @effect Selects a directory, processes each XML file to check for "solved?" status, and
-     *     writes results to "result.csv". Opens the CSV file upon completion.
+     * writes results to "result.csv". Opens the CSV file upon completion.
      */
     private void use_xml_to_check(File folder) {
         /* Select a folder, go through each .xml file in the subfolders, look for "isSolved" flag */
@@ -350,7 +360,7 @@ public class HomePanel extends LegupPanel {
     /**
      * reads the puzzle name and type, and outputs to .csv file
      *
-     * @param doc - the parsed file currently being graded
+     * @param doc    - the parsed file currently being graded
      * @param writer - write to .csv
      * @throws IOException
      */
@@ -374,7 +384,7 @@ public class HomePanel extends LegupPanel {
      * Reads the hashed solved state and export timestamp, unhashes information and prints out to
      * csv
      *
-     * @param doc - the parsed file currently being graded
+     * @param doc    - the parsed file currently being graded
      * @param writer - write to .csv
      * @throws IOException
      */
@@ -415,7 +425,7 @@ public class HomePanel extends LegupPanel {
     /**
      * @param folder - the input folder
      * @param writer - write to .csv
-     * @param path - the current path
+     * @param path   - the current path
      * @throws IOException
      */
     private void recursive_parser(File folder, BufferedWriter writer, String path)
@@ -572,7 +582,9 @@ public class HomePanel extends LegupPanel {
         this.text[1] = credits;
     }
 
-    /** Renders the user interface components */
+    /**
+     * Renders the user interface components
+     */
     private void render() {
         this.removeAll();
 
@@ -602,7 +614,7 @@ public class HomePanel extends LegupPanel {
      * Opens the puzzle editor dialog with no selected puzzle, leaving a blank panel
      *
      * @throws IllegalArgumentException if the configuration parameters are invalid (should never
-     *     happen)
+     *                                  happen)
      */
     private void openPuzzleEditorDialog() {
         String game = "";
@@ -620,8 +632,8 @@ public class HomePanel extends LegupPanel {
     /**
      * Opens the puzzle editor for the specified puzzle with the specified dimensions
      *
-     * @param game the name of the game
-     * @param rows the number of rows in the puzzle
+     * @param game    the name of the game
+     * @param rows    the number of rows in the puzzle
      * @param columns the number of columns in the puzzle
      * @throws IllegalArgumentException if the dimensions are invalid
      */
@@ -658,7 +670,7 @@ public class HomePanel extends LegupPanel {
     /**
      * Opens the puzzle editor for the specified puzzle with the given statements
      *
-     * @param game a String containing the name of the game
+     * @param game       a String containing the name of the game
      * @param statements an array of statements
      */
     public void openEditorWithNewPuzzle(String game, String[] statements) {

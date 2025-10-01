@@ -2,7 +2,9 @@ package edu.rpi.legup.puzzle.starbattle;
 
 import edu.rpi.legup.model.PuzzleImporter;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.Point;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -13,13 +15,17 @@ public class StarBattleImporter extends PuzzleImporter {
         super(starbattle);
     }
 
-    /** Puzzle setting to support row and column inputs */
+    /**
+     * Puzzle setting to support row and column inputs
+     */
     @Override
     public boolean acceptsRowsAndColumnsInput() {
         return true;
     }
 
-    /** Puzzle setting to disable support for text input */
+    /**
+     * Puzzle setting to disable support for text input
+     */
     @Override
     public boolean acceptsTextInput() {
         return false;

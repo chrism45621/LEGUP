@@ -8,9 +8,13 @@ import javax.swing.*;
  * implements toolbar scale)
  */
 public abstract class LegupPanel extends JPanel {
-    /** Alerts panel that it will be going visible now */
+    /**
+     * Alerts panel that it will be going visible now
+     */
     protected final int TOOLBAR_ICON_SCALE = 40;
 
-    /** Abstract method to make the panel visible */
+    /**
+     * Abstract method to make the panel visible
+     */
     public abstract void makeVisible();
 }

@@ -8,7 +8,9 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.puzzle.nurikabe.rules.SurroundRegionDirectRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -26,7 +28,9 @@ public class SurroundRegionDirectRuleTest {
         nurikabe = new Nurikabe();
     }
 
-    /** Tests the Surround Region direct rule for a white square in the middle of the board */
+    /**
+     * Tests the Surround Region direct rule for a white square in the middle of the board
+     */
     @Test
     public void SurroundRegionDirectRule_SurroundRegionBlackTest()
             throws InvalidFileFormatException {
@@ -67,7 +71,9 @@ public class SurroundRegionDirectRuleTest {
         }
     }
 
-    /** Tests the Surround Region direct rule for a white square in the corner of the board */
+    /**
+     * Tests the Surround Region direct rule for a white square in the corner of the board
+     */
     @Test
     public void SurroundRegionDirectRule_SurroundRegionBlackInCornerTest()
             throws InvalidFileFormatException {
@@ -100,7 +106,9 @@ public class SurroundRegionDirectRuleTest {
         }
     }
 
-    /** Tests the Surround Region direct rule for a false application of the rule */
+    /**
+     * Tests the Surround Region direct rule for a false application of the rule
+     */
     @Test
     public void SurroundRegionDirectRule_FalseSurroundRegionBlackTest()
             throws InvalidFileFormatException {

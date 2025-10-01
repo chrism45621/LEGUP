@@ -9,6 +9,7 @@ import edu.rpi.legup.puzzle.treetent.TreeTentBoard;
 import edu.rpi.legup.puzzle.treetent.TreeTentCell;
 import edu.rpi.legup.puzzle.treetent.TreeTentLine;
 import edu.rpi.legup.puzzle.treetent.TreeTentType;
+
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +39,8 @@ public class LinkTreeCaseRule extends CaseRule {
                 for (TreeTentLine l : lines) {
                     if (l.getC1().getLocation().equals(((TreeTentCell) element).getLocation())
                             || l.getC2()
-                                    .getLocation()
-                                    .equals(((TreeTentCell) element).getLocation())) {
+                            .getLocation()
+                            .equals(((TreeTentCell) element).getLocation())) {
                         canAdd = false;
                         break;
                     }
@@ -55,7 +56,7 @@ public class LinkTreeCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement equivalent puzzleElement
      * @return a list of elements the specified could be
      */
@@ -155,10 +156,10 @@ public class LinkTreeCaseRule extends CaseRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {
@@ -169,10 +170,10 @@ public class LinkTreeCaseRule extends CaseRule {
      * Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be
      * valid Overridden by case rules dependent on more than just the modified data
      *
-     * @param board board state at application
+     * @param board         board state at application
      * @param puzzleElement selected puzzleElement
      * @return List of puzzle elements (typically cells) this application of the case rule depends
-     *     upon. Defaults to any element modified by any case
+     * upon. Defaults to any element modified by any case
      */
     @Override
     public List<PuzzleElement> dependentElements(Board board, PuzzleElement puzzleElement) {

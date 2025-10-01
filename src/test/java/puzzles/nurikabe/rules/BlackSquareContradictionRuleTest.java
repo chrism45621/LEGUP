@@ -7,7 +7,9 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeBoard;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.rules.BlackSquareContradictionRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -24,7 +26,9 @@ public class BlackSquareContradictionRuleTest {
         nurikabe = new Nurikabe();
     }
 
-    /** Tests the Black Square contradiction rule for a black square in the middle of the board */
+    /**
+     * Tests the Black Square contradiction rule for a black square in the middle of the board
+     */
     @Test
     public void BlackSquareContradictionRule_TwoSurroundBlackTest()
             throws InvalidFileFormatException {
@@ -57,7 +61,9 @@ public class BlackSquareContradictionRuleTest {
         }
     }
 
-    /** Tests the Black Square contradiction rule for a square in the corner of the board */
+    /**
+     * Tests the Black Square contradiction rule for a square in the corner of the board
+     */
     @Test
     public void BlackSquareContradictionRule_CornerSquareTest() throws InvalidFileFormatException {
         TestUtilities.importTestBoard(
@@ -88,7 +94,9 @@ public class BlackSquareContradictionRuleTest {
         }
     }
 
-    /** Tests the Black Square contradiction rule for a false contradiction */
+    /**
+     * Tests the Black Square contradiction rule for a false contradiction
+     */
     @Test
     public void BlackSquareContradictionRule_FalseBlackSquareTest()
             throws InvalidFileFormatException {

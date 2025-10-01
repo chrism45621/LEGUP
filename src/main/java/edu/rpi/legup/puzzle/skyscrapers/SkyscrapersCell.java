@@ -4,6 +4,7 @@ import static edu.rpi.legup.puzzle.skyscrapers.SkyscrapersType.convertToSkyType;
 
 import edu.rpi.legup.model.elements.Element;
 import edu.rpi.legup.model.gameboard.GridCell;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 

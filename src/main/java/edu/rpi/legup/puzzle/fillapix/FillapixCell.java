@@ -2,6 +2,7 @@ package edu.rpi.legup.puzzle.fillapix;
 
 import edu.rpi.legup.model.elements.Element;
 import edu.rpi.legup.model.gameboard.GridCell;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.Objects;

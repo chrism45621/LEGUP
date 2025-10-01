@@ -31,5 +31,6 @@ public class StarBattle extends Puzzle {
     }
 
     @Override
-    public void onBoardChange(Board board) {}
+    public void onBoardChange(Board board) {
+    }
 }

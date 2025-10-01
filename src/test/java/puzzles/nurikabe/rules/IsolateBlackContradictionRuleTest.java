@@ -7,7 +7,9 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeBoard;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.rules.IsolateBlackContradictionRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -57,7 +59,9 @@ public class IsolateBlackContradictionRuleTest {
         }
     }
 
-    /** Tests the Isolate Black contradiction rule for diagonally connected black squares */
+    /**
+     * Tests the Isolate Black contradiction rule for diagonally connected black squares
+     */
     @Test
     public void IsolateBlackContradictionRule_DiagonalBlackTest()
             throws InvalidFileFormatException {
@@ -89,7 +93,9 @@ public class IsolateBlackContradictionRuleTest {
         }
     }
 
-    /** Tests the Isolate Black contradiction rule for a false contradiction */
+    /**
+     * Tests the Isolate Black contradiction rule for a false contradiction
+     */
     @Test
     public void IsolateBlackContradictionRule_FalseIsolateBlackTest()
             throws InvalidFileFormatException {

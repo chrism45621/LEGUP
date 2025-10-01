@@ -8,6 +8,7 @@ import edu.rpi.legup.model.rules.CaseRule;
 import edu.rpi.legup.model.rules.Rule;
 import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,7 @@ public class ValidateCaseRuleCommand extends PuzzleCommand {
      * AutoCaseRuleCommand Constructor creates a command for verifying a case rule
      *
      * @param selection currently selected tree puzzleElement views that is being edited
-     * @param caseRule currently selected caseRule puzzleElement view that is being edited
+     * @param caseRule  currently selected caseRule puzzleElement view that is being edited
      */
     public ValidateCaseRuleCommand(TreeViewSelection selection, CaseRule caseRule) {
         this.selection = selection.copy();
@@ -37,7 +38,9 @@ public class ValidateCaseRuleCommand extends PuzzleCommand {
         this.addNode = new HashMap<>();
     }
 
-    /** Executes the command to validate the CaseRule */
+    /**
+     * Executes the command to validate the CaseRule
+     */
     @Override
     public void executeCommand() {
         Tree tree = getInstance().getTree();
@@ -87,7 +90,7 @@ public class ValidateCaseRuleCommand extends PuzzleCommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public String getErrorString() {
@@ -109,7 +112,9 @@ public class ValidateCaseRuleCommand extends PuzzleCommand {
         return null;
     }
 
-    /** Undoes the validation command, restoring the previous state */
+    /**
+     * Undoes the validation command, restoring the previous state
+     */
     @Override
     public void undoCommand() {
         Puzzle puzzle = GameBoardFacade.getInstance().getPuzzleModule();

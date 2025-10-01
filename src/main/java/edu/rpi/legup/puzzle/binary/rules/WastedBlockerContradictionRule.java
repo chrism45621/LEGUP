@@ -6,6 +6,7 @@ import edu.rpi.legup.model.rules.ContradictionRule;
 import edu.rpi.legup.puzzle.binary.BinaryBoard;
 import edu.rpi.legup.puzzle.binary.BinaryCell;
 import edu.rpi.legup.puzzle.binary.BinaryType;
+
 import java.util.ArrayList;
 
 public class WastedBlockerContradictionRule extends ContradictionRule {
@@ -28,12 +29,13 @@ public class WastedBlockerContradictionRule extends ContradictionRule {
      j -> digit on right (0 if no digit exists)
      neededZeros = ( n + i + j ) / 3
     */
+
     /**
      * Calculates the number of zeros needed in a sequence based on the values on either side and
      * the number of empty cells.
      *
-     * @param leftVal The value on the left side of the empty cells
-     * @param rightVal The value on the right side of the empty cells
+     * @param leftVal            The value on the left side of the empty cells
+     * @param rightVal           The value on the right side of the empty cells
      * @param emptyCellsInCurSec The number of empty cells in the current section
      * @return The number of zeros needed in the sequence
      */
@@ -56,12 +58,13 @@ public class WastedBlockerContradictionRule extends ContradictionRule {
      j -> digit on right (1 if no digit exists)
      neededOnes = ( n + ( 1 - i ) + ( 1 - j ) ) / 3
     */
+
     /**
      * Calculates the number of ones needed in a sequence based on the values on either side and the
      * number of empty cells
      *
-     * @param leftVal The value on the left side of the empty cells
-     * @param rightVal The value on the right side of the empty cells
+     * @param leftVal            The value on the left side of the empty cells
+     * @param rightVal           The value on the right side of the empty cells
      * @param emptyCellsInCurSec The number of empty cells in the current section
      * @return The number of ones needed in the sequence
      */
@@ -154,10 +157,10 @@ public class WastedBlockerContradictionRule extends ContradictionRule {
      * Checks whether the transition has a contradiction at the specific puzzleElement index using
      * this rule
      *
-     * @param board board to check contradiction
+     * @param board         board to check contradiction
      * @param puzzleElement equivalent puzzleElement
      * @return null if the transition contains a contradiction at the specified puzzleElement,
-     *     otherwise error message
+     * otherwise error message
      */
     @Override
     public String checkContradictionAt(Board board, PuzzleElement puzzleElement) {

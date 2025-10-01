@@ -95,9 +95,9 @@ public class OrEliminationTest {
         transition.setRule(RULE);
 
         ShortTruthTableCellType[] cellTypes = {
-            ShortTruthTableCellType.TRUE,
-            ShortTruthTableCellType.FALSE,
-            ShortTruthTableCellType.UNKNOWN
+                ShortTruthTableCellType.TRUE,
+                ShortTruthTableCellType.FALSE,
+                ShortTruthTableCellType.UNKNOWN
         };
 
         for (ShortTruthTableCellType cellType1 : cellTypes) {
@@ -138,9 +138,9 @@ public class OrEliminationTest {
         transition.setRule(RULE);
 
         ShortTruthTableCellType[] cellTypes = {
-            ShortTruthTableCellType.TRUE,
-            ShortTruthTableCellType.FALSE,
-            ShortTruthTableCellType.UNKNOWN
+                ShortTruthTableCellType.TRUE,
+                ShortTruthTableCellType.FALSE,
+                ShortTruthTableCellType.UNKNOWN
         };
 
         for (ShortTruthTableCellType cellType1 : cellTypes) {

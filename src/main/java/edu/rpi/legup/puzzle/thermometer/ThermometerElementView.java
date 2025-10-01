@@ -1,6 +1,7 @@
 package edu.rpi.legup.puzzle.thermometer;
 
 import edu.rpi.legup.ui.boardview.GridElementView;
+
 import java.awt.*;
 import java.io.IOException;
 import javax.imageio.ImageIO;

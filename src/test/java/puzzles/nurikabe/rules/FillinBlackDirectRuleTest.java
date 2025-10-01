@@ -8,7 +8,9 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.puzzle.nurikabe.rules.FillinBlackDirectRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -118,7 +120,9 @@ public class FillinBlackDirectRuleTest {
         }
     }
 
-    /** Tests the Fillin Black direct rule for a false application of the rule */
+    /**
+     * Tests the Fillin Black direct rule for a false application of the rule
+     */
     @Test
     public void FillinBlackDirectRule_FalseTest() throws InvalidFileFormatException {
         TestUtilities.importTestBoard(

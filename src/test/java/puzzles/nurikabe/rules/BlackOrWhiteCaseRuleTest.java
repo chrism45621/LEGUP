@@ -9,8 +9,10 @@ import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
 import edu.rpi.legup.puzzle.nurikabe.rules.BlackOrWhiteCaseRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
 import java.util.ArrayList;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -56,7 +58,7 @@ public class BlackOrWhiteCaseRuleTest {
         Assert.assertTrue(
                 (board1Type.equals(NurikabeType.BLACK) || board1Type.equals(NurikabeType.WHITE))
                         && (board2Type.equals(NurikabeType.BLACK)
-                                || board2Type.equals(NurikabeType.WHITE)));
+                        || board2Type.equals(NurikabeType.WHITE)));
         Assert.assertFalse(board1Type.equals(board2Type));
 
         Assert.assertEquals(caseBoard.getHeight(), caseBoard2.getHeight(), board.getHeight());

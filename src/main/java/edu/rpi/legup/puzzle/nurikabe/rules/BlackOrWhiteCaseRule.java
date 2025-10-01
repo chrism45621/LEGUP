@@ -8,6 +8,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeBoard;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeCell;
 import edu.rpi.legup.puzzle.nurikabe.NurikabeType;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,7 +54,7 @@ public class BlackOrWhiteCaseRule extends CaseRule {
 
         if (!((mod1.getType() == NurikabeType.WHITE && mod2.getType() == NurikabeType.BLACK)
                 || (mod2.getType() == NurikabeType.WHITE
-                        && mod1.getType() == NurikabeType.BLACK))) {
+                && mod1.getType() == NurikabeType.BLACK))) {
             return super.getInvalidUseOfRuleMessage()
                     + ": This case rule must an empty white and black cell.";
         }
@@ -77,7 +78,7 @@ public class BlackOrWhiteCaseRule extends CaseRule {
     /**
      * Gets the possible cases at a specific location based on this case rule
      *
-     * @param board the current board state
+     * @param board         the current board state
      * @param puzzleElement equivalent puzzleElement
      * @return a list of elements the specified could be
      */
@@ -107,10 +108,10 @@ public class BlackOrWhiteCaseRule extends CaseRule {
      * Checks whether the child node logically follows from the parent node at the specific
      * puzzleElement index using this rule
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     public String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {

@@ -3,6 +3,7 @@ package edu.rpi.legup.model.gameboard;
 import edu.rpi.legup.model.elements.Element;
 import edu.rpi.legup.puzzle.treetent.TreeTentBoard;
 import edu.rpi.legup.puzzle.treetent.TreeTentClue;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
@@ -18,7 +19,7 @@ public class GridBoard extends Board {
     /**
      * GridBoard Constructor creates a board for grid using puzzles from a width and height.
      *
-     * @param width width of the board
+     * @param width  width of the board
      * @param height height of the board
      */
     public GridBoard(int width, int height) {
@@ -62,8 +63,8 @@ public class GridBoard extends Board {
      * Sets the {@link GridCell} at the location (x,y). This method does not set the cell if the
      * location specified is out of bounds.
      *
-     * @param x x location of the cell
-     * @param y y location of the cell
+     * @param x    x location of the cell
+     * @param y    y location of the cell
      * @param cell grid cell to set at location (x,y)
      */
     public void setCell(int x, int y, GridCell cell) {
@@ -80,7 +81,7 @@ public class GridBoard extends Board {
     public void setCell(int x, int y, Element e, MouseEvent m) {
         if (this instanceof TreeTentBoard
                 && ((y == dimension.height && 0 <= x && x < dimension.width)
-                        || (x == dimension.width && 0 <= y && y < dimension.height))) {
+                || (x == dimension.width && 0 <= y && y < dimension.height))) {
             TreeTentBoard treeTentBoard = ((TreeTentBoard) this);
             TreeTentClue clue = treeTentBoard.getClue(x, y);
             if (y == dimension.height) {

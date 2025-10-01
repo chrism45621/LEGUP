@@ -1,3 +1,4 @@
 package edu.rpi.legup.ai;
 
-public class Solver {}
+public class Solver {
+}

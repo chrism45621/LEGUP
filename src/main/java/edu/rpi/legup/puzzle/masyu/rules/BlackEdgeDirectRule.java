@@ -17,10 +17,10 @@ public class BlackEdgeDirectRule extends DirectRule {
      * puzzleElement index using this rule This method is the one that should overridden in child
      * classes
      *
-     * @param transition transition to check
+     * @param transition    transition to check
      * @param puzzleElement equivalent puzzleElement
      * @return null if the child node logically follow from the parent node at the specified
-     *     puzzleElement, otherwise error message
+     * puzzleElement, otherwise error message
      */
     @Override
     protected String checkRuleRawAt(TreeTransition transition, PuzzleElement puzzleElement) {

@@ -17,7 +17,9 @@ public class Battleship extends Puzzle {
         this.factory = new BattleshipCellFactory();
     }
 
-    /** Initializes the game board. Called by the invoker of the class */
+    /**
+     * Initializes the game board. Called by the invoker of the class
+     */
     @Override
     public void initializeView() {
         boardView = new BattleshipView((BattleshipBoard) currentBoard);
@@ -72,7 +74,8 @@ public class Battleship extends Puzzle {
      * @param board the board that has changed
      */
     @Override
-    public void onBoardChange(Board board) {}
+    public void onBoardChange(Board board) {
+    }
 
     //
     //    @Override

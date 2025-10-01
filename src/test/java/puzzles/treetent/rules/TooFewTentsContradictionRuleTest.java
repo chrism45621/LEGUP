@@ -7,7 +7,9 @@ import edu.rpi.legup.puzzle.treetent.TreeTentBoard;
 import edu.rpi.legup.puzzle.treetent.TreeTentCell;
 import edu.rpi.legup.puzzle.treetent.rules.TooFewTentsContradictionRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -27,7 +29,7 @@ public class TooFewTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Using a 1x1 Puzzle Grid, which is just grass, checks if
-     *     the fact it expects a tent on the y-axis is caught.
+     *                                    the fact it expects a tent on the y-axis is caught.
      */
     @Test
     public void TooFewTentsContradictionRule_JustY() throws InvalidFileFormatException {
@@ -44,8 +46,8 @@ public class TooFewTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Using a 1x1 Puzzle Grid, which is just a tent, checks if
-     *     the fact it expects 2 tents on the y-axis is caught. (This is an impossible situation
-     *     given the constraints, but for the purposes of the test it is fine)
+     *                                    the fact it expects 2 tents on the y-axis is caught. (This is an impossible situation
+     *                                    given the constraints, but for the purposes of the test it is fine)
      */
     @Test
     public void TooFewTentsContradictionRule_WithTent() throws InvalidFileFormatException {
@@ -63,7 +65,7 @@ public class TooFewTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Using a 1x1 Puzzle Grid, which is just grass, checks if
-     *     the fact it expects a tent on both x and y is caught.
+     *                                    the fact it expects a tent on both x and y is caught.
      */
     @Test
     public void TooFewTentsContradictionRule_DoubleBad() throws InvalidFileFormatException {
@@ -81,7 +83,7 @@ public class TooFewTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Looks at a 2x2 Board in the format: [] Tr [] Gr Column 2
-     *     is checked to have 1 Tent (which is not present, thus producing a contradiction)
+     *                                    is checked to have 1 Tent (which is not present, thus producing a contradiction)
      */
     @Test
     public void TooFewTentsContradictionRule_2x2ColumnOnly() throws InvalidFileFormatException {
@@ -113,7 +115,7 @@ public class TooFewTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Looks at a 2x2 Board in the format: Tr Gr [] [] Row 1 is
-     *     checked to have 1 Tent (which is not present, thus producing a contradiction)
+     *                                    checked to have 1 Tent (which is not present, thus producing a contradiction)
      */
     @Test
     public void TooFewTentsContradictionRule_2x2RowOnly() throws InvalidFileFormatException {
@@ -144,8 +146,8 @@ public class TooFewTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Looks at a 3x3 Board in the format: [] Tr [] [] Gr [] []
-     *     Gr [] Column 2 is checked to have 1 Tent (which is not present, thus producing a
-     *     contradiction)
+     *                                    Gr [] Column 2 is checked to have 1 Tent (which is not present, thus producing a
+     *                                    contradiction)
      */
     @Test
     public void TooFewTentsContradictionRule_3x3OneColumn() throws InvalidFileFormatException {
@@ -180,8 +182,8 @@ public class TooFewTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Looks at a 3x3 Board in the format: Gr Tr Gr Gr [] Gr Gr
-     *     Tr Gr Column 1 and 3 are checked to have 1 Tent (which is not present, thus producing a
-     *     contradiction)
+     *                                    Tr Gr Column 1 and 3 are checked to have 1 Tent (which is not present, thus producing a
+     *                                    contradiction)
      */
     @Test
     public void TooFewTentsContradictionRule_3x3TwoColumn() throws InvalidFileFormatException {
@@ -222,7 +224,7 @@ public class TooFewTentsContradictionRuleTest {
 
     /**
      * @throws InvalidFileFormatException Looks at a 2x2 Board in the format: Tn [] Tr [] This
-     *     should fail the contradiction as it is a legal board.
+     *                                    should fail the contradiction as it is a legal board.
      */
     @Test
     public void TooFewTentsContradictionRule_NoContradiction() throws InvalidFileFormatException {

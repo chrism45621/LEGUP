@@ -67,7 +67,9 @@ public class ElementSelection {
         elementView.setSelected(true);
     }
 
-    /** Clears the selection and deselects all ElementViews */
+    /**
+     * Clears the selection and deselects all ElementViews
+     */
     public void clearSelection() {
         for (ElementView elementView : selection) {
             elementView.setSelected(false);
@@ -97,7 +99,9 @@ public class ElementSelection {
         hover = newHovered;
     }
 
-    /** Clears the current hover state if there exists one */
+    /**
+     * Clears the current hover state if there exists one
+     */
     public void clearHover() {
         if (hover != null) {
             hover.setHover(false);

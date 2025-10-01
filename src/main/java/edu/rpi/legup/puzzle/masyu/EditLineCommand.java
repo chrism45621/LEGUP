@@ -14,6 +14,7 @@ import edu.rpi.legup.model.tree.TreeTransition;
 import edu.rpi.legup.ui.boardview.BoardView;
 import edu.rpi.legup.ui.boardview.ElementView;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.awt.event.MouseEvent;
 
 public class EditLineCommand extends PuzzleCommand {
@@ -41,7 +42,9 @@ public class EditLineCommand extends PuzzleCommand {
         this.transition = null;
     }
 
-    /** Executes a command */
+    /**
+     * Executes a command
+     */
     @Override
     public void executeCommand() {
         Tree tree = getInstance().getTree();
@@ -119,7 +122,7 @@ public class EditLineCommand extends PuzzleCommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public String getErrorString() {
@@ -134,7 +137,9 @@ public class EditLineCommand extends PuzzleCommand {
         return null;
     }
 
-    /** Undoes an command */
+    /**
+     * Undoes an command
+     */
     @Override
     public void undoCommand() {
         Tree tree = getInstance().getTree();

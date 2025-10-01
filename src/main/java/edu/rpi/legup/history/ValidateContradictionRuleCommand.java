@@ -5,6 +5,7 @@ import edu.rpi.legup.model.Puzzle;
 import edu.rpi.legup.model.rules.ContradictionRule;
 import edu.rpi.legup.model.tree.*;
 import edu.rpi.legup.ui.proofeditorui.treeview.*;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,7 +28,7 @@ public class ValidateContradictionRuleCommand extends PuzzleCommand {
      * contradiction rule
      *
      * @param selection currently selected tree puzzleElement views
-     * @param rule contradiction rule to be set to all the tree elements
+     * @param rule      contradiction rule to be set to all the tree elements
      */
     public ValidateContradictionRuleCommand(TreeViewSelection selection, ContradictionRule rule) {
         this.selection = selection.copy();
@@ -36,7 +37,9 @@ public class ValidateContradictionRuleCommand extends PuzzleCommand {
         this.addTran = new HashMap<>();
     }
 
-    /** Executes the command to validate and apply the ContradictionRule. */
+    /**
+     * Executes the command to validate and apply the ContradictionRule.
+     */
     @Override
     public void executeCommand() {
         Tree tree = GameBoardFacade.getInstance().getTree();
@@ -114,7 +117,7 @@ public class ValidateContradictionRuleCommand extends PuzzleCommand {
      * Gets the reason why the command cannot be executed
      *
      * @return if command cannot be executed, returns reason for why the command cannot be executed,
-     *     otherwise null if command can be executed
+     * otherwise null if command can be executed
      */
     @Override
     public String getErrorString() {
@@ -134,7 +137,9 @@ public class ValidateContradictionRuleCommand extends PuzzleCommand {
         return null;
     }
 
-    /** Undoes the validation command, restoring the previous state. */
+    /**
+     * Undoes the validation command, restoring the previous state.
+     */
     @Override
     public void undoCommand() {
         Puzzle puzzle = GameBoardFacade.getInstance().getPuzzleModule();

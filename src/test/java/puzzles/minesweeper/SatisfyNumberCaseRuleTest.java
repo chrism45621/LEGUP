@@ -9,8 +9,10 @@ import edu.rpi.legup.puzzle.minesweeper.MinesweeperCell;
 import edu.rpi.legup.puzzle.minesweeper.MinesweeperTileData;
 import edu.rpi.legup.puzzle.minesweeper.rules.SatisfyNumberCaseRule;
 import edu.rpi.legup.save.InvalidFileFormatException;
+
 import java.awt.*;
 import java.util.ArrayList;
+
 import legup.MockGameBoardFacade;
 import legup.TestUtilities;
 import org.junit.Assert;
@@ -62,36 +64,36 @@ public class SatisfyNumberCaseRuleTest {
 
         Assert.assertTrue(
                 (board1Tile1.equals(MinesweeperTileData.mine())
-                                && board1Tile2.equals(MinesweeperTileData.mine())
-                                && board1Tile3.equals(MinesweeperTileData.empty()))
+                        && board1Tile2.equals(MinesweeperTileData.mine())
+                        && board1Tile3.equals(MinesweeperTileData.empty()))
                         || (board1Tile1.equals(MinesweeperTileData.mine())
-                                && board1Tile2.equals(MinesweeperTileData.empty())
-                                && board1Tile3.equals(MinesweeperTileData.mine()))
+                        && board1Tile2.equals(MinesweeperTileData.empty())
+                        && board1Tile3.equals(MinesweeperTileData.mine()))
                         || ((board1Tile1.equals(MinesweeperTileData.empty())
-                                && board1Tile2.equals(MinesweeperTileData.mine())
-                                && board1Tile3.equals(MinesweeperTileData.mine()))));
+                        && board1Tile2.equals(MinesweeperTileData.mine())
+                        && board1Tile3.equals(MinesweeperTileData.mine()))));
 
         Assert.assertTrue(
                 (board2Tile1.equals(MinesweeperTileData.mine())
-                                && board2Tile2.equals(MinesweeperTileData.mine())
-                                && board2Tile3.equals(MinesweeperTileData.empty()))
+                        && board2Tile2.equals(MinesweeperTileData.mine())
+                        && board2Tile3.equals(MinesweeperTileData.empty()))
                         || (board2Tile1.equals(MinesweeperTileData.mine())
-                                && board2Tile2.equals(MinesweeperTileData.empty())
-                                && board2Tile3.equals(MinesweeperTileData.mine()))
+                        && board2Tile2.equals(MinesweeperTileData.empty())
+                        && board2Tile3.equals(MinesweeperTileData.mine()))
                         || ((board2Tile1.equals(MinesweeperTileData.empty())
-                                && board2Tile2.equals(MinesweeperTileData.mine())
-                                && board2Tile3.equals(MinesweeperTileData.mine()))));
+                        && board2Tile2.equals(MinesweeperTileData.mine())
+                        && board2Tile3.equals(MinesweeperTileData.mine()))));
 
         Assert.assertTrue(
                 (board3Tile1.equals(MinesweeperTileData.mine())
-                                && board3Tile2.equals(MinesweeperTileData.mine())
-                                && board3Tile3.equals(MinesweeperTileData.empty()))
+                        && board3Tile2.equals(MinesweeperTileData.mine())
+                        && board3Tile3.equals(MinesweeperTileData.empty()))
                         || (board3Tile1.equals(MinesweeperTileData.mine())
-                                && board3Tile2.equals(MinesweeperTileData.empty())
-                                && board3Tile3.equals(MinesweeperTileData.mine()))
+                        && board3Tile2.equals(MinesweeperTileData.empty())
+                        && board3Tile3.equals(MinesweeperTileData.mine()))
                         || ((board3Tile1.equals(MinesweeperTileData.empty())
-                                && board3Tile2.equals(MinesweeperTileData.mine())
-                                && board3Tile3.equals(MinesweeperTileData.mine()))));
+                        && board3Tile2.equals(MinesweeperTileData.mine())
+                        && board3Tile3.equals(MinesweeperTileData.mine()))));
 
         Assert.assertFalse(board1Tile1.equals(board2Tile1) && board1Tile1.equals(board3Tile1));
         Assert.assertFalse(board1Tile2.equals(board2Tile2) && board1Tile2.equals(board3Tile2));
